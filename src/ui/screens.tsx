@@ -1,10 +1,10 @@
 /** All screens. Copy voice: plain, brief, second person, no exclamation marks. */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import type { Bank } from "../content/types";
 import type { Screen as MachineScreen, UiEvent, UserState } from "../session/machine";
 import { factById, meterView, variantById } from "../session/machine";
 import { TUNING } from "../model/tuning";
-import { Bold, Dots, Hairline, MemoryCard, Meter, Screen } from "./components";
+import { Bold, Hairline, MemoryCard, Meter, Screen } from "./components";
 import { Question } from "./Question";
 
 interface ScreenProps {
@@ -15,86 +15,37 @@ interface ScreenProps {
 
 const BOOKING_URL = "https://www.gov.uk/life-in-the-uk-test";
 
-export function SetupScreen({ state, dispatch }: ScreenProps) {
-  const step = state.screen.kind === "setup" ? state.screen.step : 0;
-  const [date, setDate] = useState("");
+export function IntroScreen({ dispatch }: ScreenProps) {
   return (
     <Screen center>
-      <Dots total={3} on={step} />
-      {step === 0 && (
-        <>
-          <h1 className="title">When is your test?</h1>
-          <p className="muted">If you haven't booked yet, skip this — we'll tell you when you're ready to book.</p>
-          <input
-            type="date"
-            aria-label="Test date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            style={{
-              minHeight: "var(--tap)",
-              fontSize: "1rem",
-              padding: "0 1rem",
-              border: "1.5px solid var(--border)",
-              borderRadius: "var(--radius)",
-              background: "var(--surface)",
-              margin: "1rem 0",
-              width: "100%",
-            }}
-          />
-          <button className="btn primary" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 0, value: date })}>
-            {date ? "Next" : "I haven't booked yet"}
-          </button>
-        </>
-      )}
-      {step === 1 && (
-        <>
-          <h1 className="title">Have you studied for it already?</h1>
-          <div className="pill-choice" style={{ marginTop: "1rem" }}>
-            <button className="btn" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 1, value: "no" })}>
-              Not yet
-            </button>
-            <button className="btn" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 1, value: "some" })}>
-              A little
-            </button>
-            <button className="btn" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 1, value: "lots" })}>
-              A lot — I mostly need to check
-            </button>
-          </div>
-        </>
-      )}
-      {step === 2 && (
-        <>
-          <h1 className="title">If you failed and had to retake, how bad would that be?</h1>
-          <p className="muted">A retake costs £50 and about a week. This sets how sure we make you before saying stop.</p>
-          <div className="pill-choice" style={{ marginTop: "1rem" }}>
-            <button className="btn" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 2, value: "fine" })}>
-              It's fine — I'd just rebook
-            </button>
-            <button className="btn" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 2, value: "annoying" })}>
-              I'd rather not
-            </button>
-            <button className="btn" onClick={() => dispatch({ type: "SETUP_ANSWER", step: 2, value: "disaster" })}>
-              It would be a real problem
-            </button>
-          </div>
-        </>
-      )}
-    </Screen>
-  );
-}
-
-export function SpeedIntroScreen({ dispatch }: ScreenProps) {
-  return (
-    <Screen center>
-      <h1 className="title">First, a fast pass.</h1>
+      <h1 className="title" style={{ fontSize: "1.9rem" }}>
+        Pass the Life in the UK test in about two focused hours.
+      </h1>
       <p>
-        We'll show you the easy stuff — one fact at a time. Say whether you already knew it. No score, no
-        trick. It takes about six minutes and removes everything you don't need to study.
+        Most people spend eight or more hours re-reading a 180-page handbook — most of it on things they
+        already know. This does it differently:
       </p>
-      <p className="muted">Be honest — it only changes what we practise.</p>
+      <ol style={{ margin: "0.75rem 0 0", paddingLeft: "1.25rem", display: "grid", gap: "0.6rem" }}>
+        <li>
+          <strong>A fast pass over the easy stuff.</strong> Tap whether you already knew each fact — be
+          honest, it only changes what we practise. Six minutes, and it's off your list.
+        </li>
+        <li>
+          <strong>Drill only what's left.</strong> Real questions in 7-minute blocks. A wrong answer is
+          good news — it flips into a short memory card, and we've found something worth your time.
+        </li>
+        <li>
+          <strong>A number you can trust.</strong> Once we've read you well enough, you get a live
+          percentage chance of passing — and when it hits 95%, we tell you to stop studying and book the
+          test.
+        </li>
+      </ol>
+      <p className="muted" style={{ marginTop: "0.9rem" }}>
+        No streaks, no scores, nothing to sign up for. The exit is the point.
+      </p>
       <div style={{ marginTop: "1.25rem" }}>
         <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
-          Start
+          Start the fast pass
         </button>
       </div>
     </Screen>
@@ -163,11 +114,9 @@ export function HomeScreen({ bank, state, dispatch }: ScreenProps) {
       <div style={{ margin: "0.5rem 0 1.25rem" }}>
         <Meter view={view} responsesSeen={state.responsesSeen} />
       </div>
-      {state.setup?.testDateISO && (
-        <p className="muted small" style={{ marginTop: 0 }}>
-          Test booked for {state.setup.testDateISO}. Target: {target}%.
-        </p>
-      )}
+      <p className="muted small" style={{ marginTop: 0 }}>
+        Target: {target}% chance of passing before we tell you to stop.
+      </p>
       <div className="spacer" />
       <button className="btn primary" onClick={() => dispatch({ type: "BLOCK_START" })}>
         {state.blockNo === 0 ? "Start a 7-minute block" : "Another 7-minute block"}
@@ -175,6 +124,11 @@ export function HomeScreen({ bank, state, dispatch }: ScreenProps) {
       <button className="btn" onClick={() => dispatch({ type: "MOCK_START", which: null })}>
         Sit a full mock (24 questions)
       </button>
+      {state.stopShownAt != null && !state.outcome && (
+        <button className="btn quiet" onClick={() => dispatch({ type: "GO_OUTCOME" })}>
+          Sat the test? Tell us how it went
+        </button>
+      )}
       {atTarget && (
         <p className="notice" style={{ marginTop: "0.75rem" }}>
           You're at your target. More studying isn't a good use of your time —{" "}
@@ -406,10 +360,8 @@ export function DoneScreen(_: ScreenProps) {
 
 export function screenFor(kind: MachineScreen["kind"]) {
   switch (kind) {
-    case "setup":
-      return SetupScreen;
-    case "speed_intro":
-      return SpeedIntroScreen;
+    case "intro":
+      return IntroScreen;
     case "speed":
     case "recheck":
       return SpeedScreen;

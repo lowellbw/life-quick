@@ -73,9 +73,7 @@ function runUser(u: SyntheticUser, seed: number, maxMinutes = 150): RunResult {
     if (unlockAtEvidence == null && s.meter.unlocked) unlockAtEvidence = s.evidenceUnits;
   };
 
-  step({ type: "SETUP_ANSWER", step: 0, value: "", nowMs: now });
-  step({ type: "SETUP_ANSWER", step: 1, value: "some", nowMs: now });
-  step({ type: "SETUP_ANSWER", step: 2, value: "annoying", nowMs: now });
+  // no setup questionnaire: intro screen -> straight into the speed round
   step({ type: "SPEED_START", nowMs: now });
 
   // speed round

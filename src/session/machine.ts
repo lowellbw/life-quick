@@ -10,7 +10,7 @@
  * it never owns logic.
  */
 import type { Bank, Fact, Variant } from "../content/types";
-import { TUNING, TARGET_BY_PAIN, type RetakePain, type StudiedBefore } from "../model/tuning";
+import { TUNING, type RetakePain, type StudiedBefore } from "../model/tuning";
 import {
   applyEvent,
   emptyEvidence,
@@ -44,8 +44,7 @@ import { DAY_MS } from "../lib/time";
 // ------------------------------------------------------------------ types
 
 export type Screen =
-  | { kind: "setup"; step: 0 | 1 | 2 }
-  | { kind: "speed_intro" }
+  | { kind: "intro" }
   | { kind: "speed"; factId: string; index: number; total: number }
   | { kind: "phase_bridge" }
   | { kind: "home" }
@@ -88,7 +87,7 @@ export interface UserState {
   seed: number;
   createdAt: number;
   lastActiveAt: number;
-  setup: SetupState | null;
+  setup: SetupState;
   screen: Screen;
 
   speedOrder: string[];
@@ -136,7 +135,6 @@ export type UiEvent = DistributiveOmit<Event, "nowMs"> & { nowMs?: number };
 
 export type Event =
   | { type: "BOOT"; nowMs: number }
-  | { type: "SETUP_ANSWER"; step: 0 | 1 | 2; value: string; nowMs: number }
   | { type: "SPEED_START"; nowMs: number }
   | { type: "SPEED_MARK"; knew: boolean; nowMs: number }
   | { type: "BRIDGE_DONE"; nowMs: number }
@@ -148,6 +146,7 @@ export type Event =
   | { type: "MOCK_ANSWER"; variantId?: string; optionIdx: number[]; nowMs: number }
   | { type: "MOCK_RESULTS_ACK"; nowMs: number }
   | { type: "GO_HOME"; nowMs: number }
+  | { type: "GO_OUTCOME"; nowMs: number }
   | { type: "KEEP_GOING"; nowMs: number }
   | { type: "RECHECK_MARK"; knew: boolean; nowMs: number }
   | { type: "OUTCOME_REPORT"; result: "passed" | "failed" | "not_yet"; nowMs: number };
@@ -159,12 +158,13 @@ export function initialState(seed: number, nowMs: number): UserState {
     seed,
     createdAt: nowMs,
     lastActiveAt: nowMs,
-    setup: null,
-    screen: { kind: "setup", step: 0 },
+    // No setup questionnaire: sensible defaults, adjustable later in settings.
+    setup: { testDateISO: null, studiedBefore: "some", retakePain: "annoying", targetPct: 95 },
+    screen: { kind: "intro" },
     speedOrder: [],
     speedIndex: 0,
     evidence: {},
-    ability: initialAbility("no"),
+    ability: initialAbility("some"),
     ledger: emptyAuditLedger(),
     queue: emptyQueue(),
     cadence: emptyCadence(),
@@ -322,7 +322,7 @@ export function isAnswerCorrect(variant: Variant, chosen: number[]): boolean {
 export function reduce(s: UserState, ev: Event, bank: Bank): UserState {
   switch (ev.type) {
     case "BOOT": {
-      if (!s.setup) return s; // still in setup — nothing to decay or gate
+      if (s.screen.kind === "intro") return s; // not started — nothing to decay or gate
       const gapDays = (ev.nowMs - s.lastActiveAt) / DAY_MS;
       const shrink = decayShrink(gapDays);
       let next = s;
@@ -358,36 +358,8 @@ export function reduce(s: UserState, ev: Event, bank: Bank): UserState {
           }
         }
       }
-      // test date passed and no outcome recorded? ask.
-      if (next.setup?.testDateISO && !next.outcome) {
-        const testMs = Date.parse(next.setup.testDateISO);
-        if (Number.isFinite(testMs) && ev.nowMs > testMs + DAY_MS / 2) {
-          return { ...next, screen: { kind: "outcome" }, lastActiveAt: ev.nowMs };
-        }
-      }
-      const screen: Screen =
-        next.screen.kind === "setup" || next.screen.kind === "speed" || next.screen.kind === "speed_intro"
-          ? next.screen
-          : { kind: "home" };
+      const screen: Screen = next.screen.kind === "speed" ? next.screen : { kind: "home" };
       return { ...next, screen, lastActiveAt: ev.nowMs };
-    }
-
-    case "SETUP_ANSWER": {
-      const setup: SetupState =
-        s.setup ??
-        ({ testDateISO: null, studiedBefore: "no", retakePain: "annoying", targetPct: 95 } as SetupState);
-      let nextSetup = setup;
-      if (ev.step === 0) nextSetup = { ...setup, testDateISO: ev.value || null };
-      if (ev.step === 1) nextSetup = { ...setup, studiedBefore: ev.value as StudiedBefore };
-      if (ev.step === 2) {
-        const pain = ev.value as RetakePain;
-        nextSetup = { ...setup, retakePain: pain, targetPct: TARGET_BY_PAIN[pain] };
-      }
-      const ability = ev.step === 1 ? initialAbility(ev.value as StudiedBefore) : s.ability;
-      if (ev.step < 2) {
-        return { ...s, setup: nextSetup, ability, screen: { kind: "setup", step: (ev.step + 1) as 1 | 2 } };
-      }
-      return { ...s, setup: nextSetup, ability, screen: { kind: "speed_intro" }, lastActiveAt: ev.nowMs };
     }
 
     case "SPEED_START": {
@@ -557,6 +529,9 @@ export function reduce(s: UserState, ev: Event, bank: Bank): UserState {
 
     case "GO_HOME":
       return { ...s, screen: { kind: "home" }, lastActiveAt: ev.nowMs };
+
+    case "GO_OUTCOME":
+      return { ...s, screen: { kind: "outcome" }, lastActiveAt: ev.nowMs };
 
     case "KEEP_GOING":
       return { ...s, keepGoingChosen: true, screen: { kind: "keep_going" } };

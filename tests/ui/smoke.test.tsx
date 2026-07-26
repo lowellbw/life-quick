@@ -43,14 +43,10 @@ describe("ui smoke", () => {
     const store = makeStore(42);
     render(<Harness store={store} />);
 
-    // setup: skip date, studied a little, retake annoying
-    fireEvent.click(screen.getByText("I haven't booked yet"));
-    fireEvent.click(screen.getByText("A little"));
-    fireEvent.click(screen.getByText("I'd rather not"));
-    expect(store.get().setup?.targetPct).toBe(95);
-
-    // speed intro -> speed
-    fireEvent.click(screen.getByText("Start"));
+    // single intro screen with the pitch; defaults applied silently
+    expect(store.get().screen.kind).toBe("intro");
+    expect(store.get().setup.targetPct).toBe(95);
+    fireEvent.click(screen.getByText("Start the fast pass"));
     expect(store.get().screen.kind).toBe("speed");
 
     // mark 5 items via the UI
@@ -103,9 +99,6 @@ describe("ui smoke", () => {
     // from a correct answer froze the next question with disabled options
     const store = makeStore(101);
     act(() => {
-      store.dispatch({ type: "SETUP_ANSWER", step: 0, value: "" });
-      store.dispatch({ type: "SETUP_ANSWER", step: 1, value: "no" });
-      store.dispatch({ type: "SETUP_ANSWER", step: 2, value: "annoying" });
       store.dispatch({ type: "SPEED_START" });
       while (store.get().screen.kind === "speed") store.dispatch({ type: "SPEED_MARK", knew: false });
       store.dispatch({ type: "BRIDGE_DONE" });
@@ -136,10 +129,8 @@ describe("ui smoke", () => {
   it("evidence and audit ledger reflect speed-round claims", () => {
     let s: UserState = initialState(7, 1_700_000_000_000);
     const step = (e: Event) => (s = reduce(s, e, bank));
-    step({ type: "SETUP_ANSWER", step: 0, value: "", nowMs: 0 });
-    step({ type: "SETUP_ANSWER", step: 1, value: "no", nowMs: 0 });
-    step({ type: "SETUP_ANSWER", step: 2, value: "disaster", nowMs: 0 });
-    expect(s.setup?.targetPct).toBe(98);
+    expect(s.screen.kind).toBe("intro");
+    expect(s.setup.targetPct).toBe(95); // default, no questionnaire
     step({ type: "SPEED_START", nowMs: 0 });
     step({ type: "SPEED_MARK", knew: true, nowMs: 0 });
     step({ type: "SPEED_MARK", knew: false, nowMs: 0 });
