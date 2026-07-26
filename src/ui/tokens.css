@@ -1,0 +1,382 @@
+/* Ready design tokens — "calm arcade".
+   Colour carries meaning: amber marks attention (never red), green confirms
+   (never celebrates), clay is the single accent. */
+:root {
+  --bone: #faf8f5;
+  --surface: #ffffff;
+  --ink: #1f1e1c;
+  --ink-muted: #6b6862;
+  --clay: #d97757;
+  --clay-deep: #c05f3f;
+  --green: #3d8168;
+  --amber: #c98a2e;
+  --amber-soft: #f7ecd9;
+  --green-soft: #e4efe9;
+  --clay-soft: #f7e7e0;
+  --border: #e8e3dc;
+
+  --serif: "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --tap: 56px;
+  --maxw: 34rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--sans);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ---------- layout ---------- */
+.screen {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.screen-inner {
+  width: 100%;
+  max-width: var(--maxw);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* ---------- type ---------- */
+.stem {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  line-height: 1.35;
+  margin: 1.25rem 0 1.5rem;
+  text-wrap: balance;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  margin: 0 0 0.75rem;
+}
+
+.muted {
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+/* ---------- buttons & options ---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  width: 100%;
+  text-align: center;
+  transition: transform 80ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.btn:active {
+  transform: scale(0.985);
+}
+
+.btn.primary {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  background: var(--clay-deep);
+}
+
+.btn.quiet {
+  border: none;
+  background: transparent;
+  color: var(--ink-muted);
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn + .btn {
+  margin-top: 0.6rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0.85rem 1.1rem;
+  margin: 0 0 0.6rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.02rem;
+  text-align: left;
+  transition: border-color 120ms ease, background 120ms ease, transform 80ms ease;
+}
+
+.option:active {
+  transform: scale(0.99);
+}
+
+.option:hover {
+  border-color: #d8d1c7;
+}
+
+.option[data-state="selected"] {
+  border-color: var(--clay);
+  background: var(--clay-soft);
+}
+
+.option[data-state="correct"] {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+/* attention, not failure: amber, never red */
+.option[data-state="wrong"] {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+.option .mark {
+  margin-left: auto;
+  font-weight: 700;
+  flex: none;
+}
+
+.option .mark.correct {
+  color: var(--green);
+}
+
+.option .mark.wrong {
+  color: var(--amber);
+}
+
+/* ---------- meter ---------- */
+.meter-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+}
+
+.meter-label {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.55rem;
+}
+
+.meter-bar {
+  height: 10px;
+  border-radius: 6px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: var(--clay);
+  border-radius: 6px;
+  transition: width 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.meter-number {
+  font-family: var(--serif);
+  font-size: 3.4rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.meter-number .pct {
+  font-size: 1.6rem;
+  color: var(--ink-muted);
+}
+
+/* ---------- memory card ---------- */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.3rem;
+  box-shadow: 0 6px 24px rgba(31, 30, 28, 0.06);
+}
+
+.card .card-topic {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.card .card-title {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.chip {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.card .fact {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin: 0 0 0.6rem;
+}
+
+.card .fact strong {
+  background: var(--amber-soft);
+  padding: 0 0.15em;
+  border-radius: 4px;
+}
+
+.card .hook {
+  font-style: italic;
+  color: var(--ink-muted);
+  margin: 0.4rem 0 0;
+  font-size: 0.98rem;
+}
+
+.card .related {
+  margin: 0.9rem 0 0;
+  padding: 0.9rem 0 0;
+  border-top: 1px dashed var(--border);
+}
+
+.card .related .fact {
+  font-size: 0.98rem;
+  margin-bottom: 0.45rem;
+}
+
+.card .keyed-note {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+.card .wiki {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--clay-deep);
+}
+
+/* ---------- misc ---------- */
+.hairline {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hairline > div {
+  height: 100%;
+  background: var(--clay);
+  transition: width 200ms ease;
+}
+
+.dots {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin: 0.75rem 0;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--border);
+}
+
+.dots span.on {
+  background: var(--clay);
+}
+
+.pill-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.notice {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+a {
+  color: var(--clay-deep);
+}
+
+@media (max-width: 420px) {
+  .stem {
+    font-size: 1.3rem;
+  }
+}

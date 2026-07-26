@@ -1,0 +1,2773 @@
+[
+ {
+  "id": "patron-saints-of-the-uk",
+  "title": "Patron Saints of the UK",
+  "area": "Culture & Society",
+  "theme": "Religion & patron saints",
+  "hook": "Four nations, four saints: George, Andrew, David, Patrick — each with a feast day to remember.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "The patron saint of England is **St George**, celebrated on **23rd April**.",
+    "questions": [
+     "e10q1",
+     "e13q1"
+    ]
+   },
+   {
+    "statement": "The patron saint of Scotland is **St Andrew**, celebrated on **30th November**.",
+    "questions": [
+     "e1q5",
+     "e11q19"
+    ]
+   },
+   {
+    "statement": "The patron saint of Wales is **St David**, celebrated on **1st March**.",
+    "questions": [
+     "e3q14",
+     "e8q5"
+    ]
+   },
+   {
+    "statement": "The patron saint of Northern Ireland is **St Patrick**, celebrated on **17th March**.",
+    "questions": [
+     "e5q13",
+     "e14q1"
+    ]
+   },
+   {
+    "statement": "St Patrick’s Day is an official **public holiday** in Northern Ireland.",
+    "questions": [
+     "e2q18"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "churches-of-the-uk",
+  "title": "Churches of the UK",
+  "area": "Culture & Society",
+  "theme": "Religion & patron saints",
+  "hook": "The monarch heads the Church of England; Wales and Northern Ireland have no established church at all.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Church_of_England",
+  "facts": [
+   {
+    "statement": "**The monarch** is the head of the Church of England, and its spiritual leader is **the Archbishop of Canterbury**.",
+    "questions": [
+     "e4q12",
+     "e13q18"
+    ]
+   },
+   {
+    "statement": "**St Augustine**, who led missionaries from Rome, became the first Archbishop of Canterbury.",
+    "questions": [
+     "e14q14"
+    ]
+   },
+   {
+    "statement": "The national Church of Scotland is a **Presbyterian** church.",
+    "questions": [
+     "e5q7"
+    ]
+   },
+   {
+    "statement": "There is **no established church** in Wales or Northern Ireland.",
+    "questions": [
+     "e3q2",
+     "e10q3",
+     "e6q5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "king-james-bible-and-the-puritans",
+  "title": "King James Bible & the Puritans",
+  "area": "Culture & Society",
+  "theme": "Religion & patron saints",
+  "hook": "King James I authorised an English Bible; the Puritans wanted worship stricter and plainer still.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/King_James_Version",
+  "facts": [
+   {
+    "statement": "King James I’s new English translation of the Bible is called the King James Version or the **Authorised Version**.",
+    "questions": [
+     "e12q8"
+    ]
+   },
+   {
+    "statement": "The Puritans were a group of **Protestants** who advocated strict and simple religious worship.",
+    "questions": [
+     "e15q16"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "christmas-and-boxing-day",
+  "title": "Christmas & Boxing Day",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "The 25th celebrates the birth of Christ; the 26th, Boxing Day, keeps the holiday going.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Christmas",
+  "facts": [
+   {
+    "statement": "**Christmas Day**, the **25th of December**, celebrates the birth of Jesus Christ.",
+    "questions": [
+     "e4q15",
+     "e6q13"
+    ]
+   },
+   {
+    "statement": "Boxing Day, the day after Christmas Day, is a public holiday on **26th December**.",
+    "questions": [
+     "e10q5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "easter-lent-and-good-friday",
+  "title": "Easter, Lent & Good Friday",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "Forty days of Lent lead to Good Friday and to Easter, always in March or April.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Easter",
+  "facts": [
+   {
+    "statement": "Easter takes place in **March or April**.",
+    "questions": [
+     "e5q1"
+    ]
+   },
+   {
+    "statement": "**The 40 days before Easter** are known as **Lent**.",
+    "questions": [
+     "e1q24",
+     "e7q23"
+    ]
+   },
+   {
+    "statement": "**Good Friday** marks **the day when Jesus Christ died**.",
+    "questions": [
+     "e2q17",
+     "e8q12"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "hogmanay-and-new-year",
+  "title": "Hogmanay & the New Year",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "Scotland calls 31 December Hogmanay, and Auld Lang Syne sings in the New Year.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Hogmanay",
+  "facts": [
+   {
+    "statement": "**Hogmanay** is **New Year’s Eve in Scotland**, the **31st of December**.",
+    "questions": [
+     "e3q3",
+     "e9q8",
+     "e14q7"
+    ]
+   },
+   {
+    "statement": "People in the UK and other countries sing **Auld Lang Syne** when celebrating the New Year.",
+    "questions": [
+     "e15q13"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "diwali-and-eid-al-fitr",
+  "title": "Diwali & Eid al-Fitr",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "Diwali is the Festival of Lights; Eid al-Fitr marks the end of Ramadan’s month of fasting.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Diwali",
+  "facts": [
+   {
+    "statement": "Diwali, often called **the Festival of Lights**, is celebrated by **Hindus** and **Sikhs**.",
+    "questions": [
+     "e2q16",
+     "e11q4"
+    ]
+   },
+   {
+    "statement": "**Eid al-Fitr** celebrates the end of Ramadan, when Muslims have fasted for a month.",
+    "questions": [
+     "e3q24"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "halloween-and-april-fools-day",
+  "title": "Halloween & April Fool's Day",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "Ghosts come out on 31 October; the newspapers print jokes until midday on 1 April.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Halloween",
+  "facts": [
+   {
+    "statement": "**Halloween** is celebrated on the **31st of October**.",
+    "questions": [
+     "e7q2"
+    ]
+   },
+   {
+    "statement": "On **April Fool’s Day** the television and newspapers have stories that are jokes until midday.",
+    "questions": [
+     "e5q9"
+    ]
+   },
+   {
+    "statement": "**April Fool‘s Day**, 1 April, is the day when jokes are published in newspapers and telecast on TV.",
+    "questions": [
+     "e12q13"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bank-holidays",
+  "title": "Bank Holidays",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "When the banks close and much of Britain closes with them, that is a bank holiday.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Bank_holiday",
+  "facts": [
+   {
+    "statement": "A bank holiday is **a public holiday when banks and many other businesses are closed for the day**.",
+    "questions": [
+     "e1q16"
+    ]
+   },
+   {
+    "statement": "Public holidays in the UK are known as **bank holidays**.",
+    "questions": [
+     "e10q6",
+     "e13q5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "edinburgh-festival-fringe",
+  "title": "The Edinburgh Festival Fringe",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "Every summer Edinburgh fills with festivals, and the Fringe is the biggest of them all.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Edinburgh_Festival_Fringe",
+  "facts": [
+   {
+    "statement": "The Edinburgh Festival Fringe (‘the Fringe’) takes place in **Edinburgh**, Scotland, every summer.",
+    "questions": [
+     "e10q9"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "national-flowers-and-foods",
+  "title": "Flowers & Foods of the Nations",
+  "area": "Culture & Society",
+  "theme": "Festivals, holidays & traditions",
+  "hook": "Daffodil, thistle, shamrock — and haggis or an Ulster Fry to taste the nations.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "The **daffodil** is the flower of Wales, **the thistle** of Scotland and **the shamrock** of Northern Ireland.",
+    "questions": [
+     "e4q2",
+     "e8q2",
+     "e9q1"
+    ]
+   },
+   {
+    "statement": "Haggis is a traditional food from **Scotland**; the traditional food of Northern Ireland is the **Ulster Fry**.",
+    "questions": [
+     "e6q19",
+     "e14q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "uk-currency-coins-and-banknotes",
+  "title": "UK Currency: Coins & Banknotes",
+  "area": "Culture & Society",
+  "theme": "Money, work, tax & public services",
+  "hook": "Everything runs on pounds sterling — and Scottish and Northern Irish notes spend anywhere in the UK.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Pound_sterling",
+  "facts": [
+   {
+    "statement": "The currency in the UK is the **pound sterling** (symbol £).",
+    "questions": [
+     "e11q3"
+    ]
+   },
+   {
+    "statement": "UK currency has no **25p** coin and no **£25** banknote.",
+    "questions": [
+     "e5q2",
+     "e10q13"
+    ]
+   },
+   {
+    "statement": "The highest-value standard UK banknote is **£50**, not £100.",
+    "questions": [
+     "e9q3"
+    ],
+    "keyedNote": "Some Scottish and Northern Irish banks do issue £100 notes; the test counts £50 as the highest standard note."
+   },
+   {
+    "statement": "**Northern Ireland and Scotland** have their own banknotes, which are **valid everywhere in the UK**.",
+    "questions": [
+     "e2q13",
+     "e4q5",
+     "e8q8"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "working-in-the-uk",
+  "title": "Working in the UK",
+  "area": "Culture & Society",
+  "theme": "Money, work, tax & public services",
+  "hook": "Prove your identity and your right to work, and the DWP issues your National Insurance number.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/National_Insurance_number",
+  "facts": [
+   {
+    "statement": "To get a National Insurance number you need **documents that prove your identity** and **documents that prove that you have permission to work in the UK**.",
+    "questions": [
+     "e6q24"
+    ]
+   },
+   {
+    "statement": "To arrange a National Insurance number, you **contact the Department for Work and Pensions (DWP)**.",
+    "questions": [
+     "e7q20"
+    ]
+   },
+   {
+    "statement": "**Women in Britain today make up about half of the workforce.**",
+    "questions": [
+     "e12q24"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "school-governors",
+  "title": "School Governors",
+  "area": "Culture & Society",
+  "theme": "Money, work, tax & public services",
+  "hook": "Governors set a school's strategic direction and keep watch on its performance.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "Key roles of school governors include **setting the strategic direction of the school** and **monitoring and evaluating school performance**.",
+    "questions": [
+     "e3q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "everyday-rules-in-the-uk",
+  "title": "Everyday Rules in the UK",
+  "area": "Culture & Society",
+  "theme": "Food, leisure & everyday life",
+  "hook": "Licence at 17, moped at 16, alcohol at 18 — and every dog's collar names its owner.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "When walking your dog in a public place, you must ensure **that your dog wears a collar showing the name and address of the owner**.",
+    "questions": [
+     "e2q4"
+    ]
+   },
+   {
+    "statement": "Out in public, a dog’s collar must show **the owner’s name** and **the owner’s address**.",
+    "questions": [
+     "e8q11"
+    ]
+   },
+   {
+    "statement": "You must be **18** to buy alcohol in the UK and **18** to go into betting shops or gambling clubs.",
+    "questions": [
+     "e11q24",
+     "e14q15"
+    ]
+   },
+   {
+    "statement": "To drive on public roads you need **a valid driving licence** and must be at least **17 years old** for a car or motorcycle.",
+    "questions": [
+     "e10q8",
+     "e15q19"
+    ]
+   },
+   {
+    "statement": "You must be at least **16 years old** to ride a moped in the UK.",
+    "questions": [
+     "e16q12"
+    ]
+   },
+   {
+    "statement": "Sunday and holiday hours are often shorter, but **most shops in the UK open seven days a week.**",
+    "questions": [
+     "e13q20"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "uk-charities",
+  "title": "UK Charities",
+  "area": "Culture & Society",
+  "theme": "Food, leisure & everyday life",
+  "hook": "The National Trust minds Britain's places; Friends of the Earth minds the environment.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/National_Trust",
+  "facts": [
+   {
+    "statement": "**The National Trust** is a charity that works to preserve important buildings, coastline and countryside in the UK.",
+    "questions": [
+     "e4q6"
+    ]
+   },
+   {
+    "statement": "**Friends of the Earth** is **an environmental charity**.",
+    "questions": [
+     "e5q19",
+     "e11q6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "william-shakespeare",
+  "title": "William Shakespeare",
+  "area": "Culture & Society",
+  "theme": "Literature & writers",
+  "hook": "England’s greatest playwright began life in the market town of Stratford-upon-Avon.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/William_Shakespeare",
+  "facts": [
+   {
+    "statement": "**William Shakespeare** was born in **Stratford-upon-Avon**, England.",
+    "questions": [
+     "e6q9",
+     "e9q6"
+    ]
+   },
+   {
+    "statement": "Shakespeare’s most famous plays include **A Midsummer Night’s Dream** and **Macbeth**.",
+    "questions": [
+     "e2q14",
+     "e17q15"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wordsworth-daffodils",
+  "title": "Wordsworth & The Daffodils",
+  "area": "Culture & Society",
+  "theme": "Literature & writers",
+  "hook": "A poet inspired by nature, Wordsworth made the daffodil the most famous flower in English poetry.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/William_Wordsworth",
+  "facts": [
+   {
+    "statement": "**William Wordsworth** wrote ‘The **Daffodils**’, his famous poem about that flower.",
+    "questions": [
+     "e1q22",
+     "e11q18"
+    ]
+   },
+   {
+    "statement": "British poets such as **William Wordsworth** drew inspiration from nature.",
+    "questions": [
+     "e13q15"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "chaucer-canterbury-tales",
+  "title": "Chaucer’s Canterbury Tales",
+  "area": "Culture & Society",
+  "theme": "Literature & writers",
+  "hook": "Pilgrims riding to Canterbury told stories on the way — Chaucer turned them into poems.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/The_Canterbury_Tales",
+  "facts": [
+   {
+    "statement": "Geoffrey Chaucer’s **The Canterbury Tales** is a collection of **poems** about a group of people on a pilgrimage to Canterbury.",
+    "questions": [
+     "e4q14",
+     "e10q4",
+     "e13q4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "great-british-fiction",
+  "title": "Great British fiction",
+  "area": "Culture & Society",
+  "theme": "Literature & writers",
+  "hook": "Sherlock Holmes, The Lord of the Rings and the Booker Prize — landmarks of British fiction.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**Sir Arthur Conan Doyle** wrote the Sherlock Holmes stories.",
+    "questions": [
+     "e3q12"
+    ]
+   },
+   {
+    "statement": "In 2003 **The Lord of the Rings** by JRR Tolkien was voted the country’s best-loved novel.",
+    "questions": [
+     "e5q23"
+    ]
+   },
+   {
+    "statement": "The Man Booker Prize is awarded annually for the best fiction novel, making it a prize for **literature**.",
+    "questions": [
+     "e8q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cenotaph-whitehall",
+  "title": "The Cenotaph, Whitehall",
+  "area": "Culture & Society",
+  "theme": "Architecture & famous buildings",
+  "hook": "The war memorial in Whitehall where the King and politicians gather for Remembrance Day.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/The_Cenotaph",
+  "facts": [
+   {
+    "statement": "The Cenotaph is **a war memorial** and the site of the annual Remembrance Day service.",
+    "questions": [
+     "e1q8"
+    ]
+   },
+   {
+    "statement": "The Cenotaph in Whitehall was designed by **Sir Edwin Lutyens**, who created many war memorials around the world.",
+    "questions": [
+     "e8q19"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "st-pauls-and-crathes-castle",
+  "title": "Wren’s St Paul’s & Crathes Castle",
+  "area": "Culture & Society",
+  "theme": "Architecture & famous buildings",
+  "hook": "From the ashes of 1666 rose Wren’s St Paul’s; in Scotland stands Crathes Castle.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral",
+  "facts": [
+   {
+    "statement": "After the Great Fire of London in 1666, St Paul’s Cathedral was rebuilt to a design by the architect **Sir Christopher Wren**.",
+    "questions": [
+     "e11q20"
+    ]
+   },
+   {
+    "statement": "**Crathes Castle** is located in Scotland.",
+    "questions": [
+     "e13q23"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "british-screen-actors",
+  "title": "British stars of the screen",
+  "area": "Culture & Society",
+  "theme": "Film, TV & media",
+  "hook": "From Chaplin’s silent tramp to Oscar nights, British actors made their mark in Hollywood.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Charlie_Chaplin",
+  "facts": [
+   {
+    "statement": "**Charlie Chaplin** became famous in silent movies for playing **a tramp**.",
+    "questions": [
+     "e4q20",
+     "e13q12"
+    ]
+   },
+   {
+    "statement": "British actresses Dame Judi Dench, Kate Winslet and Tilda Swinton have won Oscars, but **Emily Watson** has not.",
+    "questions": [
+     "e14q4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "british-film-successes",
+  "title": "British film successes",
+  "area": "Culture & Society",
+  "theme": "Film, TV & media",
+  "hook": "Harry Potter, James Bond and Nick Park’s animations — British film is a global success story.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Cinema_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The two highest-grossing film franchises, **Harry Potter** and **James Bond**, were both produced in the UK.",
+    "questions": [
+     "e15q4",
+     "e16q5"
+    ]
+   },
+   {
+    "statement": "Nick Park won three of his four Oscars for films featuring **Wallace and Gromit**, each one **an animated film**.",
+    "questions": [
+     "e16q9",
+     "e15q23"
+    ]
+   },
+   {
+    "statement": "Academy Award winner Nick Park specialised in **animated movies**.",
+    "questions": [
+     "e16q24"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bbc-and-broadcasting",
+  "title": "The BBC & broadcasting rules",
+  "area": "Culture & Society",
+  "theme": "Film, TV & media",
+  "hook": "Funded by the licence fee, free of government control — and party coverage must be balanced by law.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/BBC",
+  "facts": [
+   {
+    "statement": "The BBC is funded by the TV licence fee and is **independent of government**.",
+    "questions": [
+     "e12q2"
+    ]
+   },
+   {
+    "statement": "By law, radio and television coverage of political parties must be **balanced**, with **equal time** given to rival viewpoints.",
+    "questions": [
+     "e11q10"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "british-art-and-design",
+  "title": "British art & design",
+  "area": "Culture & Society",
+  "theme": "Music, art & the performing arts",
+  "hook": "Hockney’s pop art, Cliff’s Art Deco ceramics, the Tate in London and the Turner Prize.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**David Hockney** was an important contributor to the pop art movement of the 1960s.",
+    "questions": [
+     "e2q8"
+    ]
+   },
+   {
+    "statement": "**Clarice Cliff** was a famous designer of Art Deco ceramics.",
+    "questions": [
+     "e13q24"
+    ]
+   },
+   {
+    "statement": "The Turner Prize, established in 1984, is **a contemporary art award**, one of the most prestigious visual art awards in Europe.",
+    "questions": [
+     "e8q24"
+    ]
+   },
+   {
+    "statement": "The Tate Britain and Tate Modern galleries are in **London**.",
+    "questions": [
+     "e12q7"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "british-music-and-theatre",
+  "title": "Music & theatre in Britain",
+  "area": "Culture & Society",
+  "theme": "Music, art & the performing arts",
+  "hook": "Elgar at the Proms, the Beatles in the sixties and the West End’s Theatreland.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "Sir Edward Elgar is remembered because **he was a musician**, best known for the Pomp and Circumstance Marches.",
+    "questions": [
+     "e10q12"
+    ]
+   },
+   {
+    "statement": "The Proms is **an eight-week summer season of daily orchestral classical music concerts**, held in venues including the Royal Albert Hall.",
+    "questions": [
+     "e10q19"
+    ]
+   },
+   {
+    "statement": "**The Beatles** and **The Rolling Stones** were two famous British pop groups of the Swinging Sixties.",
+    "questions": [
+     "e15q18"
+    ]
+   },
+   {
+    "statement": "London’s West End is known as **Theatreland** because of its many theatres.",
+    "questions": [
+     "e3q16"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "british-inventors-scientists",
+  "title": "British inventors & scientists",
+  "area": "Culture & Society",
+  "theme": "Notable Britons & achievements",
+  "hook": "Radar, the web, the Turing machine, split atoms and DNA — British minds led the way.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**William Caxton** was **the first person in England to print books using a printing press**.",
+    "questions": [
+     "e13q8"
+    ]
+   },
+   {
+    "statement": "Radar was developed by **Sir Robert Watson-Watt**.",
+    "questions": [
+     "e4q22"
+    ]
+   },
+   {
+    "statement": "In the 1930s the British mathematician Alan Turing invented **the Turing machine**, a theoretical mathematical device.",
+    "questions": [
+     "e15q10"
+    ]
+   },
+   {
+    "statement": "Scientists led by **Ernest Rutherford**, working at Manchester and then Cambridge, were the first to split the atom.",
+    "questions": [
+     "e15q12"
+    ]
+   },
+   {
+    "statement": "**Francis Crick** co-discovered **the structure of the DNA molecule** in the 1950s and was awarded a Nobel Prize for it.",
+    "questions": [
+     "e8q7",
+     "e16q10"
+    ]
+   },
+   {
+    "statement": "The World Wide Web was invented by **Sir Tim Berners-Lee**.",
+    "questions": [
+     "e12q15"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "churchill-and-nightingale",
+  "title": "Churchill & Florence Nightingale",
+  "area": "Culture & Society",
+  "theme": "Notable Britons & achievements",
+  "hook": "The public’s greatest Briton of all time, and the nurse who founded modern nursing.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Winston_Churchill",
+  "facts": [
+   {
+    "statement": "In 2002 **Winston Churchill** was voted the greatest Briton of all time by the public.",
+    "questions": [
+     "e4q9",
+     "e12q23"
+    ]
+   },
+   {
+    "statement": "Florence Nightingale was **a nurse** and is often regarded as the founder of modern nursing.",
+    "questions": [
+     "e9q24"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "uk-and-great-britain",
+  "title": "The UK & Great Britain",
+  "area": "Geography",
+  "theme": "Nations, capitals & geography of the UK",
+  "hook": "Great Britain means England, Scotland and Wales; add Northern Ireland and you have the UK.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/United_Kingdom",
+  "facts": [
+   {
+    "statement": "The UK is located in the **north west of Europe**.",
+    "questions": [
+     "e1q4"
+    ]
+   },
+   {
+    "statement": "Great Britain refers only to **England**, **Scotland** and **Wales** — Northern Ireland is **not** part of Great Britain.",
+    "questions": [
+     "e4q7",
+     "e6q6",
+     "e8q10"
+    ]
+   },
+   {
+    "statement": "The Union Flag, also known as the Union Jack, is **the Flag of the United Kingdom**.",
+    "questions": [
+     "e12q22"
+    ]
+   },
+   {
+    "statement": "The rose is the flower associated with **England**, as the thistle is with Scotland, the daffodil with Wales and the shamrock with Northern Ireland.",
+    "questions": [
+     "e16q19"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "crown-dependencies-and-overseas-territories",
+  "title": "Crown Dependencies & Overseas Territories",
+  "area": "Geography",
+  "theme": "Nations, capitals & geography of the UK",
+  "hook": "Channel Islands and Isle of Man sit near; St Helena and the Falklands lie far — none of them is part of the UK.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Crown_Dependencies",
+  "facts": [
+   {
+    "statement": "**The Channel Islands** and the **Isle of Man** are **Crown Dependencies** — self-governing islands closely linked to the UK but not part of it.",
+    "questions": [
+     "e1q20",
+     "e12q1",
+     "e17q6"
+    ]
+   },
+   {
+    "statement": "**St Helena** and **the Falkland Islands** are British overseas territories, linked to the UK but **not part** of the UK or Great Britain.",
+    "questions": [
+     "e2q2",
+     "e5q4",
+     "e7q14",
+     "e8q17",
+     "e11q1"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "capitals-and-cities-of-the-uk",
+  "title": "Capitals & Cities of the UK",
+  "area": "Geography",
+  "theme": "Nations, capitals & geography of the UK",
+  "hook": "Beyond London: Edinburgh for Scotland, Cardiff for Wales, Belfast for Northern Ireland.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "**Edinburgh** is the capital of Scotland, Cardiff is the capital of **Wales**, and **Belfast** is the capital of Northern Ireland.",
+    "questions": [
+     "e7q11",
+     "e3q21",
+     "e9q9"
+    ]
+   },
+   {
+    "statement": "Swansea, like Cardiff, is a city in **Wales**.",
+    "questions": [
+     "e6q15"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "landmarks-of-london",
+  "title": "Landmarks of London",
+  "area": "Geography",
+  "theme": "Landmarks & famous places",
+  "hook": "Big Ben is the bell at Parliament, the Jewels sit in the Tower, and Whitehall keeps the Cenotaph.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/London",
+  "facts": [
+   {
+    "statement": "Big Ben is the nickname for the great bell of the clock at **the Houses of the Parliament** in London.",
+    "questions": [
+     "e1q2"
+    ]
+   },
+   {
+    "statement": "The Crown Jewels are kept **at the Tower of London**.",
+    "questions": [
+     "e2q20"
+    ]
+   },
+   {
+    "statement": "Yeoman Warders, known as **Beefeaters**, give guided tours telling the history of **the Tower of London**.",
+    "questions": [
+     "e3q9",
+     "e13q9"
+    ]
+   },
+   {
+    "statement": "**London’s West End**, also called ‘Theatreland’, is particularly well known for its theatres.",
+    "questions": [
+     "e11q2"
+    ]
+   },
+   {
+    "statement": "The **Cenotaph** is a war memorial located in Whitehall.",
+    "questions": [
+     "e11q12"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "national-parks-of-britain",
+  "title": "National Parks of Britain",
+  "area": "Geography",
+  "theme": "Landmarks & famous places",
+  "hook": "Britain has 15 national parks, and England’s largest is the Lake District.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Lake_District",
+  "facts": [
+   {
+    "statement": "National parks are **areas of protected countryside** that everyone can visit, and where people live, work and look after the landscape.",
+    "questions": [
+     "e6q4"
+    ]
+   },
+   {
+    "statement": "There are **15** national parks in England, Wales and Scotland.",
+    "questions": [
+     "e8q9"
+    ]
+   },
+   {
+    "statement": "**The Lake District**, in **England**, is the country’s **largest national park** and was voted Britain’s favourite view in 2007.",
+    "questions": [
+     "e3q15",
+     "e13q2",
+     "e9q4",
+     "e7q17"
+    ]
+   },
+   {
+    "statement": "Snowdonia is a national park in **Wales**.",
+    "questions": [
+     "e3q11"
+    ]
+   },
+   {
+    "statement": "Loch Lomond and the Trossachs National Park is in the west of **Scotland**.",
+    "questions": [
+     "e10q2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "famous-places-around-the-uk",
+  "title": "Famous Places Around the UK",
+  "area": "Geography",
+  "theme": "Landmarks & famous places",
+  "hook": "Stonehenge, the Giant’s Causeway, Skara Brae and the Eden Project — pin each one to its place on the map.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**Stonehenge** is a monument that stands in what is now the English county of Wiltshire.",
+    "questions": [
+     "e14q13"
+    ]
+   },
+   {
+    "statement": "The Giant’s Causeway, a formation of columns made from volcanic lava, is on the north-east coast of **Northern Ireland**.",
+    "questions": [
+     "e16q2"
+    ]
+   },
+   {
+    "statement": "Skara Brae, on Orkney off the north coast of **Scotland**, is the best preserved prehistoric village in northern Europe.",
+    "questions": [
+     "e17q14"
+    ]
+   },
+   {
+    "statement": "The Eden Project is located in **Cornwall**, in the south west of England.",
+    "questions": [
+     "e5q3"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "horse-racing-in-the-uk",
+  "title": "Horse Racing in the UK",
+  "area": "Sport",
+  "theme": "Sport & sporting events",
+  "hook": "The Grand National runs at Aintree, Royal Ascot in Berkshire, and the Scottish Grand National at Ayr.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Grand_National",
+  "facts": [
+   {
+    "statement": "The Grand National, run at Aintree near Liverpool, is a famous **horse racing** event.",
+    "questions": [
+     "e4q13"
+    ]
+   },
+   {
+    "statement": "**Royal Ascot** is a five-day horse-racing meeting in Berkshire attended by members of the Royal Family.",
+    "questions": [
+     "e7q21"
+    ]
+   },
+   {
+    "statement": "The Scottish Grand National takes place at **Ayr**.",
+    "questions": [
+     "e10q14"
+    ]
+   },
+   {
+    "statement": "The National Horseracing Museum is located in **Newmarket, Suffolk**.",
+    "questions": [
+     "e13q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "classic-british-sporting-events",
+  "title": "Classic British Sporting Events",
+  "area": "Sport",
+  "theme": "Sport & sporting events",
+  "hook": "Match each event to its sport: the Ashes is cricket, the Six Nations is rugby, Wimbledon is tennis.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Sport_in_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The modern game of **golf** can be traced back to 15th century **Scotland**.",
+    "questions": [
+     "e2q21",
+     "e5q8"
+    ]
+   },
+   {
+    "statement": "**The Ashes** is the most famous cricket competition, a series of Test matches played between England and Australia.",
+    "questions": [
+     "e7q4"
+    ]
+   },
+   {
+    "statement": "**The Six Nations Championship** is a rugby union competition between England, Ireland, Scotland, Wales, France and Italy.",
+    "questions": [
+     "e14q9"
+    ]
+   },
+   {
+    "statement": "**Wimbledon**, played each year at the All England Lawn Tennis and Croquet Club, is the most famous tennis tournament in the UK.",
+    "questions": [
+     "e12q11"
+    ]
+   },
+   {
+    "statement": "**The University of Oxford** and **the University of Cambridge** compete in a popular yearly rowing race on the River Thames.",
+    "questions": [
+     "e10q23"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "olympic-and-paralympic-britain",
+  "title": "Olympic & Paralympic Britain",
+  "area": "Sport",
+  "theme": "Sport & sporting events",
+  "hook": "The Games came to Britain in 1908, 1948 and 2012 — remember the Paralympic champions too.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/2012_Summer_Olympics",
+  "facts": [
+   {
+    "statement": "The UK has hosted **the Olympic games** on **3** occasions: 1908, 1948 and 2012.",
+    "questions": [
+     "e12q20",
+     "e14q19"
+    ]
+   },
+   {
+    "statement": "Mary Peters, who moved to Northern Ireland as a child, won an Olympic **gold** medal in the pentathlon in 1972.",
+    "questions": [
+     "e15q8"
+    ]
+   },
+   {
+    "statement": "**Baroness Tanni Grey-Thompson** and **Ellie Simmonds** are two of Britain’s most famous Paralympians.",
+    "questions": [
+     "e6q10"
+    ]
+   },
+   {
+    "statement": "**Ellie Simmonds** won gold medals for swimming at the 2008, 2012 and 2016 Paralympic Games.",
+    "questions": [
+     "e16q18"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "british-sporting-heroes",
+  "title": "British Sporting Heroes",
+  "area": "Sport",
+  "theme": "Sport & sporting events",
+  "hook": "1954: Bannister breaks the four-minute mile; 1966: Bobby Moore lifts the World Cup.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**Bobby Moore** captained the English football team that won the World Cup in 1966.",
+    "questions": [
+     "e1q11"
+    ]
+   },
+   {
+    "statement": "In 1954 **Sir Roger Bannister** made sporting history: **he was the first man in the world to run a mile in under four minutes.**",
+    "questions": [
+     "e3q23",
+     "e17q19"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "uk-diverse-population",
+  "title": "The UK’s Diverse Population",
+  "area": "Geography",
+  "theme": "Population & demographics",
+  "hook": "About one person in ten in the UK has a parent or grandparent born outside the country.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Demography_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "**Around 10%** of the UK population has a parent or grandparent born outside the UK.",
+    "questions": [
+     "e16q11"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "citizen-responsibilities",
+  "title": "Responsibilities of UK citizens",
+  "area": "Values & Citizenship",
+  "theme": "Rights & responsibilities of citizens",
+  "hook": "Five duties, one theme: look after yourself, your family, your area, the law and other people's rights.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "Your duties include: **to respect and obey the law**, **to look after yourself and your family** and **to look after the area in which you live and the environment**.",
+    "questions": [
+     "e1q1",
+     "e6q1",
+     "e7q1"
+    ]
+   },
+   {
+    "statement": "You should also aim **to look after yourself and your family** and **to respect the rights of others, including their right to their own opinions**.",
+    "questions": [
+     "e9q5",
+     "e12q19"
+    ]
+   },
+   {
+    "statement": "The National Citizen Service programme is **optional** and gives **16- and 17-year-olds** the chance to develop their skills and take part in a community project.",
+    "questions": [
+     "e3q8",
+     "e16q8"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "principles-of-british-life",
+  "title": "Fundamental principles of British life",
+  "area": "Values & Citizenship",
+  "theme": "British values & principles",
+  "hook": "Democracy, the rule of law, individual liberty, tolerance, participation – five pillars worth reciting.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "The fundamental principles of British life include **democracy**, **the rule of law** and **individual liberty**, along with tolerance of different faiths and beliefs.",
+    "questions": [
+     "e3q1",
+     "e5q5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "parliament-commons-lords",
+  "title": "Parliament: Commons & Lords",
+  "area": "Government & Politics",
+  "theme": "Parliament & how government works",
+  "hook": "Commons elected, Lords appointed – remember which house is which and who sits in each.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Parliament_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The UK Parliament is formed of two chambers: the **House of Commons** and **the House of Lords**.",
+    "questions": [
+     "e4q10"
+    ]
+   },
+   {
+    "statement": "Several Church of England **bishops sit in the House of Lords**.",
+    "questions": [
+     "e2q3"
+    ]
+   },
+   {
+    "statement": "Peers gain their seats in the House of Lords by **appointment rather than election**, with life peers appointed by **the monarch** on the Prime Minister's advice.",
+    "questions": [
+     "e15q20",
+     "e14q10"
+    ]
+   },
+   {
+    "statement": "Prime Minister's Questions takes place **every week** while Parliament is sitting.",
+    "questions": [
+     "e6q7"
+    ]
+   },
+   {
+    "statement": "Proceedings in Parliament are broadcast on television and published in official reports called **Hansard**.",
+    "questions": [
+     "e14q8"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mps-and-the-speaker",
+  "title": "MPs & the Speaker",
+  "area": "Government & Politics",
+  "theme": "Parliament & how government works",
+  "hook": "MPs serve a place: everyone in the constituency, reachable by letter, phone or a local surgery.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Speaker_of_the_House_of_Commons_(United_Kingdom)",
+  "facts": [
+   {
+    "statement": "MPs **represent everyone in their constituency** and **help to create new laws**, as well as scrutinising the government and debating national issues.",
+    "questions": [
+     "e8q13",
+     "e17q4"
+    ]
+   },
+   {
+    "statement": "You can contact MPs **by letter or telephone**, at their **constituency office** or their office in the House of Commons, and many hold local surgeries.",
+    "questions": [
+     "e9q18",
+     "e12q12"
+    ]
+   },
+   {
+    "statement": "Debates in the House of Commons are chaired by **the Speaker**, who is also **an MP** representing a constituency and its constituents.",
+    "questions": [
+     "e1q10",
+     "e17q13"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ministers-and-civil-service",
+  "title": "Ministers, civil servants & opposition",
+  "area": "Government & Politics",
+  "theme": "Parliament & how government works",
+  "hook": "Home Secretary, home front: crime, policing and immigration all land on one desk.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Government_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "**The Home Secretary** is the minister responsible for **crime**, **policing** and immigration.",
+    "questions": [
+     "e2q1",
+     "e8q4",
+     "e15q22"
+    ]
+   },
+   {
+    "statement": "Civil servants are not political appointees – **they are chosen on merit and are politically neutral**.",
+    "questions": [
+     "e12q16",
+     "e14q21"
+    ]
+   },
+   {
+    "statement": "Senior opposition MPs, appointed by the leader of the opposition, form the **Shadow Cabinet** to challenge the government and offer alternative policies.",
+    "questions": [
+     "e17q3",
+     "e17q23"
+    ]
+   },
+   {
+    "statement": "The official home of the Prime Minister is **10 Downing Street**.",
+    "questions": [
+     "e4q23"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "uk-constitution",
+  "title": "The UK constitution",
+  "area": "Government & Politics",
+  "theme": "Parliament & how government works",
+  "hook": "There is no single document to read – the British constitution is famously unwritten.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Constitution_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The British constitution is **not written down in any single document**, which is why it is described as 'unwritten'.",
+    "questions": [
+     "e10q24"
+    ]
+   },
+   {
+    "statement": "The system of government in the UK is a **parliamentary democracy**.",
+    "questions": [
+     "e14q16"
+    ]
+   },
+   {
+    "statement": "Constitutional institutions include the monarchy, Parliament, the cabinet, the judiciary, the police and the civil service – but not **the armed forces**.",
+    "questions": [
+     "e17q1"
+    ]
+   },
+   {
+    "statement": "Towns, cities and rural areas in the UK are governed by **democratically elected councils**, often called 'local authorities'.",
+    "questions": [
+     "e12q6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "general-elections-voting",
+  "title": "General elections & voting",
+  "area": "Government & Politics",
+  "theme": "Elections & voting",
+  "hook": "Every 5 years a poll card arrives; when an MP quits mid-term, a by-election follows.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Elections_in_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "MPs are elected at a general election, which is held at least **every 5 years**.",
+    "questions": [
+     "e4q4"
+    ]
+   },
+   {
+    "statement": "The voting age for UK general elections was set at **18** in 1969.",
+    "questions": [
+     "e13q14"
+    ]
+   },
+   {
+    "statement": "Before a general election takes place, you will be sent **a poll card**.",
+    "questions": [
+     "e1q17"
+    ]
+   },
+   {
+    "statement": "If an MP dies or resigns, a fresh election called a **by-election** is held in his or her constituency.",
+    "questions": [
+     "e8q23"
+    ]
+   },
+   {
+    "statement": "By law, **television** and **radio** coverage of political parties must be balanced, with equal time given to rival viewpoints.",
+    "questions": [
+     "e1q19",
+     "e4q24"
+    ]
+   },
+   {
+    "statement": "**Persuading people to vote for a political party**, by knocking on doors or handing out leaflets, is called 'canvassing'.",
+    "questions": [
+     "e5q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "registering-standing-election",
+  "title": "Registering & standing for election",
+  "area": "Government & Politics",
+  "theme": "Elections & voting",
+  "hook": "Eighteen opens the door to standing for office; Northern Ireland registers each voter individually.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**Northern Ireland** uses a system called '**individual registration**', where all those entitled to vote must complete their own registration form.",
+    "questions": [
+     "e6q12",
+     "e9q11"
+    ]
+   },
+   {
+    "statement": "Most citizens of the UK, the Irish Republic or the Commonwealth aged **18** or over can stand for public office, including election as an MP.",
+    "questions": [
+     "e9q13",
+     "e4q21"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "margaret-thatcher",
+  "title": "Margaret Thatcher",
+  "area": "Government & Politics",
+  "theme": "Prime Ministers & political leaders",
+  "hook": "The Iron Lady claimed two records: first woman PM and longest-serving PM of the 20th century.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+  "facts": [
+   {
+    "statement": "**Margaret Thatcher** made history because **she was the first woman Prime Minister of the UK**.",
+    "questions": [
+     "e1q9",
+     "e11q8"
+    ]
+   },
+   {
+    "statement": "**Margaret Thatcher** was the longest-serving Prime Minister of the 20th century, in office from 1979 until 1990.",
+    "questions": [
+     "e17q5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "prime-ministers-history",
+  "title": "Prime Ministers through history",
+  "area": "Government & Politics",
+  "theme": "Prime Ministers & political leaders",
+  "hook": "From Walpole in 1721 to the 2010 coalition, the same office keeps changing hands.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Prime_Minister_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The first man to be called Prime Minister was **Sir Robert Walpole**, who held office from 1721 to 1742.",
+    "questions": [
+     "e14q3"
+    ]
+   },
+   {
+    "statement": "**Winston Churchill** became Prime Minister and was an inspirational leader to the British people during the Second World War.",
+    "questions": [
+     "e2q9"
+    ]
+   },
+   {
+    "statement": "In 1945 the British people elected a Labour government, and the new Prime Minister was **Clement Attlee**.",
+    "questions": [
+     "e14q18"
+    ]
+   },
+   {
+    "statement": "**John Major** became Prime Minister after Margaret Thatcher and played an important part in the Northern Ireland peace process.",
+    "questions": [
+     "e16q16"
+    ]
+   },
+   {
+    "statement": "The Labour government led by **Tony Blair**, elected in 1997, introduced a Scottish Parliament and a Welsh Assembly.",
+    "questions": [
+     "e16q13"
+    ]
+   },
+   {
+    "statement": "In May 2010 **the Conservative Party** and **the Liberal Democrats Party** formed a coalition, with David Cameron becoming Prime Minister.",
+    "questions": [
+     "e6q16"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "role-of-the-monarch",
+  "title": "The role of the monarch",
+  "area": "Monarchy",
+  "theme": "Monarchy & the royal family",
+  "hook": "The monarch appoints the government but does not run it: advise, warn, encourage.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Monarchy_of_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The monarch has two duties: **to appoint the government**, and **to advise, warn and encourage the Prime Minister‘s decisions on government policies**.",
+    "questions": [
+     "e17q10"
+    ],
+    "keyedNote": "More precisely, the monarch advises, warns and encourages the Prime Minister; the decisions themselves are made by the PM and cabinet."
+   }
+  ]
+ },
+ {
+  "id": "devolved-powers",
+  "title": "What the devolved nations control",
+  "area": "Government & Politics",
+  "theme": "Devolution & the devolved nations",
+  "hook": "Devolved bodies run health and schools; defence and immigration never left London.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Devolution_in_the_United_Kingdom",
+  "facts": [
+   {
+    "statement": "The devolved administrations control many public services and can pass laws on **health** and **education**.",
+    "questions": [
+     "e7q9"
+    ]
+   },
+   {
+    "statement": "**Defence** and **immigration** policy remain under central UK government control – the Northern Ireland Assembly and other devolved bodies cannot decide them.",
+    "questions": [
+     "e9q12",
+     "e11q16"
+    ]
+   },
+   {
+    "statement": "The Scottish Parliament can legislate on civil and criminal law, health, **education**, planning and additional tax-raising powers.",
+    "questions": [
+     "e17q24"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "senedd-ni-assembly",
+  "title": "The Senedd & NI Assembly",
+  "area": "Government & Politics",
+  "theme": "Devolution & the devolved nations",
+  "hook": "Remember 60 and 90: Senedd members and Northern Ireland MLAs, both elected proportionally.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Northern_Ireland_Assembly",
+  "facts": [
+   {
+    "statement": "The Welsh Parliament (Senedd) has **60** members, elected **every 4 years** by a form of proportional representation.",
+    "questions": [
+     "e10q10",
+     "e8q20"
+    ]
+   },
+   {
+    "statement": "The Northern Ireland Assembly has **90** elected members, known as MLAs, chosen **by a system of proportional representation**.",
+    "questions": [
+     "e12q3",
+     "e14q2"
+    ]
+   },
+   {
+    "statement": "The Northern Ireland Assembly has been **suspended on a few occasions** by the UK government.",
+    "questions": [
+     "e11q13"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "juries-uk",
+  "title": "Juries in the UK",
+  "area": "Law & Justice",
+  "theme": "The legal system & courts",
+  "hook": "One register, two duties: it lets you vote and can call you, at random, to a jury at 18.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Jury",
+  "facts": [
+   {
+    "statement": "Jurors are selected **randomly from the electoral register**, so that is where you must be registered to be called.",
+    "questions": [
+     "e1q15",
+     "e5q6"
+    ]
+   },
+   {
+    "statement": "Anyone on the electoral register aged **18** to 70 can be asked to serve on a jury.",
+    "questions": [
+     "e1q14",
+     "e12q18"
+    ]
+   },
+   {
+    "statement": "A jury has **12** members in England, Wales and Northern Ireland, but **15** members in Scotland.",
+    "questions": [
+     "e2q15",
+     "e7q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "criminal-youth-courts",
+  "title": "Criminal courts & Youth Courts",
+  "area": "Law & Justice",
+  "theme": "The legal system & courts",
+  "hook": "Minor crime goes to magistrates – and in Youth Courts, young names stay out of the papers.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "In England, Wales and Northern Ireland, most minor criminal cases are dealt with in a **Magistrates’ Court**.",
+    "questions": [
+     "e2q23"
+    ]
+   },
+   {
+    "statement": "In Scotland, minor criminal offences go to **the Justice of the Peace Court**.",
+    "questions": [
+     "e6q20"
+    ]
+   },
+   {
+    "statement": "In England, Wales and Northern Ireland, Youth Court cases are normally heard by **up to 3 specially trained magistrates** or **a District Judge**.",
+    "questions": [
+     "e15q9",
+     "e17q18"
+    ]
+   },
+   {
+    "statement": "Cases in a Youth Court are heard by **district judges** or **specially trained magistrates**.",
+    "questions": [
+     "e16q6"
+    ]
+   },
+   {
+    "statement": "The name or photographs of a young person accused in a Youth Court **cannot be published in newspapers or used by the media**.",
+    "questions": [
+     "e10q11"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "criminal-vs-civil-law",
+  "title": "Criminal vs civil law",
+  "area": "Law & Justice",
+  "theme": "The legal system & courts",
+  "hook": "If it harms the public it is criminal; workplace and money disputes stay civil.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "Racial crime and **smoking in public places where it is not allowed** are examples of **criminal offences**.",
+    "questions": [
+     "e4q19",
+     "e7q7"
+    ]
+   },
+   {
+    "statement": "**Discrimination in the workplace** is an example of civil law rather than criminal law.",
+    "questions": [
+     "e5q16"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "solicitors-small-claims",
+  "title": "Solicitors & small claims",
+  "area": "Law & Justice",
+  "theme": "The legal system & courts",
+  "hook": "Time is money at a solicitor's office; small claims let you skip the lawyer entirely.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "**Solicitors’ charges are usually based on how much time they spend on a case**.",
+    "questions": [
+     "e1q18"
+    ]
+   },
+   {
+    "statement": "The small claims procedure is **an informal way of helping people to settle minor disputes without spending a lot of time and money using a lawyer**.",
+    "questions": [
+     "e9q22"
+    ]
+   },
+   {
+    "statement": "Small claims are used for amounts under £10,000 in England and Wales, and under **£5,000** in Scotland and Northern Ireland.",
+    "questions": [
+     "e16q14"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "police-complaints-reports",
+  "title": "Dealing with the police",
+  "area": "Law & Justice",
+  "theme": "Police, crime & punishment",
+  "hook": "A police complaint has many doors: the station, the Chief Constable or an independent body.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "Anyone can complain about the police – **go to the police station directly** or **write to the Chief Constable of the police force involved**.",
+    "questions": [
+     "e1q13",
+     "e11q17"
+    ]
+   },
+   {
+    "statement": "Writing to the Chief Constable is only one route – police complaints can also go to **independent bodies** such as the Independent Police Complaints Commission.",
+    "questions": [
+     "e5q12",
+     "e8q3"
+    ]
+   },
+   {
+    "statement": "If you think someone is trying to persuade you to join an extremist or terrorist cause, notify **your local police force**.",
+    "questions": [
+     "e3q7",
+     "e16q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "protective-laws",
+  "title": "Laws that protect people",
+  "area": "Law & Justice",
+  "theme": "Rights, equality & the law",
+  "hook": "The law reaches inside the home: partner violence, forced marriage and FGM are all crimes.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "If a husband forces his wife to have sex, he **can be charged with rape**.",
+    "questions": [
+     "e5q20"
+    ]
+   },
+   {
+    "statement": "Anyone who is violent towards their partner – whether man or woman, married or living together – **can be prosecuted**.",
+    "questions": [
+     "e15q24"
+    ]
+   },
+   {
+    "statement": "Female genital mutilation (FGM), or taking a girl or woman abroad for FGM, is **illegal in the UK and a criminal offence**.",
+    "questions": [
+     "e8q15"
+    ]
+   },
+   {
+    "statement": "Court orders **can be obtained to protect a person from being forced into a marriage**.",
+    "questions": [
+     "e15q7"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "early-britain-stone-to-iron-age",
+  "title": "Early Britain: Stone to Iron Age",
+  "area": "History",
+  "theme": "Ancient, Roman & early Britain",
+  "hook": "Hunter-gatherers came first, farmers followed 6,000 years ago, and Iron Age kings put their names on the first coins.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Prehistoric_Britain",
+  "facts": [
+   {
+    "statement": "The first people to live in Britain, in the Stone Age, were **hunter-gatherers**.",
+    "questions": [
+     "e7q18"
+    ]
+   },
+   {
+    "statement": "The first farmers arrived in Britain **6,000 years ago**, and their ancestors probably came from **south-east Europe**.",
+    "questions": [
+     "e15q5",
+     "e2q7"
+    ]
+   },
+   {
+    "statement": "**The people of the Iron Age** made the first coins to be minted in Britain, some inscribed with **the names of Iron Age kings**.",
+    "questions": [
+     "e6q2",
+     "e11q21",
+     "e12q5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "roman-britain",
+  "title": "Roman Britain",
+  "area": "History",
+  "theme": "Ancient, Roman & early Britain",
+  "hook": "Caesar tried first in 55 BC, Boudicca fought back, and Hadrian built a wall to keep out the Picts.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Roman_Britain",
+  "facts": [
+   {
+    "statement": "**Julius Caesar** led the first Roman invasion of Britain, in 55 BC.",
+    "questions": [
+     "e2q10"
+    ]
+   },
+   {
+    "statement": "**Boudicca**, queen of the Iceni in eastern England, was a tribal leader who fought against **the Romans**.",
+    "questions": [
+     "e4q8",
+     "e14q24",
+     "e13q3"
+    ]
+   },
+   {
+    "statement": "**Emperor Hadrian** built a wall in the north of England to keep out the Picts, ancestors of the Scottish people.",
+    "questions": [
+     "e10q22"
+    ]
+   },
+   {
+    "statement": "Hadrian’s Wall included the forts of **Housesteads** and **Vindolanda**.",
+    "questions": [
+     "e15q15"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "anglo-saxons-and-vikings",
+  "title": "Anglo-Saxons and the Vikings",
+  "area": "History",
+  "theme": "Anglo-Saxons & Vikings",
+  "hook": "After Rome left in AD 410 the Jutes, Angles and Saxons arrived; Alfred the Great later united England against the Vikings.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Alfred_the_Great",
+  "facts": [
+   {
+    "statement": "After the Romans left in AD 410, Britain was invaded by tribes from northern Europe: **the Jutes**, the Angles and the Saxons.",
+    "questions": [
+     "e16q4"
+    ]
+   },
+   {
+    "statement": "The Anglo-Saxon kingdoms in England united under **King Alfred the Great**, who defeated the Vikings.",
+    "questions": [
+     "e2q11",
+     "e13q7"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "william-the-conqueror-1066",
+  "title": "William the Conqueror & 1066",
+  "area": "History",
+  "theme": "Norman Conquest & the Middle Ages",
+  "hook": "One 1066 conquest left England a tapestry, a great survey and a tower — all pointing back to William.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Norman_Conquest",
+  "facts": [
+   {
+    "statement": "**The Norman Conquest** of **1066** was the last successful foreign invasion of England.",
+    "questions": [
+     "e2q19",
+     "e7q24"
+    ]
+   },
+   {
+    "statement": "William the Conqueror was the Duke of Normandy, in what is now northern **France**, and defeated Harold, the Saxon king, at Hastings in 1066.",
+    "questions": [
+     "e17q16"
+    ]
+   },
+   {
+    "statement": "**The Battle of Hastings**, William’s victory of 1066, is commemorated in a great embroidery known as the Bayeux Tapestry.",
+    "questions": [
+     "e4q17"
+    ]
+   },
+   {
+    "statement": "Two records that give us information about England under William I are **the Domesday Book** and **the Bayeux Tapestry**.",
+    "questions": [
+     "e6q21"
+    ]
+   },
+   {
+    "statement": "**William the Conqueror** introduced **the Domesday Book**, drawn up **after the Norman conquest** to list England’s towns, people, land and animals.",
+    "questions": [
+     "e9q20",
+     "e11q15",
+     "e15q11"
+    ]
+   },
+   {
+    "statement": "**William the Conqueror** built the Tower of London, whose Norman castle keep is **the White Tower**.",
+    "questions": [
+     "e6q3",
+     "e16q15"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "magna-carta-1215",
+  "title": "Magna Carta, 1215",
+  "area": "History",
+  "theme": "Magna Carta & early rights",
+  "hook": "1215 is the year the law was set above the king.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Magna_Carta",
+  "facts": [
+   {
+    "statement": "The Magna Carta, created in **1215**, established that even the king was subject to the law — **it restricted the King’s power**.",
+    "questions": [
+     "e2q12",
+     "e8q14"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "battle-of-bannockburn-1314",
+  "title": "Battle of Bannockburn, 1314",
+  "area": "History",
+  "theme": "Norman Conquest & the Middle Ages",
+  "hook": "1314 at Bannockburn: Robert the Bruce’s Scots beat the English, and Scotland stayed unconquered.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Battle_of_Bannockburn",
+  "facts": [
+   {
+    "statement": "In 1314 the Scottish, led by **Robert the Bruce**, defeated the English at the Battle of Bannockburn, and Scotland remained unconquered by the English.",
+    "questions": [
+     "e7q6",
+     "e12q14"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "the-black-death-1348",
+  "title": "The Black Death, 1348",
+  "area": "History",
+  "theme": "Norman Conquest & the Middle Ages",
+  "hook": "One arrival in 1348 — the plague called the Black Death — killed a third of England.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Black_Death",
+  "facts": [
+   {
+    "statement": "In 1348, during **the Middle Ages**, a disease known as **the Black Death**, probably **a plague**, came to Britain.",
+    "questions": [
+     "e6q18",
+     "e3q19",
+     "e17q11"
+    ]
+   },
+   {
+    "statement": "The Black Death killed **one third of the population** of England, with a similar proportion in Scotland and Wales.",
+    "questions": [
+     "e17q8"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "medieval-england",
+  "title": "Medieval England: War, Land, Language",
+  "area": "History",
+  "theme": "Norman Conquest & the Middle Ages",
+  "hook": "A 116-year war with France, serfs on a lord’s land, and two languages merging into English.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/England_in_the_Middle_Ages",
+  "facts": [
+   {
+    "statement": "In the Middle Ages, English kings fought a long war with France called **the Hundred Years War**, which actually lasted 116 years.",
+    "questions": [
+     "e3q5"
+    ]
+   },
+   {
+    "statement": "Medieval serfs were **peasants who had a small area of their lord’s agricultural land**, where they could grow food.",
+    "questions": [
+     "e9q16"
+    ]
+   },
+   {
+    "statement": "After the Norman Conquest, nobles spoke **Norman French** and peasants spoke **Anglo-Saxon**; these two languages combined into one English language.",
+    "questions": [
+     "e11q9",
+     "e15q1"
+    ]
+   },
+   {
+    "statement": "**William Caxton** was the first person in England to print books using a printing press.",
+    "questions": [
+     "e2q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wars-of-the-roses",
+  "title": "The Wars of the Roses",
+  "area": "History",
+  "theme": "Wars of the Roses",
+  "hook": "Two families, two roses: York against Lancaster.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Wars_of_the_Roses",
+  "facts": [
+   {
+    "statement": "The Wars of the Roses were fought between the supporters of two families: **the House of York** and **the House of Lancaster**.",
+    "questions": [
+     "e1q6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "henry-viii-and-the-reformation",
+  "title": "Henry VIII & the Reformation",
+  "area": "History",
+  "theme": "Tudors & the Reformation",
+  "hook": "A refused divorce led Henry VIII to break with the Pope and found the Church of England.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Henry_VIII",
+  "facts": [
+   {
+    "statement": "**Henry VIII** established the Church of England **because the Pope didn’t let him divorce his first wife, Catherine of Aragon**.",
+    "questions": [
+     "e6q17",
+     "e3q4"
+    ]
+   },
+   {
+    "statement": "**The Reformation** was the movement against the authority of the Pope and the ideas of the Catholic Church during the reign of Henry VIII.",
+    "questions": [
+     "e7q19",
+     "e9q19",
+     "e16q22"
+    ]
+   },
+   {
+    "statement": "Anne Boleyn, the wife of Henry VIII, was executed at the **Tower of London**.",
+    "questions": [
+     "e4q18"
+    ]
+   },
+   {
+    "statement": "**Henry VIII** was the father of Queen Elizabeth I.",
+    "questions": [
+     "e5q11"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mary-queen-of-scots",
+  "title": "Mary, Queen of Scots",
+  "area": "History",
+  "theme": "Tudors & the Reformation",
+  "hook": "Scotland turned Protestant in 1560, but its queen Mary Stuart stayed Catholic and was finally executed.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots",
+  "facts": [
+   {
+    "statement": "In 1560 the Scottish Parliament abolished the Pope’s authority and Scotland established **a Protestant church** with an elected leadership.",
+    "questions": [
+     "e11q14"
+    ]
+   },
+   {
+    "statement": "**Mary Stuart (‘Mary, Queen of Scots’) was a Catholic**.",
+    "questions": [
+     "e5q15"
+    ]
+   },
+   {
+    "statement": "After 20 years in prison, Mary, Queen of Scots, was accused of plotting against Elizabeth I and **she was executed.**",
+    "questions": [
+     "e8q6",
+     "e16q3"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "elizabeth-i-and-the-spanish-armada",
+  "title": "Elizabeth I & the Spanish Armada",
+  "area": "History",
+  "theme": "Tudors & the Reformation",
+  "hook": "1588 is the year Protestant England, under Elizabeth I, defeated the Armada Spain sent to restore Catholicism.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Spanish_Armada",
+  "facts": [
+   {
+    "statement": "In **1588** the English defeated **the Spanish Armada**, a large fleet of ships sent by **Spain** to conquer England and restore Catholicism.",
+    "questions": [
+     "e1q12",
+     "e8q18",
+     "e10q16",
+     "e11q11",
+     "e13q21"
+    ]
+   },
+   {
+    "statement": "**Elizabeth I was a Protestant and she succeeded in finding a balance between the views of the Catholics and the more extreme Protestants.**",
+    "questions": [
+     "e6q23"
+    ]
+   },
+   {
+    "statement": "Elizabeth I was not a Catholic; **she was a Protestant**.",
+    "questions": [
+     "e13q11"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "early-stuarts-civil-war",
+  "title": "The Early Stuarts & the Civil War",
+  "area": "History",
+  "theme": "Stuarts, Civil War & Restoration",
+  "hook": "Divine right met Parliament's army — the king lost his head and England, briefly, its monarchy.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/English_Civil_War",
+  "facts": [
+   {
+    "statement": "When Elizabeth I died, her cousin King James VI of **Scotland** also became King James I of England, Wales and Ireland.",
+    "questions": [
+     "e13q19"
+    ]
+   },
+   {
+    "statement": "Charles I believed in the ‘Divine Right of Kings’ and tried **to rule without the Parliament**.",
+    "questions": [
+     "e12q21"
+    ]
+   },
+   {
+    "statement": "In the Civil War from 1642, **the Cavaliers and the Roundheads** fought — the Cavaliers for King Charles I, the Roundheads for Parliament.",
+    "questions": [
+     "e4q16",
+     "e15q14"
+    ]
+   },
+   {
+    "statement": "In the Civil War, Charles I's army was defeated at **the Battle of Marston Moor** and **the Battle of Naseby**.",
+    "questions": [
+     "e7q15"
+    ]
+   },
+   {
+    "statement": "**Charles I** was held prisoner by the parliamentary army, and in 1649 **he was executed**.",
+    "questions": [
+     "e6q8",
+     "e17q9"
+    ]
+   },
+   {
+    "statement": "**When Charles I was executed**, England declared itself a republic, called the Commonwealth, with no monarch.",
+    "questions": [
+     "e15q3"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cromwell-and-charles-ii-escape",
+  "title": "Cromwell & the escape of Charles II",
+  "area": "History",
+  "theme": "Stuarts, Civil War & Restoration",
+  "hook": "The man who ruled Britain without a crown — and the king who survived by hiding in an oak tree.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Oliver_Cromwell",
+  "facts": [
+   {
+    "statement": "**Oliver Cromwell** was given the title of Lord Protector and ruled until his death in 1658.",
+    "questions": [
+     "e1q23"
+    ]
+   },
+   {
+    "statement": "Defeated by Cromwell in the Civil War, **Charles II** famously escaped by **hiding in an oak tree** before fleeing to Europe.",
+    "questions": [
+     "e5q10",
+     "e13q6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "charles-ii-restoration",
+  "title": "Charles II & the Restoration",
+  "area": "History",
+  "theme": "Stuarts, Civil War & Restoration",
+  "hook": "Charles II came back from the Netherlands to a reign of fire, refugees and new rights for prisoners.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Charles_II_of_England",
+  "facts": [
+   {
+    "statement": "In May 1660 Parliament invited **Charles II** to come back from exile in the Netherlands, and he was crowned king.",
+    "questions": [
+     "e16q7"
+    ]
+   },
+   {
+    "statement": "During Charles II's reign **a fire** destroyed much of London, including many churches and St Paul's Cathedral.",
+    "questions": [
+     "e4q3"
+    ]
+   },
+   {
+    "statement": "The Habeas Corpus Act became law in 1679 and guaranteed **that every prisoner has a right to a court hearing**.",
+    "questions": [
+     "e10q17"
+    ]
+   },
+   {
+    "statement": "Between 1680 and 1720 many refugees called Huguenots came to England from **France**.",
+    "questions": [
+     "e12q10"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "glorious-revolution-1688",
+  "title": "The Glorious Revolution, 1688",
+  "area": "History",
+  "theme": "Glorious Revolution & Bill of Rights",
+  "hook": "A king replaced without resistance, and a Bill that set the limits of royal power — 1688 changed the rules.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Glorious_Revolution",
+  "facts": [
+   {
+    "statement": "In 1688 important Protestants asked **William of Orange** to invade England, and his unresisted takeover was called **the ‘Glorious Revolution’**.",
+    "questions": [
+     "e17q20",
+     "e5q18"
+    ]
+   },
+   {
+    "statement": "William of Orange defeated **James II** at the Battle of the Boyne in Ireland in 1690.",
+    "questions": [
+     "e17q21"
+    ]
+   },
+   {
+    "statement": "The laws passed after the Glorious Revolution marked the beginning of the **constitutional monarchy**.",
+    "questions": [
+     "e10q15"
+    ]
+   },
+   {
+    "statement": "The Bill of Rights, 1689, confirmed **the rights of Parliament and the limits of the king's power**, not a right to vote for men or women.",
+    "questions": [
+     "e1q7",
+     "e7q3"
+    ]
+   },
+   {
+    "statement": "**The MacDonalds of Glencoe** were the Scottish clan killed for not taking the oath.",
+    "questions": [
+     "e7q8"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bonnie-prince-charlie-highlands",
+  "title": "Bonnie Prince Charlie & the Highlands",
+  "area": "History",
+  "theme": "Stuarts, Civil War & Restoration",
+  "hook": "The last Stuart bid for the throne rose with the Highland clans; later the crofts were cleared for sheep.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Charles_Edward_Stuart",
+  "facts": [
+   {
+    "statement": "In 1745 Charles Edward Stuart — **Bonnie Prince Charlie** — raised an army supported by clansmen from **the Highlands** of Scotland.",
+    "questions": [
+     "e3q6",
+     "e13q10"
+    ]
+   },
+   {
+    "statement": "In **the Highland Clearances**, many Scottish landlords destroyed small farms known as ‘crofts’ to make space for flocks of sheep and cattle.",
+    "questions": [
+     "e7q13"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "the-enlightenment",
+  "title": "The Enlightenment",
+  "area": "History",
+  "theme": "Enlightenment, science & discovery",
+  "hook": "The 18th century rethought politics, philosophy and science — Smith on economics, Hume on human nature.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Age_of_Enlightenment",
+  "facts": [
+   {
+    "statement": "**The Enlightenment**, during the 18th century, was **a period when new ideas about politics, philosophy and science were developed**.",
+    "questions": [
+     "e5q14",
+     "e11q5"
+    ]
+   },
+   {
+    "statement": "During the Enlightenment, Adam Smith developed ideas about **economics** which are still referred to today.",
+    "questions": [
+     "e14q5"
+    ]
+   },
+   {
+    "statement": "During the Enlightenment, David Hume developed ideas about human nature that continue to influence **philosophy**.",
+    "questions": [
+     "e17q7"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "isaac-newton-gravity",
+  "title": "Isaac Newton & gravity",
+  "area": "History",
+  "theme": "Enlightenment, science & discovery",
+  "hook": "One book, the Principia, showed how gravity applied to the whole universe.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Isaac_Newton",
+  "facts": [
+   {
+    "statement": "Isaac Newton is famous for **the discovery of gravity**: his Principia Mathematica showed how gravity applied to the whole universe.",
+    "questions": [
+     "e10q20",
+     "e16q23"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "industrial-revolution",
+  "title": "The Industrial Revolution",
+  "area": "History",
+  "theme": "Industrial Revolution & invention",
+  "hook": "Steam power made Britain the first country to industrialise — bringing canals, railways and new factory laws.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Industrial_Revolution",
+  "facts": [
+   {
+    "statement": "**The steam power** behind new machinery drove the Industrial Revolution — Britain's rapid industrial development of the 18th and 19th centuries.",
+    "questions": [
+     "e9q17",
+     "e14q23"
+    ]
+   },
+   {
+    "statement": "During the 18th century, **manufacturing** jobs became the biggest source of employment in Britain.",
+    "questions": [
+     "e7q5"
+    ]
+   },
+   {
+    "statement": "Canals were built **to link the factories to towns and cities and to the ports**, particularly in the middle and north of England.",
+    "questions": [
+     "e14q20"
+    ]
+   },
+   {
+    "statement": "The Factories Act of 1847 was important because **it limited the number of hours that women and children could work to 10 hours per day**.",
+    "questions": [
+     "e17q22"
+    ]
+   },
+   {
+    "statement": "The engineer Isambard Kingdom Brunel, builder of tunnels, bridges and ships, was responsible for **the construction of the Great Western Railway**.",
+    "questions": [
+     "e16q20"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "twentieth-century-british-inventions",
+  "title": "20th-century British inventions",
+  "area": "History",
+  "theme": "Industrial Revolution & invention",
+  "hook": "Jet engines, television and Concorde — British invention did not stop with steam.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "The **jet engine** was developed in Britain in the 1930s by Sir Frank Whittle.",
+    "questions": [
+     "e1q21"
+    ]
+   },
+   {
+    "statement": "The **television** was developed by the Scotsman John Logie Baird in the 1920s.",
+    "questions": [
+     "e2q24"
+    ]
+   },
+   {
+    "statement": "**Britain** and **France** together developed Concorde, the world's only supersonic commercial airliner.",
+    "questions": [
+     "e3q10"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "victorian-trade-great-exhibition",
+  "title": "Victorian free trade & the Great Exhibition",
+  "area": "History",
+  "theme": "Industrial Revolution & invention",
+  "hook": "Import taxes fell and the Crystal Palace rose — free-trade Britain put itself on display in 1851.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Great_Exhibition",
+  "facts": [
+   {
+    "statement": "Victorian governments promoted free trade by **abolishing a number of taxes on imported goods**, such as repealing the Corn Laws in 1846.",
+    "questions": [
+     "e9q14"
+    ]
+   },
+   {
+    "statement": "The Great Exhibition of 1851 opened in Hyde Park in **the Crystal Palace**, a huge building made of steel and glass.",
+    "questions": [
+     "e9q23"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ireland-19th-century",
+  "title": "Ireland in the 19th century",
+  "area": "History",
+  "theme": "Industrial Revolution & invention",
+  "hook": "A failed potato crop cost a million lives, while Fenians pressed for complete independence from the UK.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Great_Famine_(Ireland)",
+  "facts": [
+   {
+    "statement": "In the middle of the 19th century the **potato** crop failed and Ireland suffered a famine in which a million people died.",
+    "questions": [
+     "e17q2"
+    ]
+   },
+   {
+    "statement": "The Irish Nationalist movement grew through the 19th century, and some, called the **Fenians**, favoured complete independence.",
+    "questions": [
+     "e15q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "american-independence",
+  "title": "American colonies win independence",
+  "area": "History",
+  "theme": "Empire, exploration, slavery & abolition",
+  "hook": "Tax colonists who have no say in Parliament and you may lose them — in 1776, thirteen colonies left.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/American_Revolution",
+  "facts": [
+   {
+    "statement": "The American colonies came to want independence because **the British government wanted to tax them**.",
+    "questions": [
+     "e3q18"
+    ]
+   },
+   {
+    "statement": "In 1776, 13 **North American** colonies declared their independence, demanding ‘no taxation without representation’.",
+    "questions": [
+     "e15q2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "trafalgar-and-waterloo",
+  "title": "Trafalgar & Waterloo",
+  "area": "History",
+  "theme": "Empire, exploration, slavery & abolition",
+  "hook": "Nelson fell winning at Trafalgar; Wellington finished Napoleon at Waterloo, the last battle between Britain and France.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Battle_of_Waterloo",
+  "facts": [
+   {
+    "statement": "**Admiral Nelson** was in charge of the British fleet at **the Battle of Trafalgar** and was killed in the battle.",
+    "questions": [
+     "e5q17",
+     "e14q6"
+    ]
+   },
+   {
+    "statement": "In 1815 the Duke of Wellington defeated the French Emperor Napoleon at **the Battle of Waterloo** — the last battle between Britain and **France**.",
+    "questions": [
+     "e4q1",
+     "e9q2",
+     "e13q16"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "abolition-of-slavery",
+  "title": "Abolition of slavery",
+  "area": "History",
+  "theme": "Empire, exploration, slavery & abolition",
+  "hook": "A politician's long campaign paid off in 1833, when the Emancipation Act freed the Empire's slaves.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833",
+  "facts": [
+   {
+    "statement": "In **1833** the Emancipation Act **abolished slavery throughout the British Empire**.",
+    "questions": [
+     "e7q12",
+     "e15q21"
+    ]
+   },
+   {
+    "statement": "William Wilberforce was **a politician** — a member of Parliament — who helped turn public opinion against the slave trade.",
+    "questions": [
+     "e13q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "empire-exploration-growth",
+  "title": "Exploration & the growing empire",
+  "area": "History",
+  "theme": "Empire, exploration, slavery & abolition",
+  "hook": "Elizabethan settlers in America, Cook charting Australia — an empire built on trade, and contested with France.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/British_Empire",
+  "facts": [
+   {
+    "statement": "In **Elizabeth I**'s time, English settlers first began to colonise the eastern coast of America.",
+    "questions": [
+     "e6q11"
+    ]
+   },
+   {
+    "statement": "Captain **James Cook** mapped the coast of Australia, and a few colonies were established there.",
+    "questions": [
+     "e14q11"
+    ]
+   },
+   {
+    "statement": "In the 18th century Britain's trading and settlements overseas brought conflict with **France**, which was expanding in the same areas of the world.",
+    "questions": [
+     "e17q12"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "crimean-war",
+  "title": "The Crimean War",
+  "area": "History",
+  "theme": "Empire, exploration, slavery & abolition",
+  "hook": "Britain, Turkey and France against Russia — the first war the public followed in news stories and photographs.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Crimean_War",
+  "facts": [
+   {
+    "statement": "From 1853 to 1856 Britain fought with Turkey and France against **Russia** in the Crimean War.",
+    "questions": [
+     "e11q23"
+    ]
+   },
+   {
+    "statement": "**The Crimean War** was the first war to be extensively covered by the media, through news stories and photographs.",
+    "questions": [
+     "e14q12"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "boer-war",
+  "title": "The Boer War, 1899-1902",
+  "area": "History",
+  "theme": "Empire, exploration, slavery & abolition",
+  "hook": "Settlers from the Netherlands — the Boers — held off the British Empire in South Africa for over three years.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Second_Boer_War",
+  "facts": [
+   {
+    "statement": "**The Boer War** of 1899 to 1902 took place in **South Africa**, then part of the British Empire.",
+    "questions": [
+     "e5q21",
+     "e9q10"
+    ]
+   },
+   {
+    "statement": "In South Africa the British fought settlers from the Netherlands called the **Boers**, who fought fiercely for over three years.",
+    "questions": [
+     "e17q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "suffragettes-and-votes-for-women",
+  "title": "The Suffragettes & Votes for Women",
+  "area": "History",
+  "theme": "Suffrage & women's rights (Suffragettes)",
+  "hook": "Pankhurst's suffragettes won the vote in steps — over-30s in 1918, equal at 21 in 1928 — with war work tipping the scales.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Suffragette",
+  "facts": [
+   {
+    "statement": "**Emmeline Pankhurst** was **a suffragette** — the leader of the suffragettes — and fought for **the right for women to vote**.",
+    "questions": [
+     "e3q20",
+     "e10q18",
+     "e11q22"
+    ]
+   },
+   {
+    "statement": "Campaigners for women's right to vote formed the women's suffrage movement and became known as the **suffragettes**.",
+    "questions": [
+     "e7q16"
+    ]
+   },
+   {
+    "statement": "In **1918** women over 30 were given the vote, partly **in recognition of the contribution women made to the war effort during the First World War**.",
+    "questions": [
+     "e2q5",
+     "e8q16",
+     "e10q7"
+    ]
+   },
+   {
+    "statement": "In **1928**, **women were given the right to vote at the age of 21, the same as men.**",
+    "questions": [
+     "e1q3",
+     "e4q11",
+     "e9q7"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "first-world-war",
+  "title": "The First World War",
+  "area": "History",
+  "theme": "First & Second World Wars",
+  "hook": "The assassination of Austria's Archduke in 1914 started it; the guns stopped at 11.00 am on 11th November 1918.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/World_War_I",
+  "facts": [
+   {
+    "statement": "The assassination of Archduke Franz Ferdinand of Austria in 1914 set off a chain of events leading to **the First World War**.",
+    "questions": [
+     "e7q10"
+    ]
+   },
+   {
+    "statement": "The First World War came to an end **in 1918** — **at 11.00 am on 11th November 1918** — with victory for Britain and its allies.",
+    "questions": [
+     "e10q21",
+     "e15q6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "second-world-war",
+  "title": "The Second World War",
+  "area": "History",
+  "theme": "First & Second World Wars",
+  "hook": "Germany invaded Poland in 1939; the RAF fought the Battle of Britain and small boats helped rescue over 300,000 men at Dunkirk.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/World_War_II",
+  "facts": [
+   {
+    "statement": "The Second World War began when Hitler's Germany invaded **Poland** in **1939**, and Britain and France declared war to stop his aggression.",
+    "questions": [
+     "e3q13",
+     "e5q24",
+     "e8q1"
+    ]
+   },
+   {
+    "statement": "**The Battle of Britain**, fought in the summer of 1940 by **the Royal Air Force**, was **an aerial battle** between Britain and Germany.",
+    "questions": [
+     "e6q14",
+     "e11q7",
+     "e13q13"
+    ]
+   },
+   {
+    "statement": "The 'Dunkirk spirit' recalls **the evacuation of Allied soldiers from France during World War II**, when small boats helped the Navy rescue over 300,000 men.",
+    "questions": [
+     "e12q17"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ireland-home-rule-to-republic",
+  "title": "Ireland: Home Rule to Republic",
+  "area": "History",
+  "theme": "20th-century & post-war Britain",
+  "hook": "Home Rule was promised in 1913, put on hold by world war — and in 1949 Ireland became a republic.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Republic_of_Ireland",
+  "facts": [
+   {
+    "statement": "Home Rule, promised for Ireland in 1913, was delayed until 1921 **due to the outbreak of the First World War**.",
+    "questions": [
+     "e6q22"
+    ]
+   },
+   {
+    "statement": "Ireland became a republic in **1949**.",
+    "questions": [
+     "e2q6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "admiral-nelson-trafalgar",
+  "title": "Admiral Nelson & Trafalgar",
+  "area": "History",
+  "theme": "Notable Britons & achievements",
+  "hook": "Nelson commanded the British fleet at Trafalgar against the combined French and Spanish fleet and was killed in the battle.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",
+  "facts": [
+   {
+    "statement": "**Admiral Nelson** was **a British officer in charge of the British fleet at the Battle of Trafalgar against the Spanish fleet** allied with the French.",
+    "questions": [
+     "e9q15",
+     "e12q4"
+    ],
+    "keyedNote": "The keyed option names only the Spanish fleet; Nelson in fact fought the combined French and Spanish fleet at Trafalgar."
+   }
+  ]
+ },
+ {
+  "id": "great-depression-britain",
+  "title": "The Great Depression in Britain",
+  "area": "History",
+  "theme": "20th-century & post-war Britain",
+  "hook": "In the 1930s slump Britain's traditional heavy industries — shipbuilding above all — were hit hardest.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Great_Depression",
+  "facts": [
+   {
+    "statement": "During the Great Depression of the 1930s, traditional heavy industries such as **shipbuilding** were badly affected.",
+    "questions": [
+     "e3q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "post-war-britain",
+  "title": "Post-war Britain",
+  "area": "History",
+  "theme": "20th-century & post-war Britain",
+  "hook": "Free secondary schools, a new United Nations, the Swinging Sixties and Concorde — how Britain changed from 1944 on.",
+  "wikiUrl": null,
+  "facts": [
+   {
+    "statement": "The United Nations, which aims to prevent war and promote international peace and security, was set up **after the Second World War.**",
+    "questions": [
+     "e16q1"
+    ]
+   },
+   {
+    "statement": "The Education Act 1944, often called 'the Butler Act', introduced **free secondary education in England and Wales**.",
+    "questions": [
+     "e9q21"
+    ]
+   },
+   {
+    "statement": "The **1960s**, the 'Swinging Sixties', saw **a growth in British fashion and pop music**, the rise of The Beatles, and liberalised social laws.",
+    "questions": [
+     "e8q21",
+     "e12q9"
+    ]
+   },
+   {
+    "statement": "Britain and **France** together developed Concorde, the world's only supersonic commercial airliner.",
+    "questions": [
+     "e14q22"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "the-commonwealth",
+  "title": "The Commonwealth",
+  "area": "History",
+  "theme": "Modern & contemporary Britain",
+  "hook": "Most Commonwealth members were once part of the British Empire; they work together on democracy and development.",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Commonwealth_of_Nations",
+  "facts": [
+   {
+    "statement": "The Commonwealth is **an association of countries that support each other and work together towards shared goals in democracy and development.**",
+    "questions": [
+     "e16q21"
+    ]
+   }
+  ]
+ }
+]
