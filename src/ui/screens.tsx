@@ -15,35 +15,91 @@ interface ScreenProps {
 
 const BOOKING_URL = "https://www.gov.uk/life-in-the-uk-test";
 
+/** Hand-drawn-feel line symbols: crown, teacup, Big Ben, bus, umbrella. */
+function Symbols() {
+  const s = { fill: "none", stroke: "currentColor", strokeWidth: 1.9, strokeLinecap: "round", strokeLinejoin: "round" } as const;
+  return (
+    <div className="symbol-row" aria-hidden="true">
+      {/* crown */}
+      <svg width="44" height="44" viewBox="0 0 44 44" {...{}}>
+        <path {...s} d="M8 30 L6 14 L14 21 L22 10 L30 21 L38 14 L36 30 Z" />
+        <path {...s} d="M8 34 H36" />
+      </svg>
+      {/* teacup */}
+      <svg className="accent" width="44" height="44" viewBox="0 0 44 44">
+        <path {...s} d="M8 18 H32 V26 a10 10 0 0 1 -10 10 h-4 a10 10 0 0 1 -10 -10 Z" />
+        <path {...s} d="M32 20 h3 a5 5 0 0 1 0 10 h-4" />
+        <path {...s} d="M15 12 c0 -2 2 -2 2 -4 M22 12 c0 -2 2 -2 2 -4" />
+      </svg>
+      {/* Big Ben */}
+      <svg width="44" height="52" viewBox="0 0 44 52">
+        <path {...s} d="M16 46 V14 H28 V46" />
+        <path {...s} d="M14 14 L22 5 L30 14" />
+        <circle {...s} cx="22" cy="22" r="4.5" />
+        <path {...s} d="M22 19.5 V22 L24 23.5" />
+        <path {...s} d="M12 46 H32" />
+      </svg>
+      {/* double-decker bus */}
+      <svg className="accent" width="52" height="44" viewBox="0 0 52 44">
+        <rect {...s} x="6" y="8" width="40" height="26" rx="4" />
+        <path {...s} d="M6 21 H46" />
+        <path {...s} d="M12 12.5 V17 M20 12.5 V17 M28 12.5 V17 M36 12.5 V17 M12 25.5 V30 M20 25.5 V30 M28 25.5 V30" />
+        <circle {...s} cx="15" cy="36" r="3.5" />
+        <circle {...s} cx="37" cy="36" r="3.5" />
+      </svg>
+      {/* umbrella */}
+      <svg width="44" height="44" viewBox="0 0 44 44">
+        <path {...s} d="M6 20 a16 16 0 0 1 32 0 Z" />
+        <path {...s} d="M22 20 V34 a4 4 0 0 0 8 0" />
+        <path {...s} d="M22 4 V7" />
+      </svg>
+    </div>
+  );
+}
+
 export function IntroScreen({ dispatch }: ScreenProps) {
   return (
     <Screen center>
-      <h1 className="title" style={{ fontSize: "1.9rem" }}>
-        Pass the Life in the UK test in about two focused hours.
+      <span className="kicker">Life in the UK test</span>
+      <h1 className="display" style={{ marginTop: "0.5rem" }}>
+        Two focused hours. Not a lost weekend.
       </h1>
-      <p>
-        Most people spend eight or more hours re-reading a 180-page handbook — most of it on things they
-        already know. This does it differently:
+      <Symbols />
+      <p style={{ margin: "0 0 0.25rem" }}>
+        Most people grind through a 180-page handbook — mostly re-reading things they already know. This
+        works the other way round:
       </p>
-      <ol style={{ margin: "0.75rem 0 0", paddingLeft: "1.25rem", display: "grid", gap: "0.6rem" }}>
+      <ol className="method">
         <li>
-          <strong>A fast pass over the easy stuff.</strong> Tap whether you already knew each fact — be
-          honest, it only changes what we practise. Six minutes, and it's off your list.
+          <span>
+            <strong>Clear the easy stuff first.</strong> A six-minute fast pass — tap whether you already
+            knew each fact. Be honest; it only changes what we practise.
+          </span>
         </li>
         <li>
-          <strong>Drill only what's left.</strong> Real questions in 7-minute blocks. A wrong answer is
-          good news — it flips into a short memory card, and we've found something worth your time.
+          <span>
+            <strong>Drill only what's left.</strong> Real questions in 7-minute blocks. Wrong answers flip
+            into short memory cards — that's the app finding what's worth your time.
+          </span>
         </li>
         <li>
-          <strong>A number you can trust.</strong> Once we've read you well enough, you get a live
-          percentage chance of passing — and when it hits 95%, we tell you to stop studying and book the
-          test.
+          <span>
+            <strong>Stop when the number says stop.</strong> A live, honest chance-of-passing. At 95% we
+            tell you to close this and book the test.
+          </span>
         </li>
       </ol>
-      <p className="muted" style={{ marginTop: "0.9rem" }}>
-        No streaks, no scores, nothing to sign up for. The exit is the point.
-      </p>
-      <div style={{ marginTop: "1.25rem" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "1.1rem", gap: "1rem" }}>
+        <p className="muted" style={{ margin: 0 }}>
+          No streaks. No scores. The exit is the point.
+        </p>
+        <span className="stamp">
+          24 questions
+          <br />
+          pass at 18
+        </span>
+      </div>
+      <div style={{ marginTop: "1.1rem" }}>
         <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
           Start the fast pass
         </button>
@@ -70,21 +126,24 @@ export function SpeedScreen({ bank, state, dispatch }: ScreenProps) {
   return (
     <Screen>
       <Hairline frac={(index + 1) / total} />
+      <p className="muted small" style={{ margin: "0.6rem 0 0", textAlign: "right" }}>
+        {index + 1} / {total}
+      </p>
       <div className="spacer" />
-      <div key={factId} className="speed-item">
-        <p className="stem" style={{ textAlign: "center" }}>
+      <div key={factId} className="speed-item speed-card">
+        <p className="stem" style={{ textAlign: "center", margin: 0 }}>
           <Bold text={fact.statement} />
         </p>
       </div>
-      <div className="spacer" />
-      <div>
-        <button className="btn" style={{ borderColor: "var(--ink-muted)" }} onClick={() => mark(true)}>
+      <div style={{ marginTop: "1.1rem" }}>
+        <button className="btn" onClick={() => mark(true)}>
           Knew it <span className="muted small" aria-hidden="true">&nbsp;(1)</span>
         </button>
         <button className="btn" onClick={() => mark(false)}>
           Not sure <span className="muted small" aria-hidden="true">&nbsp;(2)</span>
         </button>
       </div>
+      <div className="spacer" />
     </Screen>
   );
 }

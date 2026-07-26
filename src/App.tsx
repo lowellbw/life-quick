@@ -121,8 +121,8 @@ export default function App() {
 
   if (!state) {
     return (
-      <div className="screen">
-        <div className="screen-inner" style={{ justifyContent: "center", alignItems: "center" }}>
+      <div className="app-frame">
+        <div className="sheet" style={{ alignItems: "center", justifyContent: "center" }}>
           <p className="muted">Loading…</p>
         </div>
       </div>
@@ -130,16 +130,37 @@ export default function App() {
   }
 
   const Active = screenFor(state.screen.kind);
+  const started = state.screen.kind !== "intro";
   return (
-    <>
-      <TopBar account={account} onAccount={setAccount} />
-      <Active bank={bank} state={state} dispatch={dispatch} />
-      <div ref={liveRef} aria-live="polite" className="sr-only" />
-    </>
+    <div className="app-frame">
+      <div className="sheet">
+        <div className="topbar">
+          <span className="wordmark">Ready</span>
+          <span style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
+            {started && (
+              <button
+                className="btn quiet"
+                style={{ width: "auto", minHeight: 36, fontSize: "0.85rem" }}
+                onClick={() => {
+                  if (window.confirm("Start over from scratch? Your progress here will be erased.")) {
+                    dispatch({ type: "RESET_ALL", seed: freshSeed() });
+                  }
+                }}
+              >
+                Start over
+              </button>
+            )}
+            <AccountControl account={account} onAccount={setAccount} />
+          </span>
+        </div>
+        <Active bank={bank} state={state} dispatch={dispatch} />
+        <div ref={liveRef} aria-live="polite" className="sr-only" />
+      </div>
+    </div>
   );
 }
 
-function TopBar({
+function AccountControl({
   account,
   onAccount,
 }: {
@@ -151,7 +172,7 @@ function TopBar({
   const [sent, setSent] = useState<string | null>(null);
   if (!supabaseConfigured()) return null;
   return (
-    <div style={{ display: "flex", justifyContent: "flex-end", padding: "0.5rem 1rem 0" }}>
+    <div style={{ display: "flex", justifyContent: "flex-end" }}>
       {account ? (
         <button
           className="btn quiet"

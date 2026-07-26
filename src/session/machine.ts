@@ -147,6 +147,7 @@ export type Event =
   | { type: "MOCK_RESULTS_ACK"; nowMs: number }
   | { type: "GO_HOME"; nowMs: number }
   | { type: "GO_OUTCOME"; nowMs: number }
+  | { type: "RESET_ALL"; seed: number; nowMs: number }
   | { type: "KEEP_GOING"; nowMs: number }
   | { type: "RECHECK_MARK"; knew: boolean; nowMs: number }
   | { type: "OUTCOME_REPORT"; result: "passed" | "failed" | "not_yet"; nowMs: number };
@@ -532,6 +533,10 @@ export function reduce(s: UserState, ev: Event, bank: Bank): UserState {
 
     case "GO_OUTCOME":
       return { ...s, screen: { kind: "outcome" }, lastActiveAt: ev.nowMs };
+
+    case "RESET_ALL":
+      // start over from nothing — new seed, clean slate
+      return initialState(ev.seed, ev.nowMs);
 
     case "KEEP_GOING":
       return { ...s, keepGoingChosen: true, screen: { kind: "keep_going" } };
