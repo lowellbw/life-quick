@@ -1,4 +1,4 @@
-/* Ready design tokens — editorial British: a deep navy field with an ivory
+/* Ready design tokens — editorial British: a deep navy field with a white
    sheet, Fraunces for the words that matter, Space Grotesk for the controls.
    Colour still carries meaning: amber marks attention (never red-as-error),
    green confirms quietly, red is reserved for action and accent. */
@@ -8,8 +8,8 @@
 :root {
   --field: #131c33; /* page background behind the sheet */
   --field-deep: #0d1426;
-  --paper: #f6f1e6; /* the sheet */
-  --surface: #fdfbf5;
+  --paper: #ffffff; /* the sheet */
+  --surface: #ffffff;
   --ink: #1a2238;
   --ink-muted: #5c617a;
   --red: #c8102e; /* action + accent */
@@ -19,7 +19,7 @@
   --green-soft: #e2ede6;
   --amber: #c98a2e; /* attention, where red would be conventional */
   --amber-soft: #f6ead2;
-  --border: #ddd5c2;
+  --border: #e3e3e0;
 
   --serif: "Fraunces Variable", "Fraunces", Georgia, serif;
   --sans: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
@@ -308,7 +308,7 @@ button {
 .meter-bar {
   height: 10px;
   border-radius: 6px;
-  background: #e8e2d2;
+  background: #ececec;
   overflow: hidden;
 }
 
@@ -478,7 +478,7 @@ button {
 /* ---------- misc ---------- */
 .hairline {
   height: 3px;
-  background: #e8e2d2;
+  background: #ececec;
   border-radius: 2px;
   overflow: hidden;
 }
