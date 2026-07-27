@@ -19,25 +19,6 @@
     });
   }
 
-  // Reveal-on-scroll
-  var revealed = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealed.length) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-    revealed.forEach(function (el) { observer.observe(el); });
-  } else {
-    revealed.forEach(function (el) { el.classList.add("visible"); });
-  }
-
   // Keep the copyright year current
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
