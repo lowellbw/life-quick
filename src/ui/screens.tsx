@@ -61,8 +61,10 @@ export function IntroScreen({ dispatch }: ScreenProps) {
   return (
     <Screen center>
       <span className="kicker">Life in the UK test</span>
-      <h1 className="display" style={{ marginTop: "0.5rem" }}>
-        Two focused hours. Not a lost weekend.
+      <h1 className="display" style={{ marginTop: "0.85rem" }}>
+        Two focused hours.
+        <br />
+        <span className="pop">Not a lost weekend.</span>
       </h1>
       <Symbols />
       <p style={{ margin: "0 0 0.25rem" }}>
@@ -93,11 +95,7 @@ export function IntroScreen({ dispatch }: ScreenProps) {
         <p className="muted" style={{ margin: 0 }}>
           No streaks. No scores. The exit is the point.
         </p>
-        <span className="stamp">
-          24 questions
-          <br />
-          pass at 18
-        </span>
+        <span className="stamp">24 questions · pass at 18</span>
       </div>
       <div style={{ marginTop: "1.1rem" }}>
         <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
