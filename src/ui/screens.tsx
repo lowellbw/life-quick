@@ -60,47 +60,74 @@ function Symbols() {
 export function IntroScreen({ dispatch }: ScreenProps) {
   return (
     <Screen center>
-      <span className="kicker">Life in the UK test</span>
-      <h1 className="display" style={{ marginTop: "0.85rem" }}>
-        Two focused hours.
-        <br />
-        <span className="pop">Not a lost weekend.</span>
-      </h1>
-      <Symbols />
-      <p style={{ margin: "0 0 0.25rem" }}>
-        Most people grind through a 180-page handbook — mostly re-reading things they already know. This
-        works the other way round:
-      </p>
-      <ol className="method">
+      <div className="hero">
+        <div>
+          <span className="kicker">Life in the UK test</span>
+          <h1 className="display" style={{ marginTop: "0.85rem" }}>
+            Study less.
+            <br />
+            <span className="pop">Know your odds.</span>
+          </h1>
+          <p style={{ margin: "1rem 0 0", fontSize: "1.05rem" }}>
+            Skip the 180-page handbook. Ready measures what you actually know, drills only the gaps, and
+            gives you a live chance of passing — most people are done in about two hours.
+          </p>
+          <div className="hero-cta-row">
+            <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
+              Start the fast pass
+            </button>
+            <span className="muted small">6 minutes · nothing to sign up for</span>
+          </div>
+        </div>
+        <div className="hero-preview" aria-hidden="true">
+          <span className="preview-caption">where this ends</span>
+          <p className="preview-label">Right now, you'd have</p>
+          <div className="preview-number">
+            95<span className="pct">%</span>
+          </div>
+          <p className="preview-label" style={{ marginTop: "0.25rem" }}>
+            chance of passing · based on 141 answers
+          </p>
+          <div className="preview-bar">
+            <div />
+          </div>
+          <span className="preview-verdict">✓ You're ready — go book it</span>
+        </div>
+      </div>
+      <ol className="howworks">
         <li>
           <span>
-            <strong>Clear the easy stuff first.</strong> A six-minute fast pass — tap whether you already
-            knew each fact. Be honest; it only changes what we practise.
+            <strong>Clear the easy stuff.</strong> A six-minute fast pass — tap whether you already knew
+            each fact. Be honest; it only changes what we practise.
           </span>
         </li>
         <li>
           <span>
             <strong>Drill only what's left.</strong> Real questions in 7-minute blocks. Wrong answers flip
-            into short memory cards — that's the app finding what's worth your time.
+            into short memory cards.
           </span>
         </li>
         <li>
           <span>
-            <strong>Stop when the number says stop.</strong> A live, honest chance-of-passing. At 95% we
-            tell you to close this and book the test.
+            <strong>Stop when the number says stop.</strong> At your target we tell you to close this and
+            book the real thing — 24 questions, pass at 18.
           </span>
         </li>
       </ol>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "1.1rem", gap: "1rem" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "1rem",
+          marginTop: "0.9rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <Symbols />
         <p className="muted" style={{ margin: 0 }}>
           No streaks. No scores. The exit is the point.
         </p>
-        <span className="stamp">24 questions · pass at 18</span>
-      </div>
-      <div style={{ marginTop: "1.1rem" }}>
-        <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
-          Start the fast pass
-        </button>
       </div>
     </Screen>
   );
