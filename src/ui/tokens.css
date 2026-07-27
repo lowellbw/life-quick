@@ -664,6 +664,73 @@ button {
   padding-inline: 2.1rem;
 }
 
+/* ---------- intro panels ---------- */
+.mini-demo {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 22rem;
+}
+
+.mini-q {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mini-opt {
+  flex: 1;
+  text-align: center;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--surface);
+}
+
+.mini-opt.wrong {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+.mini-card {
+  border: 1.5px solid var(--amber);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 0.8rem 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  box-shadow: 0 10px 26px rgba(23, 23, 31, 0.08);
+}
+
+.mini-card strong {
+  background: var(--amber-soft);
+  padding: 0 0.15em;
+  border-radius: 4px;
+}
+
+.mini-card .mini-hook {
+  display: block;
+  color: var(--ink-muted);
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.guarantee {
+  margin: 1rem 0 0;
+  font-weight: 650;
+  font-size: 0.98rem;
+  border-left: 3px solid var(--accent);
+  padding: 0.35rem 0 0.35rem 0.8rem;
+}
+
+.micro-row {
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+  text-align: center;
+  margin: 0.65rem 0 0;
+}
+
 /* ---------- misc ---------- */
 .hairline {
   height: 4px;

@@ -1,10 +1,10 @@
 /** All screens. Copy voice: plain, brief, second person, no exclamation marks. */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { Bank } from "../content/types";
 import type { Screen as MachineScreen, UiEvent, UserState } from "../session/machine";
 import { factById, meterView, variantById } from "../session/machine";
 import { TUNING } from "../model/tuning";
-import { Bold, Hairline, MemoryCard, Meter, Screen } from "./components";
+import { Bold, Dots, Hairline, MemoryCard, Meter, Screen } from "./components";
 import { Question } from "./Question";
 
 interface ScreenProps {
@@ -58,82 +58,91 @@ function Symbols() {
 }
 
 export function IntroScreen({ dispatch }: ScreenProps) {
+  const [panel, setPanel] = useState(0);
+  const last = 2;
   return (
     <Screen center>
-      <div className="hero">
-        <div>
-          <span className="kicker">Life in the UK test</span>
-          <h1 className="display" style={{ marginTop: "0.85rem" }}>
-            Study less.
-            <br />
-            <span className="pop">Know your odds.</span>
-          </h1>
-          <p style={{ margin: "1rem 0 0", fontSize: "1.02rem" }}>
-            Ready keeps a probability estimate for every fact on the syllabus and simulates the real
-            24-question exam against it. You see your actual chance of passing, study only the facts the
-            model says you're missing, and stop the moment more study stops paying. Most people: about two
-            hours.
-          </p>
-          <div className="hero-cta-row">
-            <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
-              Start the fast pass
-            </button>
-            <span className="muted small">6-minute calibration · no account needed</span>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        {panel === 0 && (
+          <div className="enter">
+            <span className="kicker">Life in the UK test</span>
+            <h1 className="display" style={{ marginTop: "0.85rem" }}>
+              Everything you need to pass.
+              <br />
+              <span className="pop">In under two hours.</span>
+            </h1>
+            <p style={{ margin: "1.1rem 0 0", fontSize: "1.05rem" }}>
+              No handbook, no notes — and a clear signal the moment you're done.
+            </p>
+            <div style={{ marginTop: "1.2rem" }}>
+              <Symbols />
+            </div>
           </div>
-        </div>
-        <div className="hero-preview" aria-hidden="true">
-          <span className="preview-caption">where this ends</span>
-          <p className="preview-label">Right now, you'd have</p>
-          <div className="preview-number">
-            95<span className="pct">%</span>
+        )}
+        {panel === 1 && (
+          <div className="enter">
+            <h1 className="title" style={{ fontSize: "2rem" }}>
+              It's just multiple choice.
+            </h1>
+            <p style={{ margin: "0.5rem 0 1.1rem", fontSize: "1.02rem" }}>
+              You answer real test questions. Get one wrong and we show you the fact — with a hook that
+              makes it stick — then ask again until it does. That's the entire method.
+            </p>
+            <div className="mini-demo" aria-hidden="true">
+              <div className="mini-q">
+                <span className="mini-opt">1918</span>
+                <span className="mini-opt wrong">1912</span>
+                <span className="mini-opt">1928</span>
+              </div>
+              <div className="mini-card">
+                In <strong>1918</strong> women over 30 got the vote — equal at 21 came in <strong>1928</strong>.
+                <span className="mini-hook">War work tipped the scales.</span>
+              </div>
+            </div>
           </div>
-          <p className="preview-label" style={{ marginTop: "0.25rem" }}>
-            chance of passing · 1,500 simulated exams · 141 answers observed
-          </p>
-          <div className="preview-bar">
-            <div />
+        )}
+        {panel === 2 && (
+          <div className="enter">
+            <h1 className="title" style={{ fontSize: "2rem" }}>
+              You'll know exactly when you're ready.
+            </h1>
+            <p style={{ margin: "0.5rem 0 1.1rem", fontSize: "1.02rem" }}>
+              Every answer updates a model of what you know, and we simulate the real 24-question exam
+              against it — about 1,500 times per update. When it says you're ready, book the test.
+            </p>
+            <div className="hero-preview" style={{ transform: "none", maxWidth: "22rem" }} aria-hidden="true">
+              <p className="preview-label">Right now, you'd have</p>
+              <div className="preview-number">
+                95<span className="pct">%</span>
+              </div>
+              <div className="preview-bar">
+                <div />
+              </div>
+              <span className="preview-verdict">✓ You're ready — go book it</span>
+            </div>
+            <p className="guarantee">
+              If we call you ready and you fail, we cover your £50 retake.
+            </p>
           </div>
-          <span className="preview-verdict">✓ You're ready — go book it</span>
-        </div>
+        )}
       </div>
-      <ol className="howworks">
-        <li>
-          <span>
-            <strong>Calibrate.</strong> A six-minute pass over the easier half of the syllabus sets a
-            baseline for what you already know. Self-reports are quietly spot-checked with real questions
-            later, so the estimate stays honest.
-          </span>
-        </li>
-        <li>
-          <span>
-            <strong>Drill by expected value.</strong> Every answer updates the model, and the next
-            question is always the one that raises your pass probability most per second. Misses flip
-            into memory cards and come back at spaced intervals — minutes, not days, because your test is
-            soon.
-          </span>
-        </li>
-        <li>
-          <span>
-            <strong>Stop at the threshold.</strong> We simulate the full exam — 24 questions, pass at
-            18 — about 1,500 times against your model. Once your estimated chance clears 95%, another
-            hour of study buys almost nothing, and we tell you to book the real thing.
-          </span>
-        </li>
-      </ol>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "1rem",
-          marginTop: "0.9rem",
-          flexWrap: "wrap",
-        }}
-      >
-        <Symbols />
-        <p className="muted" style={{ margin: 0 }}>
-          No streaks. No scores. The exit is the point.
-        </p>
+      <div style={{ marginTop: "1.2rem" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
+          <Dots total={3} on={panel} />
+          {panel < last ? (
+            <button className="btn quiet" style={{ width: "auto" }} onClick={() => setPanel(panel + 1)}>
+              {panel === 0 ? "How it works →" : "One more thing →"}
+            </button>
+          ) : (
+            <button className="btn quiet" style={{ width: "auto" }} onClick={() => setPanel(0)}>
+              ← Back
+            </button>
+          )}
+        </div>
+        <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
+          Start the fast pass
+        </button>
+        <p className="micro-row">6-minute calibration · ~2 hours total · no account · 24 questions, pass at 18</p>
       </div>
     </Screen>
   );
