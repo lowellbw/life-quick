@@ -68,15 +68,17 @@ export function IntroScreen({ dispatch }: ScreenProps) {
             <br />
             <span className="pop">Know your odds.</span>
           </h1>
-          <p style={{ margin: "1rem 0 0", fontSize: "1.05rem" }}>
-            Skip the 180-page handbook. Ready measures what you actually know, drills only the gaps, and
-            gives you a live chance of passing — most people are done in about two hours.
+          <p style={{ margin: "1rem 0 0", fontSize: "1.02rem" }}>
+            Ready keeps a probability estimate for every fact on the syllabus and simulates the real
+            24-question exam against it. You see your actual chance of passing, study only the facts the
+            model says you're missing, and stop the moment more study stops paying. Most people: about two
+            hours.
           </p>
           <div className="hero-cta-row">
             <button className="btn primary" onClick={() => dispatch({ type: "SPEED_START" })}>
               Start the fast pass
             </button>
-            <span className="muted small">6 minutes · nothing to sign up for</span>
+            <span className="muted small">6-minute calibration · no account needed</span>
           </div>
         </div>
         <div className="hero-preview" aria-hidden="true">
@@ -86,7 +88,7 @@ export function IntroScreen({ dispatch }: ScreenProps) {
             95<span className="pct">%</span>
           </div>
           <p className="preview-label" style={{ marginTop: "0.25rem" }}>
-            chance of passing · based on 141 answers
+            chance of passing · 1,500 simulated exams · 141 answers observed
           </p>
           <div className="preview-bar">
             <div />
@@ -97,20 +99,24 @@ export function IntroScreen({ dispatch }: ScreenProps) {
       <ol className="howworks">
         <li>
           <span>
-            <strong>Clear the easy stuff.</strong> A six-minute fast pass — tap whether you already knew
-            each fact. Be honest; it only changes what we practise.
+            <strong>Calibrate.</strong> A six-minute pass over the easier half of the syllabus sets a
+            baseline for what you already know. Self-reports are quietly spot-checked with real questions
+            later, so the estimate stays honest.
           </span>
         </li>
         <li>
           <span>
-            <strong>Drill only what's left.</strong> Real questions in 7-minute blocks. Wrong answers flip
-            into short memory cards.
+            <strong>Drill by expected value.</strong> Every answer updates the model, and the next
+            question is always the one that raises your pass probability most per second. Misses flip
+            into memory cards and come back at spaced intervals — minutes, not days, because your test is
+            soon.
           </span>
         </li>
         <li>
           <span>
-            <strong>Stop when the number says stop.</strong> At your target we tell you to close this and
-            book the real thing — 24 questions, pass at 18.
+            <strong>Stop at the threshold.</strong> We simulate the full exam — 24 questions, pass at
+            18 — about 1,500 times against your model. Once your estimated chance clears 95%, another
+            hour of study buys almost nothing, and we tell you to book the real thing.
           </span>
         </li>
       </ol>
