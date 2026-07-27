@@ -581,7 +581,7 @@ a:hover { text-decoration: underline; }
     radial-gradient(1000px 460px at 90% -20%, hsla(83, 100%, 75%, 0.12), transparent 60%),
     var(--navy-900);
   color: var(--white);
-  padding-block: 84px;
+  padding-block: 84px 48px;
 }
 .page-hero h1 {
   font-size: clamp(2.2rem, 4.5vw, 3.2rem);
@@ -593,6 +593,25 @@ a:hover { text-decoration: underline; }
   color: hsla(0, 0%, 100%, 0.8);
   max-width: 40em;
   margin: 0;
+}
+
+.page-banner {
+  background: var(--navy-900);
+  padding-bottom: 72px;
+}
+.page-banner figure { margin: 0; }
+.page-banner img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid hsla(0, 0%, 100%, 0.12);
+  box-shadow: var(--shadow-lg);
+}
+.page-banner figcaption {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: hsla(0, 0%, 100%, 0.6);
 }
 
 .patron-card {
