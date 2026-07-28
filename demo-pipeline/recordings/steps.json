@@ -1,0 +1,32 @@
+[
+  {
+    "id": "launch",
+    "castStart": 0.004,
+    "castEnd": 5.266
+  },
+  {
+    "id": "create-command",
+    "castStart": 5.266,
+    "castEnd": 43.579
+  },
+  {
+    "id": "restart",
+    "castStart": 43.58,
+    "castEnd": 50.945
+  },
+  {
+    "id": "run-briefing",
+    "castStart": 50.945,
+    "castEnd": 64.861
+  },
+  {
+    "id": "schedule",
+    "castStart": 64.861,
+    "castEnd": 92.457
+  },
+  {
+    "id": "outro",
+    "castStart": 93.958,
+    "castEnd": 94.958
+  }
+]

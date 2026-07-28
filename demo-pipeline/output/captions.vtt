@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:01.500 --> 00:00:02.950
+Open your terminal and type “claude”. This is a real Claude session — everything you're about to see is live.
+
+2
+00:00:02.950 --> 00:00:23.901
+Step 1 — Ask in plain English for a reusable /briefing command. Claude writes it and saves it to .claude/commands.
+
+3
+00:00:23.901 --> 00:00:27.819
+Restart Claude — custom commands are loaded at startup.
+
+4
+00:00:27.819 --> 00:00:38.639
+Step 2 — Run /briefing. Claude reads your calendar, to-dos and inbox, and delivers your morning briefing.
+
+5
+00:00:38.639 --> 00:00:55.290
+Step 3 — Ask Claude to write the schedule: every weekday at 9am, the briefing arrives automatically.
+
+6
+00:00:55.290 --> 00:01:01.290
+That's it — a daily morning briefing in Claude, built in one short conversation.

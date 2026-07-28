@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make a daily briefing in Claude</title><style>
+body { font-family: system-ui, sans-serif; margin:0; background:#0d1420; color:#e8edf5; }
+main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
+h1 { font-size: 30px; } h2 { margin-top: 36px; border-bottom: 1px solid #2a3648; padding-bottom: 6px; }
+video { width: 100%; border-radius: 10px; border: 1px solid #2a3648; background:#000; }
+pre { background:#141b28; border:1px solid #2a3648; border-radius:8px; padding:14px; overflow-x:auto; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 14px; color:#c6d0de; }
+.stamp { color:#7d8a9c; font-size: 14px; margin: 10px 0 26px; }
+a { color:#7aa2f7; }
+em { color:#9aa7b8; }
+</style></head><body><main>
+<h1>Make a daily briefing in Claude</h1>
+<p class="stamp">Auto-generated from a live Claude session &middot; verified as of 2026-07-28 &middot; captions and <a href="../output/transcript.md">transcript</a> included</p>
+<video controls preload="metadata">
+  <source src="../output/daily-briefing.mp4" type="video/mp4">
+  <source src="../output/daily-briefing.webm" type="video/webm">
+  <track kind="captions" src="../output/captions.vtt" srclang="en" label="English" default>
+</video>
+<h1>Make a daily briefing in Claude — written guide</h1>
+
+<p>Teach a learner to build a reusable /briefing command in Claude Code, run it, and schedule it every weekday at 9am.</p>
+
+<p><em>This guide was generated from the same live Claude session as the video.</em></p>
+
+<h2>Steps</h2>
+
+<h3>1. Open your terminal and type “claude”. This is a real Claude session — everything you're about to see is live.</h3>
+
+<h3>2. Step 1 — Ask in plain English for a reusable /briefing command. Claude writes it and saves it to .claude/commands.</h3>
+
+<p>Type into Claude:</p>
+
+<pre><code>
+Create a slash command called /briefing that reads calendar.md, todo.md and inbox.md and gives me a punchy one-minute morning briefing: today's meetings, my top 3 priorities, and anything urgent from my inbox. Keep it under 150 words.
+</code></pre>
+
+<h3>3. Restart Claude — custom commands are loaded at startup.</h3>
+
+<h3>4. Step 2 — Run /briefing. Claude reads your calendar, to-dos and inbox, and delivers your morning briefing.</h3>
+
+<p>Type into Claude:</p>
+
+<pre><code>
+/briefing
+</code></pre>
+
+<h3>5. Step 3 — Ask Claude to write the schedule: every weekday at 9am, the briefing arrives automatically.</h3>
+
+<p>Type into Claude:</p>
+
+<pre><code>
+Save the exact cron line for my laptop into a new file called schedule.cron (just create that one file, don't run anything) so this briefing saves into briefings/ automatically every weekday at 9am.
+</code></pre>
+
+<h2>What Claude created</h2>
+
+<p><code>.claude/commands/briefing.md</code>:</p>
+
+<pre><code>
+---
+description: Punchy one-minute morning briefing from calendar, todo, and inbox
+---
+
+Read `calendar.md`, `todo.md`, and `inbox.md` in the current directory, then produce a punchy morning briefing under 150 words total, formatted as:
+
+**Today's Meetings** — each calendar entry as a terse one-liner (time + what), in chronological order.
+
+**Top 3 Priorities** — the 3 things that matter most today, synthesized from todo.md and any deadlines in calendar.md. Cross-reference: if inbox.md changes a deadline or urgency for something in todo.md, use the updated info and flag the conflict briefly.
+
+**Urgent from Inbox** — only items marked urgent or time-critical (skip newsletters/FYI-only items).
+
+Rules:
+- Total output must be under 150 words. Be terse — fragments over full sentences.
+- No preamble, no meta-commentary, no "here's your briefing" — just the briefing.
+- If a deadline conflicts between files (e.g. inbox moves a time earlier), call it out explicitly and briefly.
+</code></pre>
+
+<p>The schedule line for your crontab (<code>crontab -e</code>):</p>
+
+<pre><code>
+0 9 * * 1-5 cd /home/user/briefing-demo &amp;&amp; claude -p "/briefing" &gt; briefings/$(date +\%Y-\%m-\%d).md 2&gt;&amp;1
+</code></pre>
+
+</main></body></html>

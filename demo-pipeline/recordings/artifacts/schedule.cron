@@ -1,0 +1,1 @@
+0 9 * * 1-5 cd /home/user/briefing-demo && claude -p "/briefing" > briefings/$(date +\%Y-\%m-\%d).md 2>&1

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "launch",
+    "text": "Open your terminal and type “claude”. This is a real Claude session — everything you're about to see is live.",
+    "start": 1.5,
+    "end": 2.95
+  },
+  {
+    "id": "create-command",
+    "text": "Step 1 — Ask in plain English for a reusable /briefing command. Claude writes it and saves it to .claude/commands.",
+    "start": 2.95,
+    "end": 23.900617283950606
+  },
+  {
+    "id": "restart",
+    "text": "Restart Claude — custom commands are loaded at startup.",
+    "start": 23.900617283950606,
+    "end": 27.819150888838593
+  },
+  {
+    "id": "run-briefing",
+    "text": "Step 2 — Run /briefing. Claude reads your calendar, to-dos and inbox, and delivers your morning briefing.",
+    "start": 27.819150888838593,
+    "end": 38.63915088883859
+  },
+  {
+    "id": "schedule",
+    "text": "Step 3 — Ask Claude to write the schedule: every weekday at 9am, the briefing arrives automatically.",
+    "start": 38.63915088883859,
+    "end": 55.28975242529321
+  },
+  {
+    "id": "outro",
+    "text": "That's it — a daily morning briefing in Claude, built in one short conversation.",
+    "start": 55.28975242529321,
+    "end": 61.28975242529321
+  }
+]

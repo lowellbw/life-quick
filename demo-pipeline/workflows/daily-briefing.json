@@ -1,0 +1,67 @@
+{
+  "id": "daily-briefing",
+  "title": "Make a daily briefing in Claude",
+  "surface": "claude-code-cli",
+  "description": "Teach a learner to build a reusable /briefing command in Claude Code, run it, and schedule it every weekday at 9am.",
+  "workdirName": "briefing-demo",
+  "artifacts": [".claude/commands/briefing.md", "schedule.cron"],
+  "seedFiles": {
+    "calendar.md": "# Calendar — today\n\n- 09:30  Policy team stand-up (Teams)\n- 11:00  1:1 with director — AI skills programme\n- 14:00  Cross-department working group: digital inclusion\n- 16:30  DEADLINE: submit briefing note on procurement reform\n",
+    "todo.md": "# To-do\n\n- [ ] Draft procurement reform briefing note (due today)\n- [ ] Review feedback on the AI course pilot\n- [ ] Book venue for September away day\n- [ ] Chase data-sharing agreement sign-off\n- [ ] Update team wiki with new starter guide\n",
+    "inbox.md": "# Inbox highlights\n\n- URGENT — Director's office: procurement note now needed by 15:00, not 17:00\n- HR: mandatory security training expires Friday\n- Comms: quote requested for digital inclusion press release\n- Newsletter: AI in government weekly digest\n"
+  },
+  "steps": [
+    {
+      "id": "launch",
+      "kind": "launch",
+      "narration": "Open your terminal and type “claude”. This is a real Claude session — everything you're about to see is live.",
+      "targetSeconds": 7
+    },
+    {
+      "id": "create-command",
+      "kind": "prompt",
+      "input": "Create a slash command called /briefing that reads calendar.md, todo.md and inbox.md and gives me a punchy one-minute morning briefing: today's meetings, my top 3 priorities, and anything urgent from my inbox. Keep it under 150 words.",
+      "narration": "Step 1 — Ask in plain English for a reusable /briefing command. Claude writes it and saves it to .claude/commands.",
+      "targetSeconds": 22,
+      "markers": [
+        { "type": "fileExists", "path": ".claude/commands/briefing.md" },
+        { "type": "castIncludes", "text": "briefing.md" }
+      ]
+    },
+    {
+      "id": "restart",
+      "kind": "restart",
+      "narration": "Restart Claude — custom commands are loaded at startup.",
+      "targetSeconds": 6
+    },
+    {
+      "id": "run-briefing",
+      "kind": "prompt",
+      "input": "/briefing",
+      "narration": "Step 2 — Run /briefing. Claude reads your calendar, to-dos and inbox, and delivers your morning briefing.",
+      "targetSeconds": 22,
+      "markers": [
+        { "type": "castIncludesAny", "texts": ["priorit", "Priorit"] },
+        { "type": "castIncludesAny", "texts": ["urgent", "Urgent", "URGENT"] }
+      ]
+    },
+    {
+      "id": "schedule",
+      "kind": "prompt",
+      "input": "Save the exact cron line for my laptop into a new file called schedule.cron (just create that one file, don't run anything) so this briefing saves into briefings/ automatically every weekday at 9am.",
+      "narration": "Step 3 — Ask Claude to write the schedule: every weekday at 9am, the briefing arrives automatically.",
+      "targetSeconds": 18,
+      "markers": [
+        { "type": "fileExists", "path": "schedule.cron" },
+        { "type": "castIncludesAny", "texts": ["09**1-5", "09***1-5"] },
+        { "type": "castIncludes", "text": "cron" }
+      ]
+    },
+    {
+      "id": "outro",
+      "kind": "outro",
+      "narration": "That's it — a daily morning briefing in Claude, built in one short conversation.",
+      "targetSeconds": 6
+    }
+  ]
+}

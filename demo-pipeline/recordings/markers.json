@@ -1,0 +1,68 @@
+[
+  {
+    "step": "create-command",
+    "marker": {
+      "type": "fileExists",
+      "path": ".claude/commands/briefing.md"
+    },
+    "ok": true
+  },
+  {
+    "step": "create-command",
+    "marker": {
+      "type": "castIncludes",
+      "text": "briefing.md"
+    },
+    "ok": true
+  },
+  {
+    "step": "run-briefing",
+    "marker": {
+      "type": "castIncludesAny",
+      "texts": [
+        "priorit",
+        "Priorit"
+      ]
+    },
+    "ok": true
+  },
+  {
+    "step": "run-briefing",
+    "marker": {
+      "type": "castIncludesAny",
+      "texts": [
+        "urgent",
+        "Urgent",
+        "URGENT"
+      ]
+    },
+    "ok": true
+  },
+  {
+    "step": "schedule",
+    "marker": {
+      "type": "fileExists",
+      "path": "schedule.cron"
+    },
+    "ok": true
+  },
+  {
+    "step": "schedule",
+    "marker": {
+      "type": "castIncludesAny",
+      "texts": [
+        "09**1-5",
+        "09***1-5"
+      ]
+    },
+    "ok": true
+  },
+  {
+    "step": "schedule",
+    "marker": {
+      "type": "castIncludes",
+      "text": "cron"
+    },
+    "ok": true
+  }
+]
