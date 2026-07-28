@@ -1,0 +1,14 @@
+{
+  "comment": "Surface config for the REAL claude.ai website. Requirements: (1) network access to claude.ai — the build sandbox's egress policy blocks it (connection reset), so run this on a normal machine or CI with open egress; (2) a logged-in session for a DEDICATED TEST ACCOUNT exported to surfaces/web/storage-state.json (npx playwright codegen --save-storage=surfaces/web/storage-state.json https://claude.ai — log in, then close; never commit that file). Selectors are best-guess until calibrated: run the driver with --probe while logged in, read probe.png + the selector dump, and update below. Config-only calibration, same as the desktop surface.",
+  "url": "https://claude.ai/new",
+  "storageState": "surfaces/web/storage-state.json",
+  "recipe": "workflows/daily-briefing-desktop.json",
+  "selectors": {
+    "input": "div[contenteditable=\"true\"][aria-label], div[contenteditable=\"true\"], textarea",
+    "send": "button[aria-label*=\"Send\" i], [data-testid=\"send-button\"]",
+    "assistantMessage": "[data-testid=\"assistant-message\"], [data-message-author=\"assistant\"], .font-claude-message",
+    "streaming": "[data-is-streaming=\"true\"], button[aria-label*=\"Stop\" i], [data-testid=\"stop-button\"]"
+  },
+  "timing": { "typeDelayMs": 45, "settleMs": 3000, "stepTimeoutMs": 240000, "pageSettleMs": 4000 },
+  "output": { "dir": "output-web", "video": "daily-briefing-web" }
+}

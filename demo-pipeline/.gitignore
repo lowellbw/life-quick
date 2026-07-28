@@ -4,3 +4,6 @@ node_modules/
 recordings/replay.html
 output-desktop/
 output-desktop-poc/
+output-web/
+output-web-poc/
+surfaces/web/storage-state.json

@@ -90,6 +90,23 @@ only, never publishable content):
 xvfb-run -a node surfaces/desktop/record-desktop.js --config surfaces/desktop/rig-config.json
 ```
 
+## Third surface: Claude in the browser (real claude.ai)
+
+`surfaces/web/` drives **real claude.ai in a real browser** with Playwright: same recipe,
+typed prompts, streaming-aware completion detection, burned-in captions, marker-gated
+takes, video via Playwright's recorder. It needs two things this build sandbox doesn't
+have — network egress to claude.ai (the sandbox policy blocks it) and a logged-in
+**test-account** session (`storage-state.json`, gitignored) — so the real-site take runs
+on a normal machine: see `surfaces/web/SETUP-WEB.md`, or paste
+`surfaces/web/LOCAL-RUN-PROMPT-WEB.md` into a local Claude Code session and let it do the
+calibration and recording.
+
+```bash
+npm run web:probe   # calibrate: screenshot + selector dump of the logged-in site
+npm run web         # record the take → output-web/
+npm run web:poc     # stand-in page with LIVE claude-CLI responses (badged PoC render)
+```
+
 ## Repo layout
 
 ```

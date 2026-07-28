@@ -1,0 +1,13 @@
+{
+  "comment": "Points the web driver at the local PoC chat page: our page, LIVE Claude responses via the authenticated CLI. The page's URL bar shows its real localhost address and it badges itself as a PoC render. Use where claude.ai is unreachable (this build sandbox blocks it) or no test-account session exists.",
+  "url": "http://127.0.0.1:8787/",
+  "server": { "command": "node", "args": ["surfaces/web/poc/server.cjs"] },
+  "recipe": "workflows/daily-briefing-desktop.json",
+  "selectors": {
+    "input": "[data-testid=\"chat-input\"]",
+    "assistantMessage": "[data-message-author=\"assistant\"]",
+    "streaming": "[data-is-streaming=\"true\"]"
+  },
+  "timing": { "typeDelayMs": 35, "settleMs": 2500, "stepTimeoutMs": 240000, "pageSettleMs": 1000 },
+  "output": { "dir": "output-web-poc", "video": "daily-briefing-web-poc" }
+}

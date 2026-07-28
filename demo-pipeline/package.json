@@ -10,7 +10,10 @@
     "refresh": "node src/pipeline.js --check --auto-rerecord",
     "desktop": "node surfaces/desktop/record-desktop.js",
     "desktop:rigtest": "xvfb-run -a node surfaces/desktop/record-desktop.js --config surfaces/desktop/rig-config.json",
-    "desktop:poc": "node surfaces/desktop/record-desktop.js --config surfaces/desktop/poc-config.json"
+    "desktop:poc": "node surfaces/desktop/record-desktop.js --config surfaces/desktop/poc-config.json",
+    "web": "node surfaces/web/record-web.js",
+    "web:probe": "node surfaces/web/record-web.js --probe",
+    "web:poc": "node surfaces/web/record-web.js --config surfaces/web/poc-config.json"
   },
   "keywords": [],
   "author": "",
