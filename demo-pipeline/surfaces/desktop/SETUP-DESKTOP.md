@@ -72,6 +72,17 @@ any marker fails → that is drift, and the failing marker names the step, for r
 review. Version-fingerprint the app (`Claude.app` bundle version) alongside, as
 `check-drift.js` does with the CLI version string.
 
+## Quick proof-of-concept take (no official app needed)
+
+`npm run desktop:poc` records the same lesson through a stand-in desktop chat window
+(`poc/`) whose responses come **live from real Claude** — each turn is an actual
+`claude -p` call through the authenticated CLI, with real thinking time on screen. The
+window badges itself "proof-of-concept render · responses from real Claude" on every
+frame, because the chrome is ours, not the official app's. Requires an authenticated
+`claude` CLI; on Linux run it under `xvfb-run -a`. Output lands in `output-desktop-poc/`.
+Use this to preview the desktop experience end to end before calibrating against the
+real app.
+
 ## Running it autonomously (no human at the keyboard)
 
 To close the full self-refreshing loop on this surface you need a machine that can run

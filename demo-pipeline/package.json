@@ -9,7 +9,8 @@
     "check": "node src/pipeline.js --check",
     "refresh": "node src/pipeline.js --check --auto-rerecord",
     "desktop": "node surfaces/desktop/record-desktop.js",
-    "desktop:rigtest": "xvfb-run -a node surfaces/desktop/record-desktop.js --config surfaces/desktop/rig-config.json"
+    "desktop:rigtest": "xvfb-run -a node surfaces/desktop/record-desktop.js --config surfaces/desktop/rig-config.json",
+    "desktop:poc": "node surfaces/desktop/record-desktop.js --config surfaces/desktop/poc-config.json"
   },
   "keywords": [],
   "author": "",

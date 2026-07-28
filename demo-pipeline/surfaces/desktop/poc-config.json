@@ -1,0 +1,16 @@
+{
+  "comment": "Points the desktop driver at the proof-of-concept window: our chrome, LIVE Claude responses (each turn is a real `claude -p` call). Produces the desktop-surface PoC take when the official app is unavailable (wrong OS / no signed-in account). The window badges itself as a PoC render on every frame.",
+  "app": {
+    "linux": { "command": "node_modules/.bin/electron", "args": ["--no-sandbox", "--disable-gpu", "surfaces/desktop/poc/main.cjs"] },
+    "darwin": { "command": "node_modules/.bin/electron", "args": ["surfaces/desktop/poc/main.cjs"] }
+  },
+  "attach": { "port": 9333, "attachOnly": false, "connectTimeoutMs": 30000 },
+  "window": { "urlMatch": "poc", "width": 1280, "height": 720 },
+  "selectors": {
+    "input": "[data-testid=\"chat-input\"]",
+    "assistantMessage": "[data-message-author=\"assistant\"]",
+    "streaming": "[data-is-streaming=\"true\"]"
+  },
+  "timing": { "typeDelayMs": 35, "settleMs": 2500, "stepTimeoutMs": 240000 },
+  "output": { "dir": "output-desktop-poc", "video": "daily-briefing-desktop-poc" }
+}

@@ -3,3 +3,4 @@ node_modules/
 .demo-work/
 recordings/replay.html
 output-desktop/
+output-desktop-poc/
