@@ -1,0 +1,32 @@
+[
+  {
+    "id": "launch",
+    "text": "Open the Claude app. This is a real Claude session — everything you're about to see is live.",
+    "start": 0,
+    "end": 6.005
+  },
+  {
+    "id": "create-briefing",
+    "text": "Step 1 — Paste your day and ask for a one-minute briefing: meetings, top 3 priorities, anything urgent.",
+    "start": 6.005,
+    "end": 22.722
+  },
+  {
+    "id": "make-reusable",
+    "text": "Step 2 — Ask Claude to turn it into a reusable morning-briefing prompt you can run every day.",
+    "start": 22.722,
+    "end": 31.791
+  },
+  {
+    "id": "schedule",
+    "text": "Step 3 — Ask Claude to schedule it: every weekday at 9am, the briefing is waiting for you.",
+    "start": 31.791,
+    "end": 40.021
+  },
+  {
+    "id": "outro",
+    "text": "That's it — a daily morning briefing in the Claude app, set up in one short conversation.",
+    "start": 40.021,
+    "end": 46.023
+  }
+]

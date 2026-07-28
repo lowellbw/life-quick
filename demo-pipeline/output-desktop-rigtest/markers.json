@@ -1,0 +1,49 @@
+[
+  {
+    "step": "create-briefing",
+    "marker": {
+      "type": "domIncludesAny",
+      "texts": [
+        "priorit",
+        "Priorit"
+      ]
+    },
+    "ok": true
+  },
+  {
+    "step": "create-briefing",
+    "marker": {
+      "type": "domIncludesAny",
+      "texts": [
+        "15:00",
+        "3pm",
+        "3 pm"
+      ]
+    },
+    "ok": true
+  },
+  {
+    "step": "make-reusable",
+    "marker": {
+      "type": "domIncludesAny",
+      "texts": [
+        "briefing",
+        "Briefing"
+      ]
+    },
+    "ok": true
+  },
+  {
+    "step": "schedule",
+    "marker": {
+      "type": "domIncludesAny",
+      "texts": [
+        "9",
+        "weekday",
+        "schedule",
+        "Schedule"
+      ]
+    },
+    "ok": true
+  }
+]

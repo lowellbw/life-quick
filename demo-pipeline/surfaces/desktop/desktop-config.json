@@ -1,0 +1,17 @@
+{
+  "comment": "Surface config for the REAL Claude desktop app. The app is Electron, so the driver attaches over the Chrome DevTools Protocol. Launch paths are per-OS; selectors are best-guess and MUST be calibrated in one authoring run on a machine with the app installed and a dedicated test account logged in (see SETUP-DESKTOP.md). Calibration = run with --dump-dom and update the selectors below; no code changes.",
+  "app": {
+    "darwin": { "command": "/Applications/Claude.app/Contents/MacOS/Claude", "args": [] },
+    "win32": { "command": "%LOCALAPPDATA%\\AnthropicClaude\\Claude.exe", "args": [] },
+    "linux": { "command": null, "args": [], "comment": "No official Linux build; use attachOnly against a community repackage if your org allows it." }
+  },
+  "attach": { "port": 9333, "attachOnly": false, "connectTimeoutMs": 30000 },
+  "window": { "urlMatch": "claude", "width": 1280, "height": 720 },
+  "selectors": {
+    "input": "div[contenteditable=\"true\"], textarea[placeholder*=\"Claude\" i], [data-testid=\"chat-input\"]",
+    "assistantMessage": "[data-testid=\"assistant-message\"], [data-is-streaming], .assistant-message, [data-message-author=\"assistant\"]",
+    "streaming": "[data-is-streaming=\"true\"], [data-testid=\"stop-button\"], button[aria-label*=\"Stop\" i]"
+  },
+  "timing": { "typeDelayMs": 45, "settleMs": 2500, "stepTimeoutMs": 240000 },
+  "output": { "dir": "output-desktop", "video": "daily-briefing-desktop" }
+}

@@ -70,6 +70,26 @@ the human reviews `output/` and re-freezes `baselines/` on sign-off.
   needs a dedicated logged-in test account (per the brief's guardrails). First Phase 1
   task once a test account exists.
 
+## Second surface: the Claude desktop app
+
+`surfaces/desktop/` extends the pipeline to the **real Claude desktop app** (Electron,
+driven over the Chrome DevTools Protocol): same recipe format
+(`workflows/daily-briefing-desktop.json`), typed prompts, streaming-aware completion
+detection, screencast recording with burned-in captions, and DOM success markers gating
+every take.
+
+The app only runs on macOS/Windows with a logged-in account, so the *published* desktop
+take must be recorded on a machine that has it — see
+`surfaces/desktop/SETUP-DESKTOP.md` for the calibrate-and-record steps (config only, no
+code changes) and the options for running it autonomously. The driver's full chain is
+already validated headlessly here against a watermarked Electron test rig
+(`surfaces/desktop/rig/`, evidence in `output-desktop-rigtest/` — plumbing smoke-test
+only, never publishable content):
+
+```bash
+xvfb-run -a node surfaces/desktop/record-desktop.js --config surfaces/desktop/rig-config.json
+```
+
 ## Repo layout
 
 ```

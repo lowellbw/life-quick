@@ -1,0 +1,16 @@
+{
+  "comment": "Config that points the desktop driver at the watermarked test rig instead of the real app. CI/smoke-test use only: run under xvfb-run on Linux. Output goes to a separate directory and must never be published.",
+  "app": {
+    "linux": { "command": "node_modules/.bin/electron", "args": ["--no-sandbox", "--disable-gpu", "surfaces/desktop/rig/main.cjs"] },
+    "darwin": { "command": "node_modules/.bin/electron", "args": ["surfaces/desktop/rig/main.cjs"] }
+  },
+  "attach": { "port": 9333, "attachOnly": false, "connectTimeoutMs": 30000 },
+  "window": { "urlMatch": "rig", "width": 1280, "height": 720 },
+  "selectors": {
+    "input": "[data-testid=\"chat-input\"]",
+    "assistantMessage": "[data-message-author=\"assistant\"]",
+    "streaming": "[data-is-streaming=\"true\"]"
+  },
+  "timing": { "typeDelayMs": 25, "settleMs": 2000, "stepTimeoutMs": 60000 },
+  "output": { "dir": "output-desktop-rigtest", "video": "rig-smoketest" }
+}

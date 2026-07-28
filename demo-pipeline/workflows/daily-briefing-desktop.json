@@ -1,0 +1,52 @@
+{
+  "id": "daily-briefing-desktop",
+  "title": "Make a daily briefing in Claude (desktop app)",
+  "surface": "claude-desktop",
+  "description": "The same lesson as the CLI take, phrased for the Claude desktop app: build a reusable daily-briefing prompt, run it, then have Claude set it up to arrive automatically each weekday morning.",
+  "comment": "First authoring run on the real app should confirm the exact wording of step 3 against the app's current scheduled-tasks UI, then freeze markers from what actually appears on screen — same calibrate-once flow as the CLI recipe.",
+  "steps": [
+    {
+      "id": "launch",
+      "kind": "launch",
+      "narration": "Open the Claude app. This is a real Claude session — everything you're about to see is live.",
+      "targetSeconds": 6
+    },
+    {
+      "id": "create-briefing",
+      "kind": "prompt",
+      "input": "I want a daily morning briefing. Here is my day: 09:30 policy team stand-up; 11:00 1:1 with my director about the AI skills programme; 14:00 digital inclusion working group; a procurement briefing note due today; and an urgent inbox flag that the note's deadline moved to 15:00. Give me a punchy one-minute briefing: today's meetings, top 3 priorities, anything urgent — under 150 words.",
+      "narration": "Step 1 — Paste your day and ask for a one-minute briefing: meetings, top 3 priorities, anything urgent.",
+      "targetSeconds": 25,
+      "markers": [
+        { "type": "domIncludesAny", "texts": ["priorit", "Priorit"] },
+        { "type": "domIncludesAny", "texts": ["15:00", "3pm", "3 pm"] }
+      ]
+    },
+    {
+      "id": "make-reusable",
+      "kind": "prompt",
+      "input": "Turn that into a reusable prompt I can run every morning with fresh calendar and inbox details, and keep the same three-section format.",
+      "narration": "Step 2 — Ask Claude to turn it into a reusable morning-briefing prompt you can run every day.",
+      "targetSeconds": 22,
+      "markers": [
+        { "type": "domIncludesAny", "texts": ["briefing", "Briefing"] }
+      ]
+    },
+    {
+      "id": "schedule",
+      "kind": "prompt",
+      "input": "Set this up so it runs automatically every weekday at 9am and the briefing is waiting for me when I open Claude.",
+      "narration": "Step 3 — Ask Claude to schedule it: every weekday at 9am, the briefing is waiting for you.",
+      "targetSeconds": 20,
+      "markers": [
+        { "type": "domIncludesAny", "texts": ["9", "weekday", "schedule", "Schedule"] }
+      ]
+    },
+    {
+      "id": "outro",
+      "kind": "outro",
+      "narration": "That's it — a daily morning briefing in the Claude app, set up in one short conversation.",
+      "targetSeconds": 6
+    }
+  ]
+}
