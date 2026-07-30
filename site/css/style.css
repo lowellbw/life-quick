@@ -434,6 +434,23 @@ a { color: inherit; }
   position: relative;
   overflow: hidden;
 }
+
+/* The band closes on a tertiary call to action — an underlined link rather
+   than a button. Navy on lime is 14.5:1, so it stays fully legible. */
+.mission .tertiary {
+  display: inline-block;
+  position: relative;
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: hsla(209, 73%, 12%, 0.35);
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color 0.15s ease;
+}
+.mission .tertiary:hover { text-decoration-color: var(--navy); }
 .mission .dots {
   position: absolute;
   right: -20px;
