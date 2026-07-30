@@ -1,0 +1,646 @@
+/* ==========================================================================
+   SRI-2030 — sri-2030.org
+   Faithful to the original Squarespace theme:
+     · accent  hsl(83,100%,75%)  — "bright" lime section backgrounds
+     · darkAccent hsl(209,73%,12%) — navy, as in the logo
+     · lightAccent hsl(45,12%,87%) — stone "light" sections
+     · Rubik 500 headings, -0.02em, sizes 4 / 2.8 / 2.2 / 1.6 rem
+     · Nunito Sans 400 body, 1.5 line height
+     · uppercase Nunito Sans buttons, 6.4px radius
+   Flat, geometric, built from the logo's quadrant-tile language.
+   ========================================================================== */
+
+:root {
+  --navy: hsl(209, 73%, 12%);
+  --navy-deep: hsl(209, 73%, 8%);
+  --lime: hsl(83, 100%, 75%);
+  --stone: hsl(45, 12%, 87%);
+  --white: #ffffff;
+  --ink: hsl(209, 73%, 10%);
+
+  /* the four logo tiles */
+  --tile-green: #168038;
+  --tile-yellow: #f6c31c;
+  --tile-orange: #c2551a;
+  --tile-cyan: #14a5d4;
+
+  --font-head: "Rubik", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --btn-radius: 6.4px;
+  --container: 1200px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.6rem, 5.2vw, 4rem); }
+h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); }
+h3 { font-size: clamp(1.5rem, 2.6vw, 2.2rem); }
+h4 { font-size: 1.6rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: inherit; }
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 28px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--lime);
+  color: var(--navy);
+  padding: 10px 18px;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+/* Buttons — Squarespace-style: uppercase Nunito Sans, 6.4px radius, flat */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 1.05em 2em;
+  border-radius: var(--btn-radius);
+  border: 0;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-dark { background: var(--navy); color: var(--lime); }
+.btn-dark:hover { background: var(--navy-deep); }
+
+.btn-lime { background: var(--lime); color: var(--navy); }
+.btn-lime:hover { background: hsl(83, 100%, 68%); }
+
+/* The four-tile brand strip — the logo colours as a rule line */
+
+.brand-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 6px;
+}
+.brand-strip i:nth-child(1) { background: #1e9c43; }
+.brand-strip i:nth-child(2) { background: var(--tile-yellow); }
+.brand-strip i:nth-child(3) { background: #d9631e; }
+.brand-strip i:nth-child(4) { background: var(--tile-cyan); }
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--navy);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  min-height: 82px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.brand img { width: 48px; height: 48px; }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.site-nav a {
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  padding: 4px 0;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--lime);
+  box-shadow: 0 2px 0 var(--lime);
+}
+
+.site-nav .btn {
+  padding: 0.8em 1.6em;
+  font-size: 0.9375rem;
+}
+.site-nav a.btn-lime,
+.site-nav a.btn-lime:hover { color: var(--navy); box-shadow: none; }
+
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  margin: 6px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Hero — navy, like the logo's ground
+   -------------------------------------------------------------------------- */
+
+.hero { background: var(--navy); color: var(--white); }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: center;
+  padding-block: 96px;
+}
+
+.kicker {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--lime);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hero h1 { margin-bottom: 26px; }
+.hero h1 em { font-style: normal; color: var(--lime); }
+
+.hero .lead {
+  font-size: 1.25rem;
+  margin-bottom: 36px;
+  color: hsla(0, 0%, 100%, 0.85);
+}
+.hero .lead strong { color: var(--white); }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* photo with flat lime offset — print style, no soft shadows */
+.offset-photo { margin: 0; }
+.offset-photo .frame { position: relative; }
+.offset-photo .frame::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  background: var(--lime);
+}
+.offset-photo img {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center 72%;
+}
+.offset-photo figcaption {
+  margin-top: 34px;
+  font-size: 0.875rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+/* planting-grid dots, drawn from the logo's yellow tile */
+.dot-grid {
+  position: absolute;
+  z-index: 1;
+  top: -34px;
+  left: -34px;
+  width: 132px;
+  height: 132px;
+  background-image: radial-gradient(var(--tile-yellow) 7px, transparent 7.5px);
+  background-size: 44px 44px;
+  background-position: 12px 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Paradox band — lime, black text: the original "bright" section
+   -------------------------------------------------------------------------- */
+
+.paradox {
+  background: var(--lime);
+  color: var(--navy);
+  padding-block: 72px;
+}
+.paradox-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.paradox .cell { border-top: 3px solid var(--navy); padding-top: 20px; }
+.paradox .figure {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 2.6rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.paradox .label { font-size: 0.9688rem; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+
+.section { padding-block: 96px; }
+.section.on-navy { background: var(--navy); color: var(--white); }
+.section.on-lime { background: var(--lime); color: var(--navy); }
+.section.on-stone { background: var(--stone); color: var(--navy); }
+
+.section-head { max-width: 780px; margin-bottom: 56px; }
+.section-head p { font-size: 1.1875rem; margin-bottom: 0; }
+.on-navy .section-head p { color: hsla(0, 0%, 100%, 0.85); }
+
+/* --------------------------------------------------------------------------
+   The principles — the logo's quadrant grid, blown up
+   -------------------------------------------------------------------------- */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tile {
+  padding: 40px 36px 44px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tile .mark { height: 66px; margin-bottom: 28px; }
+.tile .mark svg { height: 100%; width: auto; display: block; }
+
+.tile h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.tile p { margin: 0; font-size: 1rem; max-width: 34em; }
+
+.tile-yellow { background: var(--tile-yellow); color: var(--navy); }
+.tile-green  { background: var(--tile-green);  color: var(--white); }
+.tile-cyan   { background: var(--tile-cyan);   color: var(--navy); }
+.tile-orange { background: var(--tile-orange); color: var(--white); }
+
+.tile-yellow .mark, .tile-cyan .mark { color: var(--navy); }
+.tile-green .mark, .tile-orange .mark { color: hsla(0, 0%, 100%, 0.95); }
+
+.after-tiles {
+  max-width: 860px;
+  margin-top: 64px;
+  font-size: 1.1875rem;
+}
+.after-tiles p { margin: 0; }
+
+/* --------------------------------------------------------------------------
+   How SRI-2030 works — editorial numbered columns on lime
+   -------------------------------------------------------------------------- */
+
+.strategy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.strategy .col { border-top: 3px solid var(--navy); padding-top: 24px; }
+
+.strategy .n {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 3.4rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.strategy p { margin: 0; font-size: 1rem; }
+
+/* --------------------------------------------------------------------------
+   Certification — ascending steps
+   -------------------------------------------------------------------------- */
+
+.cert-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: end;
+}
+
+.cert-copy p { font-size: 1.0625rem; }
+.cert-copy .cert-cta { margin-top: 30px; margin-bottom: 18px; }
+.cert-copy .contact-line { font-size: 0.9688rem; margin: 0; }
+.cert-copy .contact-line a { color: var(--navy); font-weight: 700; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: end;
+}
+
+.step { display: flex; flex-direction: column; gap: 12px; }
+
+.step .block {
+  background: var(--navy);
+  color: var(--lime);
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.step:nth-child(1) .block { height: 110px; }
+.step:nth-child(2) .block { height: 160px; }
+.step:nth-child(3) .block { height: 210px; }
+.step:nth-child(4) .block { height: 260px; background: var(--tile-green); color: var(--white); }
+
+.step h3 {
+  font-size: 1.0625rem;
+  letter-spacing: 0;
+  margin: 0;
+}
+.step p { font-size: 0.875rem; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Mission — lime, huge navy type, planting grid
+   -------------------------------------------------------------------------- */
+
+.mission {
+  background: var(--lime);
+  color: var(--navy);
+  padding-block: 110px;
+  position: relative;
+  overflow: hidden;
+}
+.mission .dots {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 300px;
+  height: 220px;
+  background-image: radial-gradient(var(--navy) 7px, transparent 7.5px);
+  background-size: 52px 52px;
+  opacity: 0.18;
+}
+.mission .kicker { color: var(--navy); }
+.mission h2 {
+  font-size: clamp(2.4rem, 5.4vw, 4rem);
+  max-width: 15em;
+  margin-bottom: 20px;
+}
+.mission p { font-size: 1.25rem; margin-bottom: 36px; max-width: 40em; }
+
+/* --------------------------------------------------------------------------
+   People page
+   -------------------------------------------------------------------------- */
+
+.page-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding-block: 88px 64px;
+}
+.page-hero .lead {
+  font-size: 1.25rem;
+  color: hsla(0, 0%, 100%, 0.85);
+  margin: 0;
+  max-width: 40em;
+}
+
+.page-banner { background: var(--navy); padding-bottom: 96px; }
+.page-banner .offset-photo img { height: 440px; object-position: center 40%; }
+
+/* Patron — editorial, on lime */
+.patron p {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  max-width: 30em;
+  margin: 0;
+}
+.patron .name {
+  margin-top: 28px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* People — editorial rows, square tile monograms like the logo quadrants */
+
+.people-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 24px;
+  padding-block: 36px;
+  border-top: 2px solid var(--navy);
+}
+.on-navy .person { border-top-color: hsla(0, 0%, 100%, 0.25); }
+
+.monogram {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--white);
+}
+.monogram.m-green  { background: var(--tile-green); }
+.monogram.m-yellow { background: var(--tile-yellow); color: var(--navy); }
+.monogram.m-orange { background: var(--tile-orange); }
+.monogram.m-cyan   { background: var(--tile-cyan); color: var(--navy); }
+.monogram.m-navy   { background: var(--navy); color: var(--lime); }
+.on-navy .monogram.m-navy { background: var(--lime); color: var(--navy); }
+
+.person h3 {
+  font-size: 1.35rem;
+  margin-bottom: 2px;
+}
+.person .role {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.person p { margin: 0; font-size: 0.9688rem; }
+
+/* Roots — two columns on navy */
+.roots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.roots-grid > div { border-top: 3px solid var(--lime); padding-top: 24px; }
+.roots-grid h3 { font-size: 1.6rem; }
+.roots-grid p { margin: 0; color: hsla(0, 0%, 100%, 0.85); }
+.roots-grid a { color: var(--lime); }
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--navy-deep);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.9375rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 48px;
+  padding-block: 64px 44px;
+}
+
+.site-footer .brand { font-size: 1.15rem; margin-bottom: 18px; }
+.site-footer .brand img { width: 40px; height: 40px; }
+
+.footer-grid h4 {
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.footer-grid a { color: hsla(0, 0%, 100%, 0.75); text-decoration: none; }
+.footer-grid a:hover { color: var(--lime); }
+
+.footer-about { max-width: 34em; }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  padding-block: 22px 40px;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  font-size: 0.875rem;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 64px; padding-block: 72px; }
+  .offset-photo img { height: 380px; }
+  .paradox-inner { grid-template-columns: 1fr 1fr; }
+  .strategy { grid-template-columns: 1fr; gap: 40px; }
+  .cert-layout { grid-template-columns: 1fr; gap: 56px; }
+  .people-list { grid-template-columns: 1fr; }
+  .roots-grid { grid-template-columns: 1fr; gap: 48px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  .section { padding-block: 72px; }
+
+  .nav-toggle { display: block; }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--navy);
+    padding: 12px 28px 24px;
+    display: none;
+  }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 8px 0; }
+
+  .tile-grid { grid-template-columns: 1fr; }
+  .tile { min-height: 0; }
+  .paradox-inner { grid-template-columns: 1fr; gap: 28px; }
+  .steps { gap: 8px; }
+  .step .block { font-size: 1.2rem; padding: 10px; }
+  .step:nth-child(1) .block { height: 80px; }
+  .step:nth-child(2) .block { height: 115px; }
+  .step:nth-child(3) .block { height: 150px; }
+  .step:nth-child(4) .block { height: 185px; }
+  .step h3 { font-size: 0.9375rem; }
+  .step p { display: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .dot-grid { display: none; }
+  .offset-photo .frame::before { inset: 12px -12px -12px 12px; }
+}

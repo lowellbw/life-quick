@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRI-2030 — three design directions</title>
+<meta name="description" content="Three design directions for sri-2030.org, side by side for review.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand-50: hsl(45, 20%, 98.5%);
+    --sand-100: hsl(45, 16%, 96%);
+    --sand-200: hsl(45, 14%, 92%);
+    --ink: hsl(209, 73%, 12%);
+    --ink-75: hsla(209, 73%, 12%, 0.75);
+    --ink-65: hsla(209, 73%, 12%, 0.65);
+    --ink-28: hsla(209, 73%, 12%, 0.28);
+    --ink-16: hsla(209, 73%, 12%, 0.16);
+    --ink-08: hsla(209, 73%, 12%, 0.08);
+    --lime: hsl(83, 100%, 75%);
+    --green: #1e9c43;
+    --yellow: #f6c31c;
+    --orange: #d9631e;
+    --cyan: #14a5d4;
+    --fd: "Rubik", system-ui, sans-serif;
+    --fu: "Nunito Sans", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sand-50);
+    color: var(--ink-75);
+    font-family: var(--fu);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  p { margin: 0; }
+
+  .wrap { max-width: 52rem; margin-inline: auto; padding: 4.5rem 1.5rem 6rem; }
+
+  .brand { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--ink); }
+  .brand img { width: 2.25rem; height: 2.25rem; border-radius: 2px; }
+  .brand span { font-family: var(--fd); font-weight: 500; font-size: 0.9375rem; letter-spacing: -0.02em; }
+
+  .meta {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+  }
+
+  h1 {
+    font-family: var(--fd);
+    font-weight: 300;
+    font-size: clamp(1.875rem, 4.4vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0.75rem 0 1rem;
+  }
+
+  .lede { font-size: 1.0625rem; max-width: 36em; }
+  .lede + .lede { margin-top: 0.75em; }
+
+  .head { margin: 3rem 0 3.25rem; }
+
+  .v {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1.75rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--ink-16);
+  }
+  .v:first-of-type { border-top: 1px solid var(--ink-28); }
+
+  .v-n {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+  }
+  .v-n::before { content: ""; width: 6px; height: 6px; flex: none; transform: translateY(-0.15em); }
+  .v-1 .v-n::before { background: var(--green); }
+  .v-2 .v-n::before { background: var(--cyan); }
+  .v-3 .v-n::before { background: var(--orange); }
+
+  .v h2 {
+    font-family: var(--fd);
+    font-weight: 400;
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+  }
+  .v p { font-size: 0.9375rem; max-width: 34em; }
+  .v ul { margin: 0.6rem 0 0; padding-left: 1.1rem; font-size: 0.9375rem; }
+  .v li { margin-bottom: 0.15rem; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.1rem; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--ink);
+    color: var(--sand-50);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    line-height: 1;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover { background: hsl(209, 73%, 8%); color: var(--lime); }
+  .btn-o { background: none; color: var(--ink); border-color: var(--ink-28); }
+  .btn-o:hover { background: none; color: var(--ink); border-color: var(--ink); }
+
+  .note {
+    margin-top: 3.25rem;
+    background: var(--sand-100);
+    border: 1px solid var(--ink-08);
+    border-radius: 2px;
+    padding: 1.75rem;
+    font-size: 0.9375rem;
+  }
+  .note h2 {
+    font-family: var(--fu);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+    margin: 0 0 0.6rem;
+  }
+  .note p + p { margin-top: 0.6em; }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink-16);
+    font-size: 0.8125rem;
+    color: var(--ink-65);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 720px) {
+    .v { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="brand" href="index.html">
+    <img src="assets/sri-2030-logo.webp" alt="">
+    <span>SRI&#8209;2030</span>
+  </a>
+
+  <div class="head">
+    <span class="meta">Design review · three directions</span>
+    <h1>Three ways the site could look</h1>
+    <p class="lede">
+      Same content throughout — SRI-2030's own words, logo and colours. What
+      changes is the design language: how much colour it uses, how the page is
+      structured, and how loudly it speaks.
+    </p>
+    <p class="lede">
+      Each version has both pages built. Once you're inside one, the bar at the
+      bottom of the screen switches between all three on whichever page you're
+      looking at, so you can compare like for like.
+    </p>
+  </div>
+
+  <section class="v v-1">
+    <span class="v-n">Version 1</span>
+    <div>
+      <h2>Briefing</h2>
+      <p>
+        Opens like a briefing paper: a masthead rule, the mission stated as the
+        headline, then the numbers behind it. Sections are numbered, and the
+        methodology is a plain list carrying the logo's own four glyphs.
+      </p>
+      <ul>
+        <li>Warm off-white, navy type, hairline rules</li>
+        <li>Small splashes of the logo colours on section numbers and glyphs</li>
+        <li>Most credible with governments, funders and partners</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="briefing/index.html">Mission</a>
+        <a class="btn btn-o" href="briefing/people.html">People</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="v v-2">
+    <span class="v-n">Version 2</span>
+    <div>
+      <h2>Quiet</h2>
+      <p>
+        The most understated of the three. A low-key fixed sidebar, a narrow
+        column of text, and a great deal of whitespace. Almost monochrome —
+        colour appears only where it has to.
+      </p>
+      <ul>
+        <li>Leads with the paradox: &ldquo;More rice. Less seed, water and emissions.&rdquo;</li>
+        <li>Colour bands replaced entirely by hairlines and space</li>
+        <li>Reads as considered and editorial; least sales-like</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="quiet/index.html">Mission</a>
+        <a class="btn btn-o" href="quiet/people.html">People</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="v v-3">
+    <span class="v-n">Version 3</span>
+    <div>
+      <h2>Bold</h2>
+      <p>
+        The loudest and most branded. Full-bleed lime and navy bands, and the
+        four SRI principles blown up into big saturated tiles drawn straight
+        from the logo's own quadrants.
+      </p>
+      <ul>
+        <li>Flat and geometric — no shadows, no rounded cards</li>
+        <li>A four-colour brand strip under the header and above the footer</li>
+        <li>Most immediately recognisable; most energetic</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="bold/index.html">Mission</a>
+        <a class="btn btn-o" href="bold/people.html">People</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="note">
+    <h2>What we'd find useful</h2>
+    <p>
+      The three aren't meant to be picked whole — elements move between them.
+      The most useful thing to know is which <em>opening</em> feels right, since
+      that is the real difference: Briefing leads with the mission and the
+      numbers, Quiet leads with the paradox, Bold leads with the brand.
+    </p>
+    <p>
+      All copy is taken verbatim from the current site, so nothing here is a
+      proposed rewrite — if some of it should change, that's a separate and
+      welcome conversation.
+    </p>
+  </div>
+
+  <footer>
+    <span>&copy; The Downforce Trust <span id="year">2026</span></span>
+    <span>More rice. Less seed, water and emissions.</span>
+  </footer>
+
+</div>
+<script>
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
