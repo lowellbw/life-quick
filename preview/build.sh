@@ -13,7 +13,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT="$ROOT/preview"
 
 # version slug : source directory
-MAP="briefing:site-briefing quiet:site-quiet bold:site"
+MAP="compact:site-compact briefing:site-briefing quiet:site-quiet bold:site"
 
 for pair in $MAP; do
   slug="${pair%%:*}"

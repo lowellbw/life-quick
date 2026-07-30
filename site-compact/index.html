@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SRI-2030 — version 2, "quiet" -->
+<!-- SRI-2030 — version 4, "compact" -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -29,8 +29,8 @@
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <ul>
         <li><a href="index.html" aria-current="page">Mission</a></li>
-        <li><a href="#how-sri-works">How SRI works</a></li>
-        <li><a href="#how-sri-2030-works">How SRI-2030 works</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#how-we-work">How we work</a></li>
         <li><a href="#certification">Certification</a></li>
         <li><a href="people.html">People</a></li>
       </ul>
@@ -41,61 +41,34 @@
     <main id="main">
       <div class="page">
 
-        <!-- Hero ======================================================== -->
+        <!-- Header — a plain statement, with the goals folded in ========= -->
         <section class="hero">
-          <span class="kicker">The SRI paradox</span>
-          <h1 class="display">More rice. <em>Less seed, water and&nbsp;emissions.</em></h1>
-          <p class="lede">
-            SRI-2030 works with governments, mainly in Africa, to scale the
-            System of Rice Intensification — and towards
-            <strong>50 million hectares of SRI by 2030.</strong>
-          </p>
-          <div class="actions">
-            <a class="btn" href="#how-sri-works">How SRI works</a>
-            <a class="btn-square" href="#how-sri-2030-works" aria-label="How SRI-2030 works">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-            </a>
+          <div class="masthead">
+            <b>SRI-2030</b>
+            <span>An initiative of The Downforce Trust</span>
           </div>
-        </section>
 
-        <!-- Goals ======================================================= -->
-        <section class="section">
-          <span class="section-label">Our goals</span>
-          <ul class="rowlist goals">
-            <li>
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <h3>A self-sufficient Africa</h3>
-                <p>The continent imports $7.5&nbsp;billion of rice a year [FAOSTAT, 2023], when it could grow its own.</p>
-              </div>
-            </li>
-            <li>
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <h3>Adoption at national scale</h3>
-                <p>Through government programmes and selected local partners, rather than one project at a time.</p>
-              </div>
-            </li>
-            <li>
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <h3>Better returns for smallholders</h3>
-                <p>Lower input costs and higher yields, with resilience to increasingly difficult weather.</p>
-              </div>
-            </li>
-            <li>
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <h3>The method taught intact</h3>
-                <p>Free certification at four levels, so SRI is not misinterpreted as it spreads.</p>
-              </div>
-            </li>
+          <h1 class="lead-statement">
+            SRI-2030 works with governments, mainly in Africa, to scale the
+            System of Rice Intensification — a way of growing more rice from
+            less seed, less water and less energy, with lower emissions.
+          </h1>
+
+          <ul class="goal-marks">
+            <li><span class="m m-green" aria-hidden="true"></span>50 million hectares of SRI by 2030</li>
+            <li><span class="m m-yellow" aria-hidden="true"></span>Africa self-sufficient in rice</li>
+            <li><span class="m m-cyan" aria-hidden="true"></span>Adoption at national scale, with government</li>
+            <li><span class="m m-orange" aria-hidden="true"></span>Better returns for smallholders</li>
           </ul>
         </section>
 
-        <!-- How SRI works =============================================== -->
-        <section class="section" id="how-sri-works">
-          <span class="section-label">How SRI works</span>
+        <!-- 01 Methodology ============================================== -->
+        <section class="section sec-1" id="methodology">
+          <div class="sec-head">
+            <span class="sec-num">01</span>
+            <span class="sec-label">Methodology</span>
+          </div>
+
           <div class="col">
             <h2 class="heading">How SRI works</h2>
             <p class="lede" style="margin-top: var(--s3);">
@@ -144,17 +117,22 @@
             </li>
           </ul>
 
-          <p class="pull" style="margin-top: var(--s6);">
+          <p class="statement" style="margin-top: var(--s6);">
             The net effect is an improved rice yield and better returns for
             farmers with less water and energy consumption, and lower
             emissions. A boon for food sovereignty, rural livelihoods, the rice
             value chain, and the environment.
           </p>
+
         </section>
 
-        <!-- How SRI-2030 works ========================================== -->
-        <section class="section" id="how-sri-2030-works">
-          <span class="section-label">How SRI-2030 works</span>
+        <!-- 02 How we work ============================================== -->
+        <section class="section sec-2" id="how-we-work">
+          <div class="sec-head">
+            <span class="sec-num">02</span>
+            <span class="sec-label">How we work</span>
+          </div>
+
           <div class="col">
             <h2 class="heading">How SRI-2030 works</h2>
             <p class="lede" style="margin-top: var(--s3);">
@@ -163,10 +141,11 @@
             </p>
           </div>
 
-          <div class="flow" style="margin-top: var(--s5);">
-            <div class="flow-step">
-              <div class="panel">
-                <span class="n">01 — National scale</span>
+          <ol class="rowlist numbered" style="margin-top: var(--s5);">
+            <li>
+              <span class="n">01</span>
+              <div>
+                <h3>National scale</h3>
                 <p>
                   We work with governments, mainly in Africa, who are seeking to
                   increase their rice production without compromising on other
@@ -179,10 +158,11 @@
                   weather.
                 </p>
               </div>
-            </div>
-            <div class="flow-step">
-              <div class="panel">
-                <span class="n">02 — With government</span>
+            </li>
+            <li>
+              <span class="n">02</span>
+              <div>
+                <h3>With government</h3>
                 <p>
                   We work strategically and selectively with local partners who
                   share our mission of transformation at a national scale. Our
@@ -190,10 +170,11 @@
                   international organisations.
                 </p>
               </div>
-            </div>
-            <div class="flow-step">
-              <div class="panel">
-                <span class="n">03 — Breakthrough approach</span>
+            </li>
+            <li>
+              <span class="n">03</span>
+              <div>
+                <h3>Breakthrough approach</h3>
                 <p>
                   We apply the breakthrough approach, asking not &lsquo;what do we
                   need?&rsquo; but &lsquo;what can we do now with what we have
@@ -204,13 +185,17 @@
                   farmer to the head of state.
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </section>
 
-        <!-- Trainer certification ======================================= -->
-        <section class="section" id="certification">
-          <span class="section-label">Trainer certification</span>
+        <!-- 03 Certification ============================================ -->
+        <section class="section sec-3" id="certification">
+          <div class="sec-head">
+            <span class="sec-num">03</span>
+            <span class="sec-label">Certification</span>
+          </div>
+
           <div class="col prose">
             <h2 class="heading" style="margin-bottom: var(--s3);">Trainer certification</h2>
             <p>
@@ -279,7 +264,7 @@
             </li>
           </ol>
 
-          <div class="panel" style="margin-top: var(--s5); max-width: var(--measure-wide);">
+          <div class="panel" style="margin-top: var(--s5);">
             <p>
               If you have run an SRI training event and would like your
               extension agents to be certified, please get in touch by email to
@@ -291,14 +276,15 @@
           </div>
         </section>
 
-      </div>
         <!-- Closer ====================================================== -->
         <section class="closer">
           <span class="kicker">Our mission</span>
           <h2>50 million hectares of SRI by 2030.</h2>
           <p>More rice. Less seed, water and emissions.</p>
           <a class="tertiary" href="people.html">Our people</a>
-      </section>
+        </section>
+
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -313,8 +299,8 @@
         <div>
           <h2>Explore</h2>
           <ul>
-            <li><a href="#how-sri-works">How SRI works</a></li>
-            <li><a href="#how-sri-2030-works">How SRI-2030 works</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#how-we-work">How we work</a></li>
             <li><a href="#certification">Trainer certification</a></li>
             <li><a href="people.html">People</a></li>
           </ul>
@@ -335,6 +321,5 @@
   </div>
 
   <script src="js/main.js"></script>
-  <script src="../switcher.js"></script>
 </body>
 </html>

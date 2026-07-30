@@ -1,0 +1,593 @@
+/* ==========================================================================
+   SRI-2030 — version 4, "compact"
+   The briefing structure — masthead rule, numbered sections, the methodology
+   as a hairline list carrying the logo's own four glyphs — but with a plain
+   header: one descriptive sentence at modest size, with the goals folded in
+   beneath it as a short marked list. No display-scale type anywhere.
+
+   Same palette and metrics as the "quiet" version — navy as a single ink at
+   alpha steps over a warm sand ramp ending on SRI-2030's brand stone — but
+   colour is allowed a few deliberate splashes: a logo-coloured square on each
+   section number, the four glyph marks, and one lime-barred statement.
+
+   Lime is high-luminance (1.11:1 on the page background), so it never carries
+   meaning on its own — it is only ever a fill beside or behind navy.
+   ========================================================================== */
+
+:root {
+  --sand-50:  hsl(45, 20%, 98.5%);
+  --sand-100: hsl(45, 16%, 96%);
+  --sand-200: hsl(45, 14%, 92%);
+  --sand-300: hsl(45, 12%, 87%);
+
+  --ink:       hsl(209, 73%, 12%);
+  --ink-hover: hsl(209, 73%, 8%);
+  --ink-75:    hsla(209, 73%, 12%, 0.75);
+  --ink-65:    hsla(209, 73%, 12%, 0.65);
+  --ink-28:    hsla(209, 73%, 12%, 0.28);
+  --ink-16:    hsla(209, 73%, 12%, 0.16);
+  --ink-08:    hsla(209, 73%, 12%, 0.08);
+
+  --lime: hsl(83, 100%, 75%);
+
+  --tile-green:  #1e9c43;
+  --tile-yellow: #f6c31c;
+  --tile-orange: #d9631e;
+  --tile-cyan:   #14a5d4;
+
+  --font-display: "Rubik", system-ui, sans-serif;
+  --font-ui: "Nunito Sans", system-ui, sans-serif;
+
+  --t-display: clamp(2.125rem, 4.6vw, 3.25rem);
+  --t-h1-page: clamp(1.875rem, 4vw, 2.75rem);
+  --t-h2:      clamp(1.5rem, 2.6vw, 1.875rem);
+  --t-figure:  clamp(1.5rem, 2.6vw, 1.875rem);
+  --t-quote:   1.3125rem;
+  --t-h3:      1.1875rem;
+  --t-lede:    1.125rem;
+  --t-body:    1rem;
+  --t-small:   0.9375rem;
+  --t-fine:    0.8125rem;
+  --t-meta:    0.75rem;
+
+  --tracking-tight: -0.02em;
+  --tracking-meta: 0.08em;
+
+  --radius: 0.125rem;
+  --card-pad: 1.875rem;
+  --column-gap: 1.25rem;
+  --measure: 36rem;
+  --measure-wide: 46rem;
+  --sidebar-w: 15rem;
+
+  --s1: 0.3125rem; --s2: 0.625rem; --s3: 1.25rem; --s4: 1.875rem;
+  --s5: 2.5rem;    --s6: 3.75rem;  --s7: 5rem;    --s8: 7.5rem;
+
+  --section-gap: var(--s7);
+  --rule: 1px solid var(--ink-28);
+  --rule-faint: 1px solid var(--ink-16);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--sand-50);
+  color: var(--ink-75);
+  font-family: var(--font-ui);
+  font-size: var(--t-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--font-display); color: var(--ink); margin: 0; letter-spacing: var(--tracking-tight); }
+p { margin: 0; }
+a { color: inherit; }
+
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 1px; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--lime);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--t-fine);
+  padding: 0.75rem 1.25rem;
+}
+.skip-link:focus { left: 0; }
+
+/* --------------------------------------------------------------------------
+   Shell + sidebar
+   -------------------------------------------------------------------------- */
+
+.shell { padding-left: var(--sidebar-w); }
+
+.page {
+  max-width: var(--measure-wide);
+  margin-inline: auto;
+  padding: var(--s6) var(--s6) 0;
+}
+
+.col { max-width: var(--measure); }
+[id] { scroll-margin-top: var(--s5); }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-w);
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow-y: auto;
+  padding: var(--s5) var(--s4);
+  background: var(--sand-50);
+}
+
+.brand { display: inline-flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--ink); }
+.brand img { width: 2.25rem; height: 2.25rem; border-radius: var(--radius); flex: none; }
+.brand span {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: var(--tracking-tight);
+}
+
+.site-nav { margin-top: var(--s6); }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.125rem; }
+
+.site-nav a {
+  display: grid;
+  grid-template-columns: 0.625rem 1fr;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-65);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.site-nav a:hover { color: var(--ink); }
+.site-nav a::before { content: ""; width: 5px; height: 5px; background: transparent; transform: translateY(-0.2em); }
+/* Current section is marked by the dot and the darker text alone — no box */
+.site-nav a[aria-current] { color: var(--ink); }
+.site-nav a[aria-current]::before { background: var(--ink); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  cursor: pointer;
+  color: var(--ink);
+}
+.nav-toggle span { display: block; width: 20px; height: 1px; margin: 5px auto; background: currentColor; }
+
+/* --------------------------------------------------------------------------
+   Masthead — the document rule that opens the page
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: var(--rule);
+  padding-bottom: 0.6rem;
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink-65);
+}
+.masthead b { font-weight: 600; color: var(--ink); }
+
+/* --------------------------------------------------------------------------
+   Type
+   -------------------------------------------------------------------------- */
+
+.kicker {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: var(--t-meta);
+  line-height: 1.5;
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink-65);
+}
+
+.display {
+  font-weight: 300;
+  font-size: var(--t-display);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.display em { font-style: normal; color: var(--ink-75); }
+
+h1.page-title { font-weight: 300; font-size: var(--t-h1-page); line-height: 1.12; }
+
+.lede { font-size: var(--t-lede); line-height: 1.6; color: var(--ink-75); }
+.lede strong { font-weight: 400; color: var(--ink); }
+
+.prose { color: var(--ink-75); }
+.prose p + p { margin-top: 1em; }
+
+a.link {
+  color: var(--ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--lime), var(--lime));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 0.375em;
+  transition: background-size 0.15s ease;
+}
+a.link:hover { background-size: 100% 0.6em; }
+
+/* --------------------------------------------------------------------------
+   Numbered sections — the briefing's spine.
+   Each number carries a small square in one of the four logo colours: the
+   splashes of colour, used systematically rather than decoratively.
+   -------------------------------------------------------------------------- */
+
+.section { margin-top: var(--section-gap); }
+
+.sec-head {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: var(--s3);
+  align-items: baseline;
+  border-top: var(--rule);
+  padding-top: var(--s2);
+  margin-bottom: var(--s5);
+}
+
+.sec-num {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  color: var(--ink-65);
+}
+.sec-num::before { content: ""; width: 6px; height: 6px; flex: none; background: var(--ink-28); }
+
+.sec-1 .sec-num::before { background: var(--tile-green); }
+.sec-2 .sec-num::before { background: var(--tile-yellow); }
+.sec-3 .sec-num::before { background: var(--tile-cyan); }
+.sec-4 .sec-num::before { background: var(--tile-orange); }
+
+.sec-label {
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink-65);
+}
+
+h2.heading { font-weight: 400; font-size: var(--t-h2); line-height: 1.2; }
+
+/* --------------------------------------------------------------------------
+   Header — a plain descriptive statement at modest size, with the goals
+   folded in beneath it as a short marked list. No display-scale type.
+   -------------------------------------------------------------------------- */
+
+.lead-statement {
+  font-weight: 300;
+  font-size: clamp(1.3125rem, 2.3vw, 1.6875rem);
+  line-height: 1.4;
+  color: var(--ink);
+  max-width: 32em;
+  margin-top: var(--s5);
+  text-wrap: pretty;
+}
+
+.goal-marks {
+  list-style: none;
+  margin: var(--s5) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  max-width: 32em;
+}
+
+.goal-marks li {
+  display: grid;
+  grid-template-columns: 0.5rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+  font-size: var(--t-small);
+  color: var(--ink-75);
+}
+
+.goal-marks .m {
+  width: 7px;
+  height: 7px;
+  transform: translateY(-0.1em);
+}
+.m-green  { background: var(--tile-green); }
+.m-yellow { background: var(--tile-yellow); }
+.m-cyan   { background: var(--tile-cyan); }
+.m-orange { background: var(--tile-orange); }
+
+/* --------------------------------------------------------------------------
+   Row lists
+   -------------------------------------------------------------------------- */
+
+.rowlist { list-style: none; margin: 0; padding: 0; }
+.rowlist > * {
+  display: grid;
+  gap: var(--s3);
+  padding-block: var(--s3);
+  border-bottom: var(--rule-faint);
+}
+.rowlist > *:first-child { border-top: var(--rule-faint); }
+
+/* Methodology — the four logo glyphs, as laid out in the openers doc */
+.principles > * { grid-template-columns: 1.75rem 1fr; }
+.principles .mark { padding-top: 0.2rem; }
+.principles .mark svg { width: 18px; height: 18px; }
+.mark-yellow { color: var(--tile-yellow); }
+.mark-green  { color: var(--tile-green); }
+.mark-cyan   { color: var(--tile-cyan); }
+.mark-orange { color: var(--tile-orange); }
+
+.principles h3 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: var(--t-body);
+  letter-spacing: 0;
+  margin-bottom: 0.35em;
+}
+.principles p { font-size: var(--t-small); color: var(--ink-75); }
+
+/* Strategy — numbered document rows */
+.numbered > * { grid-template-columns: 3.5rem 1fr; }
+.numbered .n {
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  color: var(--ink-65);
+  padding-top: 0.3rem;
+}
+.numbered h3 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: var(--t-body);
+  letter-spacing: 0;
+  margin-bottom: 0.35em;
+}
+.numbered p { color: var(--ink-75); font-size: var(--t-small); }
+
+/* Certification levels */
+.levels > * { grid-template-columns: 3.5rem 1fr; }
+.levels .n {
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  color: var(--ink-65);
+  padding-top: 0.35rem;
+}
+.levels h3 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: var(--t-body);
+  letter-spacing: 0;
+}
+.levels p { font-size: var(--t-small); color: var(--ink-75); }
+
+.level-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.35em; }
+.meter { display: flex; gap: 2px; flex: none; }
+.meter i { width: 0.375rem; height: 2px; background: var(--ink-16); }
+.meter i.on { background: var(--ink); }
+
+/* People */
+.people > * { grid-template-columns: 13rem 1fr; }
+.people h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--t-h3);
+  line-height: 1.25;
+  margin-bottom: 0.3em;
+}
+.people .role {
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink-65);
+}
+.people p { font-size: var(--t-small); color: var(--ink-75); }
+
+/* --------------------------------------------------------------------------
+   Statement — the one lime-barred pull, echoing the openers doc
+   -------------------------------------------------------------------------- */
+
+.statement {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--t-quote);
+  line-height: 1.5;
+  letter-spacing: var(--tracking-tight);
+  color: var(--ink);
+  max-width: 32em;
+  padding-left: var(--s3);
+  background: linear-gradient(var(--lime), var(--lime)) left / 3px 100% no-repeat;
+}
+
+/* --------------------------------------------------------------------------
+   Panels and buttons
+   -------------------------------------------------------------------------- */
+
+.panel {
+  background: var(--sand-100);
+  border: 1px solid var(--ink-08);
+  border-radius: var(--radius);
+  padding: var(--card-pad);
+}
+.panel h3 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: 0;
+  margin-bottom: 0.5em;
+}
+.panel p { color: var(--ink-75); }
+
+.panel-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: var(--column-gap);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--ink);
+  color: var(--sand-50);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0.9375rem 1.5rem;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover { background: var(--ink-hover); color: var(--lime); }
+
+/* --------------------------------------------------------------------------
+   Closer + footer
+   -------------------------------------------------------------------------- */
+
+/* An inset block with a large radius rather than a full-bleed footer band —
+   it sits inside .page, so its edges align with the text above it. */
+.closer {
+  margin-top: var(--s8);
+  background: var(--ink);
+  color: hsla(45, 20%, 98.5%, 0.75);
+  border-radius: 1.75rem;
+  padding: var(--s6) var(--s5);
+}
+.closer .kicker { color: var(--lime); display: block; }
+.closer h2 {
+  font-weight: 300;
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--sand-50);
+  margin: var(--s3) 0 0;
+  max-width: 22em;
+}
+.closer p { margin-top: var(--s3); font-size: var(--t-lede); max-width: 34em; }
+
+/* Tertiary call to action — an underlined link, not a button */
+.tertiary {
+  display: inline-block;
+  margin-top: var(--s4);
+  color: var(--sand-50);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: hsla(45, 20%, 98.5%, 0.45);
+  text-underline-offset: 0.25em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.tertiary:hover { color: var(--lime); text-decoration-color: var(--lime); }
+
+.site-footer {
+  max-width: var(--measure-wide);
+  margin-inline: auto;
+  padding: var(--s5) var(--s6) var(--s7);
+  font-size: var(--t-fine);
+  color: var(--ink-65);
+}
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s5); padding-bottom: var(--s5); }
+.footer-grid h2 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: var(--t-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink-65);
+  margin-bottom: var(--s2);
+}
+.footer-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.footer-grid a { text-decoration: none; }
+.footer-grid a:hover { color: var(--ink); }
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s3);
+  justify-content: space-between;
+  border-top: var(--rule-faint);
+  padding-top: var(--s3);
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.hero { padding-block: var(--s6) 0; }
+
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 899px) {
+  :root { --section-gap: var(--s6); }
+
+  .shell { padding-left: 0; }
+  .page { padding: var(--s5) var(--s3) 0; }
+  .closer-inner, .site-footer { padding-inline: var(--s3); }
+  html { scroll-padding-top: 4.5rem; }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: auto;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--s2) var(--s3);
+    border-bottom: var(--rule-faint);
+    z-index: 50;
+  }
+  .nav-toggle { display: block; }
+  .site-nav { display: none; flex-basis: 100%; margin-top: 0; padding-block: var(--s2); }
+  .site-nav.open { display: block; }
+  .site-nav a { padding-block: 0.625rem; }
+
+  .sec-head { grid-template-columns: 1fr; gap: var(--s1); }
+  .lead-statement { font-size: 1.25rem; }
+  .numbered > *, .levels > * { grid-template-columns: 1fr; gap: var(--s2); }
+  .people > * { grid-template-columns: 1fr; gap: var(--s2); }
+  .panel-pair { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: var(--s4); }
+  .panel { padding: var(--s3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

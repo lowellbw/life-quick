@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRI-2030 — compact header variants</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand-50: hsl(45, 20%, 98.5%);
+    --sand-100: hsl(45, 16%, 96%);
+    --sand-200: hsl(45, 14%, 92%);
+    --ink: hsl(209, 73%, 12%);
+    --ink-75: hsla(209, 73%, 12%, 0.75);
+    --ink-65: hsla(209, 73%, 12%, 0.65);
+    --ink-28: hsla(209, 73%, 12%, 0.28);
+    --ink-16: hsla(209, 73%, 12%, 0.16);
+    --ink-08: hsla(209, 73%, 12%, 0.08);
+    --green: #1e9c43;
+    --yellow: #f6c31c;
+    --orange: #d9631e;
+    --cyan: #14a5d4;
+    --fd: "Rubik", system-ui, sans-serif;
+    --fu: "Nunito Sans", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sand-200);
+    color: var(--ink-75);
+    font-family: var(--fu);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  p { margin: 0; }
+  .wrap { max-width: 74rem; margin-inline: auto; padding: 4rem 1.5rem 6rem; }
+
+  .meta {
+    font-weight: 600; font-size: 0.75rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-65);
+  }
+
+  .doc-head { max-width: 44rem; margin-bottom: 3rem; }
+  .doc-head h1 {
+    font-family: var(--fd); font-weight: 300;
+    font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.12;
+    letter-spacing: -0.02em; color: var(--ink); margin: 0.75rem 0 1rem;
+  }
+  .doc-head p { font-size: 1.0625rem; }
+  .doc-head p + p { margin-top: 0.7em; }
+
+  .opt { margin-bottom: 3rem; }
+  .opt-head {
+    display: grid; grid-template-columns: 3rem 1fr; gap: 1.25rem;
+    align-items: baseline; padding-bottom: 0.75rem;
+  }
+  .opt-head .letter {
+    font-family: var(--fd); font-weight: 300; font-size: 2rem;
+    line-height: 1; letter-spacing: -0.02em; color: var(--ink);
+  }
+  .opt-head h2 {
+    font-family: var(--fd); font-weight: 400; font-size: 1.25rem;
+    letter-spacing: -0.02em; color: var(--ink); margin: 0 0 0.3rem;
+  }
+  .opt-head .n { font-size: 0.9375rem; }
+  .opt-head .n b { font-weight: 600; color: var(--ink); }
+  .built {
+    display: inline-block; margin-left: 0.5rem; padding: 0.15rem 0.45rem;
+    background: var(--ink); color: var(--sand-50); border-radius: 2px;
+    font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; vertical-align: 0.15em;
+  }
+
+  /* canvas: a real page top at true type scale, with the sidebar stub */
+  .canvas {
+    background: var(--sand-50); border: 1px solid var(--ink-08);
+    border-radius: 2px; display: grid; grid-template-columns: 11rem 1fr;
+    overflow: hidden;
+  }
+  .rail { padding: 1.5rem 1.25rem; }
+  .rail .b { display: flex; align-items: center; gap: 0.5rem; }
+  .rail .chip {
+    width: 1.75rem; height: 1.75rem; border-radius: 2px; flex: none;
+    background: var(--ink);
+  }
+  .rail .b span {
+    font-family: var(--fd); font-weight: 500; font-size: 0.8125rem;
+    letter-spacing: -0.02em; color: var(--ink);
+  }
+  .rail ul {
+    list-style: none; margin: 2.25rem 0 0; padding: 0; display: grid;
+    gap: 0.4rem; font-size: 0.75rem; color: var(--ink-65);
+  }
+  .rail li.on { color: var(--ink); }
+
+  .stage {
+    padding: 2.75rem 3rem 3.25rem; min-width: 0;
+    width: 100%; max-width: calc(46rem + 6rem); margin-inline: auto;
+  }
+
+  .masthead {
+    display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem;
+    justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--ink-28); padding-bottom: 0.6rem;
+    font-weight: 600; font-size: 0.75rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-65);
+  }
+  .masthead b { font-weight: 600; color: var(--ink); }
+
+  /* the modest statement all four share */
+  .statement {
+    font-family: var(--fd); font-weight: 300;
+    font-size: clamp(1.3125rem, 2.3vw, 1.6875rem); line-height: 1.4;
+    letter-spacing: -0.02em; color: var(--ink); max-width: 32em;
+    margin-top: 2.5rem;
+  }
+  .statement.sm { font-size: 1.1875rem; line-height: 1.5; }
+
+  /* A — marked list */
+  .marks { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 32em; }
+  .marks li {
+    display: grid; grid-template-columns: 0.5rem 1fr; gap: 0.75rem;
+    align-items: baseline; font-size: 0.9375rem;
+  }
+  .m { width: 7px; height: 7px; transform: translateY(-0.1em); }
+  .m-g { background: var(--green); }
+  .m-y { background: var(--yellow); }
+  .m-c { background: var(--cyan); }
+  .m-o { background: var(--orange); }
+
+  /* B — glyph list */
+  .glyphs { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; gap: 0.85rem; max-width: 32em; }
+  .glyphs li {
+    display: grid; grid-template-columns: 1rem 1fr; gap: 0.85rem;
+    align-items: baseline; font-size: 0.9375rem;
+  }
+  .glyphs svg { width: 15px; height: 15px; display: block; transform: translateY(0.1em); }
+  .g-g { color: var(--green); }
+  .g-y { color: var(--yellow); }
+  .g-c { color: var(--cyan); }
+  .g-o { color: var(--orange); }
+
+  /* C — inline strip */
+  .strip {
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+    margin-top: 2.25rem; padding-top: 1rem;
+    border-top: 1px solid var(--ink-16); max-width: 40em;
+  }
+  .strip span {
+    display: flex; align-items: baseline; gap: 0.5rem;
+    font-size: 0.875rem; white-space: nowrap;
+  }
+
+  /* D — two-column rule grid */
+  .grid2 {
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem;
+    margin-top: 2.5rem; border-top: 1px solid var(--ink-28); max-width: 40em;
+  }
+  .grid2 > div {
+    display: grid; grid-template-columns: 0.5rem 1fr; gap: 0.75rem;
+    align-items: baseline; padding: 0.8rem 0;
+    border-bottom: 1px solid var(--ink-16); font-size: 0.9375rem;
+  }
+
+  .compare {
+    background: var(--sand-50); border: 1px solid var(--ink-08);
+    border-radius: 2px; padding: 2rem; margin-top: 1rem;
+  }
+  .compare h2 {
+    font-family: var(--fd); font-weight: 400; font-size: 1.25rem;
+    letter-spacing: -0.02em; color: var(--ink); margin: 0 0 1rem;
+  }
+  .compare p { font-size: 0.9375rem; }
+  .compare p + p { margin-top: 0.6em; }
+
+  @media (max-width: 860px) {
+    .canvas { grid-template-columns: 1fr; }
+    .rail { border-bottom: 1px solid var(--ink-16); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .rail ul { margin: 0; grid-auto-flow: column; gap: 0.7rem; }
+    .stage { padding: 2rem 1.25rem; max-width: none; }
+    .opt-head { grid-template-columns: 1fr; gap: 0.3rem; }
+    .grid2 { grid-template-columns: 1fr; column-gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc-head">
+    <span class="meta">SRI-2030 · compact version</span>
+    <h1>Four ways to fold the goals into the header</h1>
+    <p>
+      All four drop the big headline entirely. The page opens with one plain
+      sentence saying what SRI-2030 is, then the goals sit immediately beneath
+      it carrying small marks. What differs is how those goals are set.
+    </p>
+    <p>
+      <b>A is the one currently built</b> as the Compact version. Say which you
+      prefer and I'll swap it in — they are interchangeable, and none of them
+      affects the rest of the page.
+    </p>
+  </header>
+
+  <!-- A ================================================================= -->
+  <section class="opt">
+    <div class="opt-head">
+      <span class="letter">A</span>
+      <div>
+        <h2>Marked list<span class="built">built</span></h2>
+        <p class="n"><b>Plainest.</b> Four rows, each with a small square in one of the logo colours. Reads as a quiet list of commitments.</p>
+      </div>
+    </div>
+    <div class="canvas">
+      <div class="rail">
+        <div class="b"><span class="chip"></span><span>SRI&#8209;2030</span></div>
+        <ul><li class="on">Mission</li><li>Methodology</li><li>How we work</li><li>Certification</li><li>People</li></ul>
+      </div>
+      <div class="stage">
+        <div class="masthead"><b>SRI-2030</b><span>An initiative of The Downforce Trust</span></div>
+        <h3 class="statement">
+          SRI-2030 works with governments, mainly in Africa, to scale the System
+          of Rice Intensification — a way of growing more rice from less seed,
+          less water and less energy, with lower emissions.
+        </h3>
+        <ul class="marks">
+          <li><span class="m m-g"></span>50 million hectares of SRI by 2030</li>
+          <li><span class="m m-y"></span>Africa self-sufficient in rice</li>
+          <li><span class="m m-c"></span>Adoption at national scale, with government</li>
+          <li><span class="m m-o"></span>Better returns for smallholders</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- B ================================================================= -->
+  <section class="opt">
+    <div class="opt-head">
+      <span class="letter">B</span>
+      <div>
+        <h2>Logo glyphs</h2>
+        <p class="n"><b>Most characterful.</b> The same list, but the marks are the logo's own four tiles — seed grid, seedling, water drop, soil bars — in their colours.</p>
+      </div>
+    </div>
+    <div class="canvas">
+      <div class="rail">
+        <div class="b"><span class="chip"></span><span>SRI&#8209;2030</span></div>
+        <ul><li class="on">Mission</li><li>Methodology</li><li>How we work</li><li>Certification</li><li>People</li></ul>
+      </div>
+      <div class="stage">
+        <div class="masthead"><b>SRI-2030</b><span>An initiative of The Downforce Trust</span></div>
+        <h3 class="statement">
+          SRI-2030 works with governments, mainly in Africa, to scale the System
+          of Rice Intensification — a way of growing more rice from less seed,
+          less water and less energy, with lower emissions.
+        </h3>
+        <ul class="glyphs">
+          <li>
+            <span class="g-g" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V9"/><path d="M12 9C12 5 9 3 4 3c0 5 3 7 8 7"/><path d="M12 13c0-3.5 2.5-5 7-5 0 4.5-2.5 6-7 6"/></svg></span>
+            50 million hectares of SRI by 2030
+          </li>
+          <li>
+            <span class="g-y" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2.6"/><circle cx="12" cy="5" r="2.6"/><circle cx="19" cy="5" r="2.6"/><circle cx="5" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/><circle cx="19" cy="12" r="2.6"/><circle cx="5" cy="19" r="2.6"/><circle cx="12" cy="19" r="2.6"/><circle cx="19" cy="19" r="2.6"/></svg></span>
+            Africa self-sufficient in rice
+          </li>
+          <li>
+            <span class="g-c" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c3.6 4.4 7 8.2 7 12a7 7 0 1 1-14 0c0-3.8 3.4-7.6 7-12Z"/></svg></span>
+            Adoption at national scale, with government
+          </li>
+          <li>
+            <span class="g-o" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="3.2" rx="1.2"/><rect x="3" y="10.4" width="18" height="3.2" rx="1.2"/><rect x="3" y="16.8" width="18" height="3.2" rx="1.2"/></svg></span>
+            Better returns for smallholders
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- C ================================================================= -->
+  <section class="opt">
+    <div class="opt-head">
+      <span class="letter">C</span>
+      <div>
+        <h2>Inline strip</h2>
+        <p class="n"><b>Most compact.</b> The goals run as a single wrapped line under a rule — closer to a strapline than a list. Shortest header of the four.</p>
+      </div>
+    </div>
+    <div class="canvas">
+      <div class="rail">
+        <div class="b"><span class="chip"></span><span>SRI&#8209;2030</span></div>
+        <ul><li class="on">Mission</li><li>Methodology</li><li>How we work</li><li>Certification</li><li>People</li></ul>
+      </div>
+      <div class="stage">
+        <div class="masthead"><b>SRI-2030</b><span>An initiative of The Downforce Trust</span></div>
+        <h3 class="statement">
+          SRI-2030 works with governments, mainly in Africa, to scale the System
+          of Rice Intensification — a way of growing more rice from less seed,
+          less water and less energy, with lower emissions.
+        </h3>
+        <div class="strip">
+          <span><span class="m m-g"></span>50m hectares by 2030</span>
+          <span><span class="m m-y"></span>A self-sufficient Africa</span>
+          <span><span class="m m-c"></span>National scale</span>
+          <span><span class="m m-o"></span>Better farmer returns</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D ================================================================= -->
+  <section class="opt">
+    <div class="opt-head">
+      <span class="letter">D</span>
+      <div>
+        <h2>Two columns on rules</h2>
+        <p class="n"><b>Most document-like.</b> Goals in a 2&times;2 on hairlines, so the header ends on a tidy block. Sits closest to the Briefing version's figure grid.</p>
+      </div>
+    </div>
+    <div class="canvas">
+      <div class="rail">
+        <div class="b"><span class="chip"></span><span>SRI&#8209;2030</span></div>
+        <ul><li class="on">Mission</li><li>Methodology</li><li>How we work</li><li>Certification</li><li>People</li></ul>
+      </div>
+      <div class="stage">
+        <div class="masthead"><b>SRI-2030</b><span>An initiative of The Downforce Trust</span></div>
+        <h3 class="statement sm">
+          SRI-2030 works with governments, mainly in Africa, to scale the System
+          of Rice Intensification — a way of growing more rice from less seed,
+          less water and less energy, with lower emissions.
+        </h3>
+        <div class="grid2">
+          <div><span class="m m-g"></span>50 million hectares of SRI by 2030</div>
+          <div><span class="m m-y"></span>Africa self-sufficient in rice</div>
+          <div><span class="m m-c"></span>Adoption at national scale</div>
+          <div><span class="m m-o"></span>Better returns for smallholders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare">
+    <h2>Notes</h2>
+    <p>
+      <b>On the marks.</b> A, C and D use plain coloured squares, which match the
+      squares already used on the section numbers further down the page. B uses
+      the logo's four tile glyphs instead — prettier, but worth knowing that
+      those same glyphs also label the four SRI principles in the methodology
+      section, so using them here too may imply a mapping between goals and
+      principles that doesn't exist.
+    </p>
+    <p>
+      <b>On the wording.</b> The statement and the four goals are newly written
+      rather than lifted from the current site. Every claim traces back to
+      SRI-2030's own material, but the phrasing is ours and needs their sign-off.
+    </p>
+  </section>
+
+</div>
+</body>
+</html>

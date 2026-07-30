@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SRI-2030 — three design directions</title>
-<meta name="description" content="Three design directions for sri-2030.org, side by side for review.">
+<title>SRI-2030 — four design directions</title>
+<meta name="description" content="Four design directions for sri-2030.org, side by side for review.">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/webp" href="assets/favicon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,6 +90,7 @@
     color: var(--ink-65);
   }
   .v-n::before { content: ""; width: 6px; height: 6px; flex: none; transform: translateY(-0.15em); }
+  .v-0 .v-n::before { background: var(--yellow); }
   .v-1 .v-n::before { background: var(--green); }
   .v-2 .v-n::before { background: var(--cyan); }
   .v-3 .v-n::before { background: var(--orange); }
@@ -170,8 +171,8 @@
   </a>
 
   <div class="head">
-    <span class="meta">Design review · three directions</span>
-    <h1>Three ways the site could look</h1>
+    <span class="meta">Design review · four directions</span>
+    <h1>Four ways the site could look</h1>
     <p class="lede">
       Same content throughout — SRI-2030's own words, logo and colours. What
       changes is the design language: how much colour it uses, how the page is
@@ -179,13 +180,34 @@
     </p>
     <p class="lede">
       Each version has both pages built. Once you're inside one, the bar at the
-      bottom of the screen switches between all three on whichever page you're
+      bottom of the screen switches between all four on whichever page you're
       looking at, so you can compare like for like.
     </p>
   </div>
 
-  <section class="v v-1">
+  <section class="v v-0">
     <span class="v-n">Version 1</span>
+    <div>
+      <h2>Compact</h2>
+      <p>
+        The briefing structure with the plainest possible opening: one
+        descriptive sentence at modest size, with the four goals folded in
+        underneath as a short marked list. No big headline at all.
+      </p>
+      <ul>
+        <li>Nothing at display scale — the page starts quietly</li>
+        <li>Goals carry small logo-coloured marks, in the header itself</li>
+        <li>Fastest to read; least declamatory</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="compact/index.html">Mission</a>
+        <a class="btn btn-o" href="compact/people.html">People</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="v v-1">
+    <span class="v-n">Version 2</span>
     <div>
       <h2>Briefing</h2>
       <p>
@@ -206,11 +228,11 @@
   </section>
 
   <section class="v v-2">
-    <span class="v-n">Version 2</span>
+    <span class="v-n">Version 3</span>
     <div>
       <h2>Quiet</h2>
       <p>
-        The most understated of the three. A low-key fixed sidebar, a narrow
+        The most understated of the four. A low-key fixed sidebar, a narrow
         column of text, and a great deal of whitespace. Almost monochrome —
         colour appears only where it has to.
       </p>
@@ -227,7 +249,7 @@
   </section>
 
   <section class="v v-3">
-    <span class="v-n">Version 3</span>
+    <span class="v-n">Version 4</span>
     <div>
       <h2>Bold</h2>
       <p>
@@ -250,10 +272,11 @@
   <div class="note">
     <h2>What we'd find useful</h2>
     <p>
-      The three aren't meant to be picked whole — elements move between them.
+      These aren't meant to be picked whole — elements move between them.
       The most useful thing to know is which <em>opening</em> feels right, since
-      that is the real difference: Briefing leads with the mission and the
-      numbers, Quiet leads with the paradox, Bold leads with the brand.
+      that is the real difference: Compact leads with a plain description, Briefing
+      leads with the mission and the numbers, Quiet leads with the paradox, and
+      Bold leads with the brand.
     </p>
     <p>
       All copy is taken verbatim from the current site, so nothing here is a

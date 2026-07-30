@@ -13,6 +13,7 @@
   "use strict";
 
   var VERSIONS = [
+    { slug: "compact",  label: "Compact" },
     { slug: "briefing", label: "Briefing" },
     { slug: "quiet",    label: "Quiet" },
     { slug: "bold",     label: "Bold" }
