@@ -474,40 +474,27 @@ h2.heading { font-weight: 400; font-size: var(--t-h2); line-height: 1.2; }
    Closer + footer
    -------------------------------------------------------------------------- */
 
-/* An inset block with a large radius rather than a full-bleed footer band —
-   it sits inside .page, so its edges align with the text above it. */
+/* The page ends on a tertiary call to action, not a panel — a hairline and
+   one underlined link. */
 .closer {
   margin-top: var(--s8);
-  background: var(--ink);
-  color: hsla(45, 20%, 98.5%, 0.75);
-  border-radius: 1.75rem;
-  padding: var(--s6) var(--s5);
+  border-top: var(--rule);
+  padding-top: var(--s4);
 }
-.closer .kicker { color: var(--lime); display: block; }
-.closer h2 {
-  font-weight: 300;
-  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
-  line-height: 1.15;
-  color: var(--sand-50);
-  margin: var(--s3) 0 0;
-  max-width: 22em;
-}
-.closer p { margin-top: var(--s3); font-size: var(--t-lede); max-width: 34em; }
+.closer p { font-size: var(--t-small); max-width: 34em; margin-bottom: var(--s2); }
 
-/* Tertiary call to action — an underlined link, not a button */
 .tertiary {
   display: inline-block;
-  margin-top: var(--s4);
-  color: var(--sand-50);
+  color: var(--ink);
   font-weight: 600;
   font-size: 0.9375rem;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-decoration-color: hsla(45, 20%, 98.5%, 0.45);
+  text-decoration-color: var(--ink-28);
   text-underline-offset: 0.25em;
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+  transition: text-decoration-color 0.15s ease;
 }
-.tertiary:hover { color: var(--lime); text-decoration-color: var(--lime); }
+.tertiary:hover { text-decoration-color: var(--ink); }
 
 .site-footer {
   max-width: var(--measure-wide);
