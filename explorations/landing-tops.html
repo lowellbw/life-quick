@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRI-2030 — five openers for the landing page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand-50: hsl(45, 20%, 98.5%);
+    --sand-100: hsl(45, 16%, 96%);
+    --sand-200: hsl(45, 14%, 92%);
+    --ink: hsl(209, 73%, 12%);
+    --ink-75: hsla(209, 73%, 12%, 0.75);
+    --ink-65: hsla(209, 73%, 12%, 0.65);
+    --ink-28: hsla(209, 73%, 12%, 0.28);
+    --ink-16: hsla(209, 73%, 12%, 0.16);
+    --ink-08: hsla(209, 73%, 12%, 0.08);
+    --lime: hsl(83, 100%, 75%);
+    --tile-green: #1e9c43;
+    --tile-yellow: #f6c31c;
+    --tile-orange: #d9631e;
+    --tile-cyan: #14a5d4;
+    --fd: "Rubik", system-ui, sans-serif;
+    --fu: "Nunito Sans", system-ui, sans-serif;
+    --measure: 36rem;
+    --radius: 0.125rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--sand-200);
+    color: var(--ink-75);
+    font-family: var(--fu);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  p { margin: 0; }
+
+  .wrap { max-width: 76rem; margin-inline: auto; padding: 4rem 1.5rem 6rem; }
+
+  /* ---------- doc chrome ---------- */
+
+  .doc-head { max-width: 46rem; margin-bottom: 3.5rem; }
+
+  .eyebrow {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+  }
+
+  .doc-head h1 {
+    font-family: var(--fd);
+    font-weight: 300;
+    font-size: clamp(1.875rem, 4vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0.75rem 0 1rem;
+  }
+
+  .doc-head p { font-size: 1.0625rem; }
+  .doc-head p + p { margin-top: 0.75em; }
+
+  .constants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .constants span {
+    font-size: 0.8125rem;
+    padding: 0.3rem 0.6rem;
+    background: var(--sand-50);
+    border: 1px solid var(--ink-08);
+    border-radius: var(--radius);
+  }
+
+  /* ---------- option wrapper ---------- */
+
+  .option { margin-bottom: 3.5rem; }
+
+  .option-head {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding-bottom: 0.75rem;
+  }
+
+  .option-head .letter {
+    font-family: var(--fd);
+    font-weight: 300;
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .option-head h2 {
+    font-family: var(--fd);
+    font-weight: 400;
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 0.35rem;
+  }
+
+  .notes { display: grid; gap: 0.15rem; font-size: 0.9375rem; }
+  .notes b { font-weight: 600; color: var(--ink); }
+
+  /* the page-top canvas: a real page top, at true type scale */
+  .canvas {
+    background: var(--sand-50);
+    border: 1px solid var(--ink-08);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 11.5rem 1fr;
+    min-height: 30rem;
+    overflow: hidden;
+  }
+
+  /* sidebar stub, so each concept is judged in its real composition */
+  .rail { padding: 1.5rem 1.25rem; }
+  .rail .brand { display: flex; align-items: center; gap: 0.5rem; }
+  .rail .brand img { width: 1.75rem; height: 1.75rem; border-radius: var(--radius); }
+  .rail .brand span {
+    font-family: var(--fd);
+    font-weight: 500;
+    font-size: 0.8125rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .rail ul {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--ink-65);
+  }
+  .rail li.on { color: var(--ink); }
+
+  /* 46rem content box centred in the offset area, exactly as the real page
+     composes it, with the 36rem text measure left-aligned inside */
+  .stage {
+    padding: 3.25rem 3rem;
+    min-width: 0;
+    width: 100%;
+    max-width: calc(46rem + 6rem);
+    margin-inline: auto;
+  }
+  .m { max-width: var(--measure); }
+
+  /* ---------- shared page-top type ---------- */
+
+  .kick {
+    display: block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+    margin-bottom: 1.25rem;
+  }
+
+  .display {
+    font-family: var(--fd);
+    font-weight: 300;
+    font-size: clamp(1.875rem, 3.4vw, 2.875rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .display em { font-style: normal; color: var(--ink-75); }
+
+  .lede { font-size: 1.125rem; line-height: 1.6; margin-top: 1.5rem; }
+  .lede strong { font-weight: 400; color: var(--ink); }
+
+  /* hairline row list */
+  .rows { list-style: none; margin: 2.5rem 0 0; padding: 0; }
+  .rows > * {
+    display: grid;
+    gap: 1.25rem;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--ink-16);
+  }
+  .rows > *:first-child { border-top: 1px solid var(--ink-16); }
+  .rows dt, .rows .k {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+  }
+  .rows dd { margin: 0; }
+  .rows p, .rows dd { font-size: 0.9375rem; }
+
+  .two > * { grid-template-columns: 7rem 1fr; align-items: baseline; }
+  .num > * { grid-template-columns: 2.5rem 1fr; }
+  .num .k { padding-top: 0.15rem; }
+  .rows h3 {
+    font-family: var(--fu);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+    margin: 0 0 0.25rem;
+  }
+
+  .mark { width: 1.125rem; height: 1.125rem; }
+  .mark svg { width: 100%; height: 100%; display: block; }
+  .m-yellow { color: var(--tile-yellow); }
+  .m-green { color: var(--tile-green); }
+  .m-cyan { color: var(--tile-cyan); }
+  .m-orange { color: var(--tile-orange); }
+  .glyph > * { grid-template-columns: 1.125rem 1fr; }
+  .glyph .mark { margin-top: 0.3rem; }
+
+  /* B — more/less ledger */
+  .ledger { list-style: none; margin: 2.5rem 0 0; padding: 0; }
+  .ledger li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding-block: 0.85rem;
+    border-bottom: 1px solid var(--ink-16);
+  }
+  .ledger li:first-child { border-top: 1px solid var(--ink-28); }
+  .ledger .q {
+    font-family: var(--fd);
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .ledger li.plus .q { color: var(--ink); }
+  .ledger li.plus { background: linear-gradient(var(--lime), var(--lime)) left / 3px 100% no-repeat; padding-left: 0.9rem; }
+  .ledger span.t { font-size: 0.9375rem; }
+  .ledger b { font-weight: 600; color: var(--ink); }
+
+  /* D — figure block */
+  .figs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--ink-28);
+  }
+  .figs > div {
+    padding: 1.1rem 1.25rem 1.1rem 0;
+    border-bottom: 1px solid var(--ink-16);
+  }
+  .figs .n {
+    display: block;
+    font-family: var(--fd);
+    font-weight: 300;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .figs .l { font-size: 0.875rem; margin-top: 0.2rem; }
+
+  .masthead {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--ink-28);
+    padding-bottom: 0.6rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+  }
+
+  /* E — provenance */
+  .track { list-style: none; margin: 2.5rem 0 0; padding: 0 0 0 1.75rem; position: relative; }
+  .track li { position: relative; padding-block: 0.9rem; border-bottom: 1px solid var(--ink-16); }
+  .track li:first-child { border-top: 1px solid var(--ink-16); }
+  .track li::before {
+    content: "";
+    position: absolute;
+    left: -1.75rem;
+    top: 1.35rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--sand-50);
+    border: 1px solid var(--ink-28);
+    border-radius: var(--radius);
+  }
+  .track li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(-1.75rem + 0.25rem);
+    top: 1.85rem;
+    bottom: -0.45rem;
+    border-left: 1px dashed var(--ink-28);
+  }
+  .track .w {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .track p { font-size: 0.9375rem; }
+
+  /* ---------- comparison ---------- */
+
+  .compare {
+    background: var(--sand-50);
+    border: 1px solid var(--ink-08);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+  .compare h2 {
+    font-family: var(--fd);
+    font-weight: 400;
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 1.25rem;
+  }
+  .compare table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+  .compare th, .compare td { text-align: left; padding: 0.7rem 0.75rem 0.7rem 0; border-bottom: 1px solid var(--ink-16); vertical-align: top; }
+  .compare th {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+    border-bottom-color: var(--ink-28);
+  }
+  .compare td:first-child { color: var(--ink); font-weight: 600; width: 4rem; }
+
+  @media (max-width: 860px) {
+    .canvas { grid-template-columns: 1fr; min-height: 0; }
+    .rail { border-bottom: 1px solid var(--ink-16); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .rail ul { margin: 0; grid-auto-flow: column; gap: 0.75rem; }
+    .stage { padding: 2rem 1.25rem; max-width: none; }
+    .option-head { grid-template-columns: 1fr; gap: 0.35rem; }
+    .figs { grid-template-columns: 1fr; }
+    .compare td:first-child { width: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc-head">
+    <span class="eyebrow">SRI-2030 · landing page</span>
+    <h1>Five openers for the top of the page</h1>
+    <p>
+      Five ways the landing page could begin. None of them lead with a call to
+      action — each one instead uses the first screen to tell you something
+      true about SRI, on the theory that a government or a partner arrives
+      wanting to understand the method, not to be converted.
+    </p>
+    <p>
+      All five are built in the same quiet design language and use SRI-2030's
+      existing words. The sidebar stub is drawn in each so you can judge the
+      composition as a real page top rather than a slide.
+    </p>
+    <div class="constants">
+      <span>Rubik 300 / 400 · Nunito Sans</span>
+      <span>One navy ink at alpha steps</span>
+      <span>Warm off-white ground</span>
+      <span>Hairlines, no colour bands</span>
+      <span>No hero image</span>
+    </div>
+  </header>
+
+  <!-- A ================================================================= -->
+  <section class="option">
+    <div class="option-head">
+      <span class="letter">A</span>
+      <div>
+        <h2>Definition</h2>
+        <div class="notes">
+          <p><b>Foregrounds</b> what SRI actually is, in one sentence, before anything else.</p>
+          <p><b>Trade-off</b> the mission figure moves below the fold; calm, but least urgent.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="rail">
+        <a class="brand" href="#" style="text-decoration:none">
+          <img src="../site-quiet/assets/sri-2030-logo.webp" alt="">
+          <span>SRI&#8209;2030</span>
+        </a>
+        <ul>
+          <li class="on">Mission</li>
+          <li>How SRI works</li>
+          <li>How SRI-2030 works</li>
+          <li>Certification</li>
+          <li>People</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <div class="m">
+          <span class="kick">The System of Rice Intensification</span>
+          <h3 class="display">A way of cultivating rice that applies <em>simple principles to achieve remarkable results.</em></h3>
+          <p class="lede">
+            More rice, from less seed and less water, with lower emissions —
+            and better returns for the farmers who grow it.
+          </p>
+          <dl class="rows two">
+            <div>
+              <dt>Method</dt>
+              <dd>Four principles: reduce competition, establish the crop well, water without flooding, build soil fertility.</dd>
+            </div>
+            <div>
+              <dt>Where</dt>
+              <dd>National programmes with governments, mainly in Africa.</dd>
+            </div>
+            <div>
+              <dt>Mission</dt>
+              <dd>50 million hectares of SRI by 2030.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B ================================================================= -->
+  <section class="option">
+    <div class="option-head">
+      <span class="letter">B</span>
+      <div>
+        <h2>The paradox, itemised</h2>
+        <div class="notes">
+          <p><b>Foregrounds</b> the counter-intuitive claim, then substantiates it line by line on the same screen.</p>
+          <p><b>Trade-off</b> keeps their existing headline, and answers the &ldquo;how can that be?&rdquo; it provokes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="rail">
+        <a class="brand" href="#" style="text-decoration:none">
+          <img src="../site-quiet/assets/sri-2030-logo.webp" alt="">
+          <span>SRI&#8209;2030</span>
+        </a>
+        <ul>
+          <li class="on">Mission</li>
+          <li>How SRI works</li>
+          <li>How SRI-2030 works</li>
+          <li>Certification</li>
+          <li>People</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <div class="m">
+          <span class="kick">The SRI paradox</span>
+          <h3 class="display">More rice. <em>Less seed, water and emissions.</em></h3>
+          <ul class="ledger">
+            <li class="plus">
+              <span class="q">More</span>
+              <span class="t"><b>Rice</b> — improved yield and better returns for farmers</span>
+            </li>
+            <li>
+              <span class="q">Less</span>
+              <span class="t"><b>Seed</b> — single seedlings, spaced widely, in a grid of 25&nbsp;cm x 25&nbsp;cm</span>
+            </li>
+            <li>
+              <span class="q">Less</span>
+              <span class="t"><b>Water</b> — watering not flooding, by alternate wetting and drying</span>
+            </li>
+            <li>
+              <span class="q">Less</span>
+              <span class="t"><b>Energy</b> — no tillage, and fewer bought inputs</span>
+            </li>
+            <li>
+              <span class="q">Lower</span>
+              <span class="t"><b>Emissions</b> — drier soils release far less methane</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C ================================================================= -->
+  <section class="option">
+    <div class="option-head">
+      <span class="letter">C</span>
+      <div>
+        <h2>Method first</h2>
+        <div class="notes">
+          <p><b>Foregrounds</b> the four principles themselves — no hero at all, the page opens by teaching.</p>
+          <p><b>Trade-off</b> the most useful opener for an extension agent; the least persuasive for a minister.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="rail">
+        <a class="brand" href="#" style="text-decoration:none">
+          <img src="../site-quiet/assets/sri-2030-logo.webp" alt="">
+          <span>SRI&#8209;2030</span>
+        </a>
+        <ul>
+          <li class="on">Mission</li>
+          <li>How SRI works</li>
+          <li>How SRI-2030 works</li>
+          <li>Certification</li>
+          <li>People</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <div class="m">
+          <p class="lede" style="margin-top:0; max-width:30em;">
+            The System of Rice Intensification is a way of cultivating rice
+            that applies <strong>simple principles</strong> to achieve
+            remarkable results. The principles of SRI:
+          </p>
+          <ul class="rows glyph">
+            <li>
+              <span class="mark m-yellow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2.4"/><circle cx="12" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="12" r="2.4"/><circle cx="12" cy="12" r="2.4"/><circle cx="19" cy="12" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="12" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/></svg>
+              </span>
+              <div>
+                <h3>Reducing competition</h3>
+                <p>Seeding singly and spacing widely — for example in a grid of 25&nbsp;cm x 25&nbsp;cm.</p>
+              </div>
+            </li>
+            <li>
+              <span class="mark m-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V9"/><path d="M12 9C12 5 9 3 4 3c0 5 3 7 8 7"/><path d="M12 13c0-3.5 2.5-5 7-5 0 4.5-2.5 6-7 6"/></svg>
+              </span>
+              <div>
+                <h3>Establishing the new crop well</h3>
+                <p>Transplanting young seedlings, or direct drilling the seed.</p>
+              </div>
+            </li>
+            <li>
+              <span class="mark m-cyan" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c3.6 4.4 7 8.2 7 12a7 7 0 1 1-14 0c0-3.8 3.4-7.6 7-12Z"/></svg>
+              </span>
+              <div>
+                <h3>Watering not flooding</h3>
+                <p>For example by alternate wetting and drying.</p>
+              </div>
+            </li>
+            <li>
+              <span class="mark m-orange" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="3" rx="1.2"/><rect x="3" y="10.5" width="18" height="3" rx="1.2"/><rect x="3" y="17" width="18" height="3" rx="1.2"/></svg>
+              </span>
+              <div>
+                <h3>Building soil fertility</h3>
+                <p>Organic manures where feasible; avoiding tillage; cover crops; intercropping with legumes.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D ================================================================= -->
+  <section class="option">
+    <div class="option-head">
+      <span class="letter">D</span>
+      <div>
+        <h2>Briefing cover</h2>
+        <div class="notes">
+          <p><b>Foregrounds</b> the mission and the numbers behind it — the page reads as the cover of a document.</p>
+          <p><b>Trade-off</b> most credible with governments and funders; assumes the reader already knows what rice intensification is.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="rail">
+        <a class="brand" href="#" style="text-decoration:none">
+          <img src="../site-quiet/assets/sri-2030-logo.webp" alt="">
+          <span>SRI&#8209;2030</span>
+        </a>
+        <ul>
+          <li class="on">Mission</li>
+          <li>How SRI works</li>
+          <li>How SRI-2030 works</li>
+          <li>Certification</li>
+          <li>People</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <div class="m">
+          <div class="masthead">
+            <span>SRI-2030</span>
+            <span>An initiative of The Downforce Trust</span>
+          </div>
+          <h3 class="display">50 million hectares of SRI <em>by 2030.</em></h3>
+          <p class="lede" style="max-width:32em;">
+            More rice. Less seed, water and emissions. We work with
+            governments, mainly in Africa, to scale the System of Rice
+            Intensification.
+          </p>
+          <div class="figs">
+            <div>
+              <span class="n">$7.5bn</span>
+              <p class="l">Africa's annual rice imports [FAOSTAT, 2023]</p>
+            </div>
+            <div>
+              <span class="n">4</span>
+              <p class="l">Principles of SRI</p>
+            </div>
+            <div>
+              <span class="n">4 levels</span>
+              <p class="l">Free trainer certification</p>
+            </div>
+            <div>
+              <span class="n">Africa</span>
+              <p class="l">Where we work, with governments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E ================================================================= -->
+  <section class="option">
+    <div class="option-head">
+      <span class="letter">E</span>
+      <div>
+        <h2>Provenance</h2>
+        <div class="notes">
+          <p><b>Foregrounds</b> where SRI came from — credibility through lineage rather than claims.</p>
+          <p><b>Trade-off</b> warm and trustworthy; slowest to say what SRI does, so it needs a strong second screen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="rail">
+        <a class="brand" href="#" style="text-decoration:none">
+          <img src="../site-quiet/assets/sri-2030-logo.webp" alt="">
+          <span>SRI&#8209;2030</span>
+        </a>
+        <ul>
+          <li class="on">Mission</li>
+          <li>How SRI works</li>
+          <li>How SRI-2030 works</li>
+          <li>Certification</li>
+          <li>People</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <div class="m">
+          <span class="kick">Where SRI comes from</span>
+          <h3 class="display">SRI was created <em>with farmers, in Madagascar.</em></h3>
+          <p class="lede" style="max-width:30em;">
+            It has been carried since by farmers, researchers and extension
+            agents on four continents — and it is still evolving.
+          </p>
+          <ul class="track">
+            <li>
+              <span class="w">Madagascar</span>
+              <p>Father Henri de Laulanié SJ created SRI with farmers.</p>
+            </li>
+            <li>
+              <span class="w">1994 · Cornell University</span>
+              <p>Professor Norman Uphoff took up SRI and helped to spread it across the globe.</p>
+            </li>
+            <li>
+              <span class="w">Today · Africa</span>
+              <p>SRI-2030 works with national governments to scale it — towards 50 million hectares by 2030.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- comparison ======================================================== -->
+  <section class="compare">
+    <h2>Choosing between them</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Opener</th>
+          <th>Best when the visitor is</th>
+          <th>First thing they learn</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>Definition</td>
+          <td>New to SRI entirely</td>
+          <td>What the method is</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>The paradox, itemised</td>
+          <td>Sceptical — &ldquo;more from less&rdquo; sounds too good</td>
+          <td>Why the paradox holds</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>Method first</td>
+          <td>A trainer or extension agent</td>
+          <td>How to actually do it</td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td>Briefing cover</td>
+          <td>A ministry, funder or partner</td>
+          <td>The scale of the opportunity</td>
+        </tr>
+        <tr>
+          <td>E</td>
+          <td>Provenance</td>
+          <td>Assessing whether to trust it</td>
+          <td>Who developed it, and when</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1.25rem; font-size:0.9375rem;">
+      They are not exclusive — B or C works well as the second screen under A,
+      and D's figure block can sit under any of them. The one genuine either/or
+      is whether the first line states <em>what SRI is</em> (A, C, E) or
+      <em>what it achieves</em> (B, D).
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
